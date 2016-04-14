@@ -10,7 +10,7 @@ A collection of functions useful for making prose reader friendly. Inspired (and
 
 I've always appreciated the built-in functionality provided by Django's `humanize`, and I really wanted to port it over to JavaScript/Node.js. I also intend to use this to power a set of [Nunjucks](http://mozilla.github.io/nunjucks/) filters, and figured it'd be just as useful as a generic library instead of trapping it all in the Nunjucks ecosystem.
 
-..and because I wanted to. ¯\\\_(ツ)_/¯
+..and because I wanted to. ¯\\\_(ツ)\_/¯
 
 ## Installation
 
@@ -45,7 +45,7 @@ well.
 
 **Parameters**
 
--   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
+-   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 **Examples**
 
@@ -59,7 +59,44 @@ journalize.apnumber(42);
 // returns 42
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+### apstate
+
+Converts state names into AP abbreviations, and back. If the supplied
+string has no match, the original value is returned. If the value is not a
+string, the original will also be returned.
+
+If `reverse` is true, `apstate` will convert a abbreviation back to a full
+string.
+
+**Parameters**
+
+-   `val` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `reverse` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)=**  (optional, default `false`)
+
+**Examples**
+
+```javascript
+var journalize = require('journalize');
+
+journalize.apstate('Arizona');
+// returns 'Ariz.'
+
+journalize.apstate('District of Columbia');
+// returns 'D.C.'
+
+journalize.apstate('Texas');
+// returns 'Texas'
+
+journalize.apstate('Ontario');
+// returns 'Ontario'
+
+journalize.apstate('D.C.', true);
+// returns 'District of Columbia'
+```
+
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ### intcomma
 
@@ -68,7 +105,7 @@ an empty string is returned.
 
 **Parameters**
 
--   `val` **([Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)\|[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))**
+-   `val` **([Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)\|[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))** 
 
 **Examples**
 
@@ -82,7 +119,7 @@ journalize.intcomma('1234567.1234567');
 // returns '1,234,567.1234567'
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ### intword
 
@@ -91,7 +128,7 @@ numbers at least 1 million or more.
 
 **Parameters**
 
--   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
+-   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 **Examples**
 
@@ -105,7 +142,7 @@ journalize.intword(6500000000000);
 // returns '6.5 trillion'
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
 ### ordinal
 
@@ -115,7 +152,7 @@ original form.
 
 **Parameters**
 
--   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
+-   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
 **Examples**
 
@@ -132,4 +169,4 @@ journalize.ordinal(103);
 // returns '103rd'
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
