@@ -107,3 +107,32 @@ describe('intcomma', () => {
     assert.deepEqual(journalize.intcomma('corgi'), 'corgi');
   });
 });
+
+describe('apstate', () => {
+  var test_list = ['Arizona', 'Texas', 'District of Columbia', 'Wyoming', 'Ontario'];
+  var result_list = ['Ariz.', 'Texas', 'D.C.', 'Wyo.', 'Ontario'];
+
+  it('should convert state names into AP abbreviations', () => {
+    test_list.forEach((n, idx) => {
+      assert.deepEqual(journalize.apstate(n), result_list[idx]);
+    });
+  });
+
+  it('should convert AP abbreviations into state names', () => {
+    result_list.forEach((n, idx) => {
+      assert.deepEqual(journalize.apstate(n, true), test_list[idx]);
+    });
+  });
+
+  it('should return empty string when input is `undefined`', () => {
+    assert.deepEqual(journalize.apstate(undefined), '');
+  });
+
+  it('should return empty string when input is `null`', () => {
+    assert.deepEqual(journalize.apstate(null), '');
+  });
+
+  it('should return original input when input is not a string', () => {
+    assert.deepEqual(journalize.apstate(42), 42);
+  });
+});
