@@ -42,13 +42,14 @@ export default function intword (val) {
   // if `convertedVal` is less than 1 million, no conversion is needed
   if (convertedVal < 1000000) return convertedVal;
 
-  // get the number of digits in the number, and substract one to get the
+  // get the number of digits in the number, and substract remainder to get
   // exponent value
-  var exponent = getLengthOfNumber(convertedVal) - 1;
+  var numDigits = getLengthOfNumber(convertedVal) - 1;
+  var exponent = numDigits - (numDigits % 3);
 
   // calculate the rounded version of `convertedVal`
   var new_val = convertedVal / Math.pow(10, exponent);
   new_val = Math.round(new_val * 10) / 10;
 
-  return new_val + ' ' + SUFFIXES[(exponent / 3) - 2];
+  return new_val + ' ' + SUFFIXES[Math.floor(exponent / 3) - 2];
 }
