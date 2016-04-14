@@ -84,3 +84,26 @@ describe('intword', () => {
     assert.deepEqual(journalize.intword('1.234'), '1.234');
   });
 });
+
+describe('intcomma', () => {
+  it('should successfully add commas to numbers', () => {
+    var test_list = [100, 1000, 10123, 10311, 1000000, 1234567.25, '100', '1000', '10123', '10311', '1000000', '1234567.1234567'];
+    var result_list = ['100', '1,000', '10,123', '10,311', '1,000,000', '1,234,567.25', '100', '1,000', '10,123', '10,311', '1,000,000', '1,234,567.1234567'];
+
+    test_list.forEach((n, idx) => {
+      assert.deepEqual(journalize.intcomma(n), result_list[idx]);
+    });
+  });
+
+  it('should return empty string when input is `undefined`', () => {
+    assert.deepEqual(journalize.intcomma(undefined), '');
+  });
+
+  it('should return empty string when input is `null`', () => {
+    assert.deepEqual(journalize.intcomma(null), '');
+  });
+
+  it('should return original input when input is not a number', () => {
+    assert.deepEqual(journalize.intcomma('corgi'), 'corgi');
+  });
+});
