@@ -30,7 +30,7 @@ npm install --save-dev journalize
 
 If you're one of the cool kids and want to exclusively use ES6 modules with something like [Rollup](http://rollupjs.org), there's a version targeted via `jsnext:main` in the `package.json` it'll pick up.
 
-And finally, if you're old school and just wanna grab a version and go - check out the `dist` folder. There you'll find a compiled development and production version!
+And finally, if you're old school and just wanna grab a version and go - check out the `dist` folder. There you'll find a compiled development and production version! This version supports [`UMD`](https://github.com/umdjs/umd) - if you use [require.js](http://requirejs.org), it'll play along. Otherwise, it'll add `journalize` to the browser's global scope.
 
 ## API Docs
 
