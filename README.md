@@ -2,6 +2,9 @@
 
 A collection of functions useful for making prose reader friendly. Inspired (and initially based on) by Django's [`django.contrib.humanize`](https://docs.djangoproject.com/en/dev/ref/contrib/humanize/).
 
+[![build status](https://img.shields.io/travis/rdmurphy/journalize/master.svg?style=flat-square)](https://travis-ci.org/rdmurphy/journalize)
+[![npm version](https://img.shields.io/npm/v/journalize.svg?style=flat-square)](https://www.npmjs.com/package/journalize)
+
 ## Why did you do this?
 
 I've always appreciated the built-in functionality provided by Django's `humanize`, and I really wanted to port it over to JavaScript/Node.js. I also intend to use this to power a set of [Nunjucks](http://mozilla.github.io/nunjucks/) filters, and figured it'd be just as useful as a generic library instead of trapping it all in the Nunjucks ecosystem.
