@@ -1,6 +1,6 @@
 {
   "name": "journalize",
-  "version": "1.0.0",
+  "version": "1.1.0-beta.0",
   "description": "A collection of functions useful for making prose more reader friendly. Inspired by Django's `django.contrib.humanize`.",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
