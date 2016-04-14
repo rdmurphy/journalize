@@ -10,7 +10,7 @@ var SUFFIXES = ['million', 'billion', 'trillion', 'quadrillion', 'quintillion', 
  * @param  {Number} n
  * @return {Number}
  */
-function getLengthOfNumber(n) {
+function getLengthOfNumber (n) {
   return Math.ceil(Math.log(n + 1) / Math.LN10);
 }
 
