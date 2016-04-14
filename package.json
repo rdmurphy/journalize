@@ -17,7 +17,7 @@
     "build:umd": "BABEL_ENV=commonjs rollup --config --output ./dist/journalize.js -- ./src/index.js",
     "build:umd:min": "BABEL_ENV=commonjs rollup --config -- ./src/index.js | uglifyjs --compress --mangle --output ./dist/journalize.min.js",
     "clean": "rimraf coverage dist es lib",
-    "docs:build": "documentation readme --readme-file README.md --section 'API Docs' --github ./src/index.js",
+    "docs:build": "documentation readme --readme-file README.md --section 'API Docs' ./src/index.js",
     "docs:serve": "documentation serve --watch ./src/index.js",
     "lint": "eslint build src test",
     "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
