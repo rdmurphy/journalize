@@ -61,7 +61,7 @@ describe('ordinal', () => {
 describe('intword', () => {
   it('should correctly convert integers to words', () => {
     var test_list = ['100', '1000000', '1200000', '1290000', '1000000000', '2000000000', '6000000000000', '1300000000000000', '3500000000000000000000', '8100000000000000000000000000000000'];
-    var result_list = ['100', '1.0 million', '1.2 million', '1.3 million', '1.0 billion', '2.0 billion', '6.0 trillion', '1.3 quadrillion', '3.5 sextillion', '8.1 decillion'];
+    var result_list = ['100', '1 million', '1.2 million', '1.3 million', '1 billion', '2 billion', '6 trillion', '1.3 quadrillion', '3.5 sextillion', '8.1 decillion'];
 
     test_list.forEach((n, idx) => {
       assert.deepEqual(journalize.intword(n), result_list[idx]);
