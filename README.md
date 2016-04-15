@@ -1,6 +1,6 @@
 # journalize
 
-A collection of functions useful for making prose reader friendly. Inspired (and initially based on) by Django's [`django.contrib.humanize`](https://docs.djangoproject.com/en/dev/ref/contrib/humanize/).
+A collection of functions useful for making prose reader friendly. Inspired by (and initially based on) Django's [`django.contrib.humanize`](https://docs.djangoproject.com/en/dev/ref/contrib/humanize/).
 
 [![build status](https://img.shields.io/travis/rdmurphy/journalize/master.svg?style=flat-square)](https://travis-ci.org/rdmurphy/journalize)
 [![Coveralls branch](https://img.shields.io/coveralls/rdmurphy/journalize/master.svg?style=flat-square)](https://coveralls.io/github/rdmurphy/journalize)
@@ -9,29 +9,29 @@ A collection of functions useful for making prose reader friendly. Inspired (and
 
 ## Why did you do this?
 
-I've always appreciated the built-in functionality provided by Django's `humanize`, and I really wanted to port it over to JavaScript/Node.js. I also intend to use this to power a set of [Nunjucks](http://mozilla.github.io/nunjucks/) filters, and figured it'd be just as useful as a generic library instead of trapping it all in the Nunjucks ecosystem.
+I've always really appreciated the built-in functionality provided by Django's `humanize`, and I wanted to port it over to JavaScript/Node.js. Originally this was to be a collection of custom [Nunjucks](http://mozilla.github.io/nunjucks/) filters, but I think this could be just as useful as a generic library, instead of trapping it all in the Nunjucks ecosystem.
 
 ..and because I wanted to. ¯\\\_(ツ)\_/¯
 
 ## Installation
 
-If you plan to actively use this in a project (as in, you intend to `require()` it), then install it with `--save`.
+If you plan to actively use this in a project (you intend to `require()` it), then install with `--save`.
 
 ```sh
 npm install --save journalize
 ```
 
-If you're using it in a static site generator, it probably makes more sense to `--save-dev` it.
+If you're using it client side, like with a static site generator, it may make more sense to use `--save-dev`.
 
 ```sh
 npm install --save-dev journalize
 ```
 
-`journalize` aims to support the many options out there in the wild west of Node.js. If you use a module bundler like [Browserify](http://browserify.org) or [Webpack](http://webpack.github.io), a version of `journalize` is compiled to play along.
+`journalize` tries to support the many ways to load packages in the Node.js ecosystem.
 
-If you're one of the cool kids and want to exclusively use ES6 modules with something like [Rollup](http://rollupjs.org), there's a version targeted via `jsnext:main` in the `package.json` it'll pick up.
+If you use a module bundler like [Browserify](http://browserify.org) or [Webpack](http://webpack.github.io), a version of `journalize` is built to be compatible. The `main` key in `package.json` points to this file. If you're one of the cool kids and want to use ES6 modules with something like [Rollup](http://rollupjs.org), `jsnext:main` in `package.json` points at a ES6 module version.
 
-And finally, if you're old school and just wanna grab a version and go - check out the `dist` folder. There you'll find a compiled development and production version! This version supports [`UMD`](https://github.com/umdjs/umd) - if you use [require.js](http://requirejs.org), it'll play along. Otherwise, it'll add `journalize` to the browser's global scope.
+And finally, if you're old school and just wanna grab-and-go - check out the `dist` folder. There you'll find the latest compiled development and production versions. This version has a [`umd`](https://github.com/umdjs/umd) wrapper. It's compatible with both [require.js](http://requirejs.org) and [CommonJS](http://www.commonjs.org). Finally, if neither are available, it'll add a `journalize` object to the browser's global scope.
 
 ## API Docs
 
