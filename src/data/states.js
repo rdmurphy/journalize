@@ -1,216 +1,297 @@
 /**
- * A list of state names and their AP abbreviations.
+ * A list of state names and their AP abbreviations and USPS postal codes.
  *
- * Source: https://github.com/wireservice/lookup/blob/master/states/ap.csv
+ * Sources:
+ * https://github.com/wireservice/lookup/blob/master/states/ap.csv
+ * https://github.com/wireservice/lookup/blob/master/states/usps.csv
  *
  * @private
  * @type {Array}
  */
-var AP_STATES = [
+export default [
   {
     'state': 'Alabama',
-    'ap': 'Ala.'
+    'ap': 'Ala.',
+    'usps': 'AL'
   },
   {
     'state': 'Alaska',
-    'ap': 'Alaska'
+    'ap': 'Alaska',
+    'usps': 'AK'
   },
   {
     'state': 'Arizona',
-    'ap': 'Ariz.'
+    'ap': 'Ariz.',
+    'usps': 'AZ'
   },
   {
     'state': 'Arkansas',
-    'ap': 'Ark.'
+    'ap': 'Ark.',
+    'usps': 'AR'
   },
   {
     'state': 'California',
-    'ap': 'Calif.'
+    'ap': 'Calif.',
+    'usps': 'CA'
   },
   {
     'state': 'Colorado',
-    'ap': 'Colo.'
+    'ap': 'Colo.',
+    'usps': 'CO'
   },
   {
     'state': 'Connecticut',
-    'ap': 'Conn.'
+    'ap': 'Conn.',
+    'usps': 'CT'
   },
   {
     'state': 'Delaware',
-    'ap': 'Del.'
+    'ap': 'Del.',
+    'usps': 'DE'
   },
   {
     'state': 'District of Columbia',
-    'ap': 'D.C.'
+    'ap': 'D.C.',
+    'usps': 'DC'
   },
   {
     'state': 'Florida',
-    'ap': 'Fla.'
+    'ap': 'Fla.',
+    'usps': 'FL'
   },
   {
     'state': 'Georgia',
-    'ap': 'Ga.'
+    'ap': 'Ga.',
+    'usps': 'GA'
   },
   {
     'state': 'Hawaii',
-    'ap': 'Hawaii'
+    'ap': 'Hawaii',
+    'usps': 'HI'
   },
   {
     'state': 'Idaho',
-    'ap': 'Idaho'
+    'ap': 'Idaho',
+    'usps': 'ID'
   },
   {
     'state': 'Illinois',
-    'ap': 'Ill.'
+    'ap': 'Ill.',
+    'usps': 'IL'
   },
   {
     'state': 'Indiana',
-    'ap': 'Ind.'
+    'ap': 'Ind.',
+    'usps': 'IN'
   },
   {
     'state': 'Iowa',
-    'ap': 'Iowa'
+    'ap': 'Iowa',
+    'usps': 'IA'
   },
   {
     'state': 'Kansas',
-    'ap': 'Kan.'
+    'ap': 'Kan.',
+    'usps': 'KS'
   },
   {
     'state': 'Kentucky',
-    'ap': 'Ky.'
+    'ap': 'Ky.',
+    'usps': 'KY'
   },
   {
     'state': 'Louisiana',
-    'ap': 'La.'
+    'ap': 'La.',
+    'usps': 'LA'
   },
   {
     'state': 'Maine',
-    'ap': 'Maine'
+    'ap': 'Maine',
+    'usps': 'ME'
   },
   {
     'state': 'Maryland',
-    'ap': 'Md.'
+    'ap': 'Md.',
+    'usps': 'MD'
   },
   {
     'state': 'Massachusetts',
-    'ap': 'Mass.'
+    'ap': 'Mass.',
+    'usps': 'MA'
   },
   {
     'state': 'Michigan',
-    'ap': 'Mich.'
+    'ap': 'Mich.',
+    'usps': 'MI'
   },
   {
     'state': 'Minnesota',
-    'ap': 'Minn.'
+    'ap': 'Minn.',
+    'usps': 'MN'
   },
   {
     'state': 'Mississippi',
-    'ap': 'Miss.'
+    'ap': 'Miss.',
+    'usps': 'MS'
   },
   {
     'state': 'Missouri',
-    'ap': 'Mo.'
+    'ap': 'Mo.',
+    'usps': 'MO'
   },
   {
     'state': 'Montana',
-    'ap': 'Mont.'
+    'ap': 'Mont.',
+    'usps': 'MT'
   },
   {
     'state': 'Nebraska',
-    'ap': 'Neb.'
+    'ap': 'Neb.',
+    'usps': 'NE'
   },
   {
     'state': 'Nevada',
-    'ap': 'Nev.'
+    'ap': 'Nev.',
+    'usps': 'NV'
   },
   {
     'state': 'New Hampshire',
-    'ap': 'N.H.'
+    'ap': 'N.H.',
+    'usps': 'NH'
   },
   {
     'state': 'New Jersey',
-    'ap': 'N.J.'
+    'ap': 'N.J.',
+    'usps': 'NJ'
   },
   {
     'state': 'New Mexico',
-    'ap': 'N.M.'
+    'ap': 'N.M.',
+    'usps': 'NM'
   },
   {
     'state': 'New York',
-    'ap': 'N.Y.'
+    'ap': 'N.Y.',
+    'usps': 'NY'
   },
   {
     'state': 'North Carolina',
-    'ap': 'N.C.'
+    'ap': 'N.C.',
+    'usps': 'NC'
   },
   {
     'state': 'North Dakota',
-    'ap': 'N.D.'
+    'ap': 'N.D.',
+    'usps': 'ND'
   },
   {
     'state': 'Ohio',
-    'ap': 'Ohio'
+    'ap': 'Ohio',
+    'usps': 'OH'
   },
   {
     'state': 'Oklahoma',
-    'ap': 'Okla.'
+    'ap': 'Okla.',
+    'usps': 'OK'
   },
   {
     'state': 'Oregon',
-    'ap': 'Ore.'
+    'ap': 'Ore.',
+    'usps': 'OR'
   },
   {
     'state': 'Pennsylvania',
-    'ap': 'Pa.'
+    'ap': 'Pa.',
+    'usps': 'PA'
   },
   {
     'state': 'Rhode Island',
-    'ap': 'R.I.'
+    'ap': 'R.I.',
+    'usps': 'RI'
   },
   {
     'state': 'South Carolina',
-    'ap': 'S.C.'
+    'ap': 'S.C.',
+    'usps': 'SC'
   },
   {
     'state': 'South Dakota',
-    'ap': 'S.D.'
+    'ap': 'S.D.',
+    'usps': 'SD'
   },
   {
     'state': 'Tennessee',
-    'ap': 'Tenn.'
+    'ap': 'Tenn.',
+    'usps': 'TN'
   },
   {
     'state': 'Texas',
-    'ap': 'Texas'
+    'ap': 'Texas',
+    'usps': 'TX'
   },
   {
     'state': 'Utah',
-    'ap': 'Utah'
+    'ap': 'Utah',
+    'usps': 'UT'
   },
   {
     'state': 'Vermont',
-    'ap': 'Vt.'
+    'ap': 'Vt.',
+    'usps': 'VT'
   },
   {
     'state': 'Virginia',
-    'ap': 'Va.'
+    'ap': 'Va.',
+    'usps': 'VA'
   },
   {
     'state': 'Washington',
-    'ap': 'Wash.'
+    'ap': 'Wash.',
+    'usps': 'WA'
   },
   {
     'state': 'West Virginia',
-    'ap': 'W.Va.'
+    'ap': 'W.Va.',
+    'usps': 'WV'
   },
   {
     'state': 'Wisconsin',
-    'ap': 'Wis.'
+    'ap': 'Wis.',
+    'usps': 'WI'
   },
   {
     'state': 'Wyoming',
-    'ap': 'Wyo.'
+    'ap': 'Wyo.',
+    'usps': 'WY'
+  },
+  {
+    'state': 'American Samoa',
+    'ap': '',
+    'usps': 'AS'
+  },
+  {
+    'state': 'Guam',
+    'ap': '',
+    'usps': 'GU'
+  },
+  {
+    'state': 'Northern Mariana Islands',
+    'ap': '',
+    'usps': 'MP'
+  },
+  {
+    'state': 'Puerto Rico',
+    'ap': '',
+    'usps': 'PR'
+  },
+  {
+    'state': 'U.S. Minor Outlying Islands',
+    'ap': '',
+    'usps': 'UM'
+  },
+  {
+    'state': 'U.S. Virgin Islands',
+    'ap': '',
+    'usps': 'VI'
   }
 ];
-
-export default AP_STATES;
