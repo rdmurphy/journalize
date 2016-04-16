@@ -7,7 +7,23 @@ A collection of functions useful for making prose reader friendly. Inspired by (
 [![npm version](https://img.shields.io/npm/v/journalize.svg?style=flat-square)](https://www.npmjs.com/package/journalize)
 [![npm](https://img.shields.io/npm/dm/journalize.svg?style=flat-square)](https://www.npmjs.com/package/journalize)
 
-## Why did you do this?
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Why did you create this?](#why-did-you-do-this)
+- [Installation](#installation)
+- [API Docs](#api-docs)
+  - [apnumber](#apnumber)
+  - [apstate](#apstate)
+  - [intcomma](#intcomma)
+  - [intword](#intword)
+  - [ordinal](#ordinal)
+- [Shout-outs](#shout-outs)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Why did you create this?
 
 I've always really appreciated the built-in functionality provided by Django's `humanize`, and I wanted to port it over to JavaScript/Node.js. Originally this was to be a collection of custom [Nunjucks](http://mozilla.github.io/nunjucks/) filters, but I think this could be just as useful as a generic library, instead of trapping it all in the Nunjucks ecosystem.
 
@@ -176,4 +192,4 @@ Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 - Thanks to maintainers of [Redux](https://github.com/reactjs/redux/) for setting a great example of how to setup and maintain a JavaScript project that needs to balance the needs/many options in the Node.js/browser ecosystems.
 - Thanks to [Mike Bostock](https://twitter.com/mbostock) and his work on the in-progress [v4 of d3.js](https://github.com/mbostock/d3/tree/4) &mdash; it's a good example of how to modularize a project with Rollup.
-- Thanks to [Rollup](https://github.com/rollup/rollup) to being awesome. It's a great fit for creating a modular library.
+- Thanks to [Rollup](https://github.com/rollup/rollup) for being awesome. It's a great fit for creating a modular library.
