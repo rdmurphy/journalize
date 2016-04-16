@@ -11,10 +11,11 @@
     "src"
   ],
   "scripts": {
-    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:dist",
     "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:dist": "mkdirp dist && npm run build:umd && npm run build:umd:min",
     "build:es": "BABEL_ENV=es babel src --out-dir es",
-    "build:umd": "BABEL_ENV=commonjs rollup --config --output ./dist/journalize.js -- ./src/index.js",
+    "build:umd": "BABEL_ENV=commonjs rollup --config -- ./src/index.js | uglifyjs --beautify --indent-level 2 --output ./dist/journalize.js",
     "build:umd:min": "BABEL_ENV=commonjs rollup --config -- ./src/index.js | uglifyjs --compress --mangle --output ./dist/journalize.min.js",
     "clean": "rimraf coverage dist es lib",
     "docs:build": "documentation readme --readme-file README.md --section 'API Docs' ./src/index.js",
@@ -58,6 +59,7 @@
     "eslint-plugin-promise": "^1.1.0",
     "eslint-plugin-standard": "^1.3.2",
     "isparta": "^4.0.0",
+    "mkdirp": "^0.5.1",
     "mocha": "^2.4.5",
     "mocha-lcov-reporter": "^1.2.0",
     "rimraf": "^2.5.2",
