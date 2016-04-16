@@ -1,10 +1,14 @@
 # Changelog
 
+## 1.2.0
+
+- Added `postal` function
+
 ## 1.1.0
 
-- Adds `apstate` function
+- Added `apstate` function
 
 ## 1.0.0
 
 - The beginning of time :tada:
-- Adds `apnumber`, `intcomma`, `intword` and `ordinal` functions 
+- Added `apnumber`, `intcomma`, `intword` and `ordinal` functions
