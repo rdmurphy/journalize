@@ -1,13 +1,12 @@
-import find from 'lodash/find';
-import isNil from 'lodash/isNil';
-import isString from 'lodash/isString';
+import lookup from './lookup';
 
 import AP_STATES from './data/states';
 
 /**
  * Converts state names into AP abbreviations, and back. If the supplied
- * string has no match, the original value is returned. If the value is not a
- * string, the original will also be returned.
+ * string has no match, or if there is a match and the lookup is empty, the
+ * original value is returned. If the value is not a string, the original will
+ * also be returned.
  *
  * If `reverse` is true, `apstate` will convert a abbreviation back to a full
  * string.
@@ -35,29 +34,5 @@ import AP_STATES from './data/states';
  * // returns 'District of Columbia'
  */
 export default function apstate (val, reverse) {
-  reverse = reverse || false;
-
-  // if `val` is undefined or null, return an empty string
-  if (isNil(val)) return '';
-
-  // if `val` is not a string, abort and return `val`
-  if (!isString(val)) return val;
-
-  // if `reverse` is true, convert the AP abbreviation to full length
-  var key, value;
-  if (reverse) {
-    key = 'ap';
-    value = 'state';
-  } else {
-    key = 'state';
-    value = 'ap';
-  }
-
-  // look for a match in AP_STATES
-  var match = find(AP_STATES, [key, val]);
-
-  // if no match is found, return the original `val`
-  if (!match) return val;
-
-  return match[value];
+  return lookup(val, reverse, AP_STATES, 'state', 'ap');
 }
