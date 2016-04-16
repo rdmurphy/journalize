@@ -171,3 +171,9 @@ journalize.ordinal(103);
 ```
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
+
+## Shout-outs
+
+- Thanks to maintainers of [Redux](https://github.com/reactjs/redux/) for setting a great example of how to setup and maintain a JavaScript project that needs to balance the needs/many options in the Node.js/browser ecosystems.
+- Thanks to [Mike Bostock](https://twitter.com/mbostock) and his work on the in-progress [v4 of d3.js](https://github.com/mbostock/d3/tree/4) &mdash; it's a good example of how to modularize a project with Rollup.
+- Thanks to [Rollup](https://github.com/rollup/rollup) to being awesome. It's a great fit for creating a modular library.
