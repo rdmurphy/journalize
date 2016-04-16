@@ -11,7 +11,7 @@ A collection of functions useful for making prose reader friendly. Inspired by (
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Why did you create this?](#why-did-you-do-this)
+- [Why did you create this?](#why-did-you-create-this)
 - [Installation](#installation)
 - [API Docs](#api-docs)
   - [apnumber](#apnumber)
@@ -19,6 +19,7 @@ A collection of functions useful for making prose reader friendly. Inspired by (
   - [intcomma](#intcomma)
   - [intword](#intword)
   - [ordinal](#ordinal)
+  - [postal](#postal)
 - [Shout-outs](#shout-outs)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -81,8 +82,9 @@ Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 ### apstate
 
 Converts state names into AP abbreviations, and back. If the supplied
-string has no match, the original value is returned. If the value is not a
-string, the original will also be returned.
+string has no match, or if there is a match and the lookup is empty, the
+original value is returned. If the value is not a string, the original will
+also be returned.
 
 If `reverse` is true, `apstate` will convert a abbreviation back to a full
 string.
@@ -188,8 +190,46 @@ journalize.ordinal(103);
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
+### postal
+
+Converts state and U.S. territory names into USPS postal codes, and back. If
+the supplied string has no match, or if there is a match and the lookup is
+empty, the original value is returned. If the value is not a string, the
+original will also be returned.
+
+If `reverse` is true, `postal` will convert a postal code back to a full
+string.
+
+**Parameters**
+
+-   `val` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
+-   `reverse` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)=**  (optional, default `false`)
+
+**Examples**
+
+```javascript
+var journalize = require('journalize');
+
+journalize.postal('Arizona');
+// returns 'AZ'
+
+journalize.postal('District of Columbia');
+// returns 'DC'
+
+journalize.postal('Texas');
+// returns 'TX'
+
+journalize.postal('Ontario');
+// returns 'Ontario'
+
+journalize.postal('DC', true);
+// returns 'District of Columbia'
+```
+
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
+
 ## Shout-outs
 
-- Thanks to maintainers of [Redux](https://github.com/reactjs/redux/) for setting a great example of how to setup and maintain a JavaScript project that needs to balance the needs/many options in the Node.js/browser ecosystems.
-- Thanks to [Mike Bostock](https://twitter.com/mbostock) and his work on the in-progress [v4 of d3.js](https://github.com/mbostock/d3/tree/4) &mdash; it's a good example of how to modularize a project with Rollup.
-- Thanks to [Rollup](https://github.com/rollup/rollup) for being awesome. It's a great fit for creating a modular library.
+-   Thanks to the maintainers of [Redux](https://github.com/reactjs/redux/) for setting a great example of how to setup and maintain a JavaScript project that needs to balance the needs/many options in the Node.js/browser ecosystems.
+-   Thanks to [Mike Bostock](https://twitter.com/mbostock) and his work on the in-progress [v4 of d3.js](https://github.com/mbostock/d3/tree/4) — it's a good example of how to modularize a project with Rollup.
+-   Thanks to [Rollup](https://github.com/rollup/rollup) for being awesome. It's a great fit for creating a modular library.

@@ -1,6 +1,11 @@
 import isInteger from 'lodash/isInteger';
 import isNil from 'lodash/isNil';
 
+/**
+ * Array of suffixes to be used by intword.
+ * @private
+ * @type {Array}
+ */
 var SUFFIXES = ['million', 'billion', 'trillion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion', 'decillion'];
 
 /**

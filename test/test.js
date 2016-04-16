@@ -1,13 +1,13 @@
-var assert = require('assert');
-var range = require('lodash/range');
+const assert = require('assert');
+const range = require('lodash/range');
 
-var journalize = require('../src');
+const journalize = require('../src');
 
 describe('apnumber', () => {
   it('should correctly convert numbers', () => {
-    var test_list = range(-1, 11).map((n) => n.toString());
+    const test_list = range(-1, 11).map((n) => n.toString());
 
-    var result_list = ['-1', '0', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', '10'];
+    const result_list = ['-1', '0', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', '10'];
 
     test_list.forEach((n, idx) => {
       assert.deepEqual(journalize.apnumber(n), result_list[idx]);
@@ -33,8 +33,8 @@ describe('apnumber', () => {
 
 describe('ordinal', () => {
   it('should correctly convert ordinals', () => {
-    var test_list = ['1', '2', '3', '4', '11', '12', '13', '101', '102', '103', '111'];
-    var result_list = ['1st', '2nd', '3rd', '4th', '11th', '12th', '13th', '101st', '102nd', '103rd', '111th'];
+    const test_list = ['1', '2', '3', '4', '11', '12', '13', '101', '102', '103', '111'];
+    const result_list = ['1st', '2nd', '3rd', '4th', '11th', '12th', '13th', '101st', '102nd', '103rd', '111th'];
 
     test_list.forEach((n, idx) => {
       assert.deepEqual(journalize.ordinal(n), result_list[idx]);
@@ -60,8 +60,8 @@ describe('ordinal', () => {
 
 describe('intword', () => {
   it('should correctly convert integers to words', () => {
-    var test_list = ['100', '1000000', '1200000', '1290000', '12000000', '1000000000', '2000000000', '6000000000000', '603000000000000', '1300000000000000', '3500000000000000000000', '8100000000000000000000000000000000'];
-    var result_list = ['100', '1 million', '1.2 million', '1.3 million', '12 million', '1 billion', '2 billion', '6 trillion', '603 trillion', '1.3 quadrillion', '3.5 sextillion', '8.1 decillion'];
+    const test_list = ['100', '1000000', '1200000', '1290000', '12000000', '1000000000', '2000000000', '6000000000000', '603000000000000', '1300000000000000', '3500000000000000000000', '8100000000000000000000000000000000'];
+    const result_list = ['100', '1 million', '1.2 million', '1.3 million', '12 million', '1 billion', '2 billion', '6 trillion', '603 trillion', '1.3 quadrillion', '3.5 sextillion', '8.1 decillion'];
 
     test_list.forEach((n, idx) => {
       assert.deepEqual(journalize.intword(n), result_list[idx]);
@@ -87,8 +87,8 @@ describe('intword', () => {
 
 describe('intcomma', () => {
   it('should successfully add commas to numbers', () => {
-    var test_list = [100, 1000, 10123, 10311, 1000000, 1234567.25, '100', '1000', '10123', '10311', '1000000', '1234567.1234567'];
-    var result_list = ['100', '1,000', '10,123', '10,311', '1,000,000', '1,234,567.25', '100', '1,000', '10,123', '10,311', '1,000,000', '1,234,567.1234567'];
+    const test_list = [100, 1000, 10123, 10311, 1000000, 1234567.25, '100', '1000', '10123', '10311', '1000000', '1234567.1234567'];
+    const result_list = ['100', '1,000', '10,123', '10,311', '1,000,000', '1,234,567.25', '100', '1,000', '10,123', '10,311', '1,000,000', '1,234,567.1234567'];
 
     test_list.forEach((n, idx) => {
       assert.deepEqual(journalize.intcomma(n), result_list[idx]);
@@ -109,8 +109,8 @@ describe('intcomma', () => {
 });
 
 describe('apstate', () => {
-  var test_list = ['Arizona', 'Texas', 'District of Columbia', 'Wyoming', 'Ontario'];
-  var result_list = ['Ariz.', 'Texas', 'D.C.', 'Wyo.', 'Ontario'];
+  const test_list = ['Arizona', 'Texas', 'District of Columbia', 'Wyoming', 'Ontario', 'Puerto Rico'];
+  const result_list = ['Ariz.', 'Texas', 'D.C.', 'Wyo.', 'Ontario', 'Puerto Rico'];
 
   it('should convert state names into AP abbreviations', () => {
     test_list.forEach((n, idx) => {
@@ -134,5 +134,34 @@ describe('apstate', () => {
 
   it('should return original input when input is not a string', () => {
     assert.deepEqual(journalize.apstate(42), 42);
+  });
+});
+
+describe('postal', () => {
+  const test_list = ['Arizona', 'Texas', 'District of Columbia', 'Wyoming', 'Ontario', 'Puerto Rico'];
+  const result_list = ['AZ', 'TX', 'DC', 'WY', 'Ontario', 'PR'];
+
+  it('should convert state names into USPS postal codes', () => {
+    test_list.forEach((n, idx) => {
+      assert.deepEqual(journalize.postal(n), result_list[idx]);
+    });
+  });
+
+  it('should convert USPS postal codes into state names', () => {
+    result_list.forEach((n, idx) => {
+      assert.deepEqual(journalize.postal(n, true), test_list[idx]);
+    });
+  });
+
+  it('should return empty string when input is `undefined`', () => {
+    assert.deepEqual(journalize.postal(undefined), '');
+  });
+
+  it('should return empty string when input is `null`', () => {
+    assert.deepEqual(journalize.postal(null), '');
+  });
+
+  it('should return original input when input is not a string', () => {
+    assert.deepEqual(journalize.postal(42), 42);
   });
 });
