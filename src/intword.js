@@ -53,8 +53,8 @@ export default function intword (val) {
   var exponent = numDigits - (numDigits % 3);
 
   // calculate the rounded version of `convertedVal`
-  var new_val = convertedVal / Math.pow(10, exponent);
-  new_val = Math.round(new_val * 10) / 10;
+  var newVal = convertedVal / Math.pow(10, exponent);
+  newVal = Math.round(newVal * 10) / 10;
 
-  return new_val + ' ' + SUFFIXES[Math.floor(exponent / 3) - 2];
+  return newVal + ' ' + SUFFIXES[Math.floor(exponent / 3) - 2];
 }
