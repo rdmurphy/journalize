@@ -1,39 +1,41 @@
-const _ = require('lodash');
+'use strict';
 
-var apdate = function (val) {
+var isNil = require('lodash/isNil');
+var isEqual = require('lodash/isEqual');
+var isDate = require('lodash/isDate');
+var isInteger = require('lodash/isInteger');
+var isEmpty = require('lodash/isEmpty');
 
-  var AP_MONTHS = ["Jan.","Feb.","March","April","May","June","July","Aug.","Sept.","Oct.","Nov.","Dec."];
+var AP_MONTHS = ['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.'];
+
+module.exports = function  (val) {
 
   var dateObj = new Date(Date.parse(val));
-
+  var currentYear = new Date().getFullYear();
   var day = dateObj.getDate();
   var month = AP_MONTHS[dateObj.getMonth()];
   var year = dateObj.getFullYear();
 
-
-  // OPTIONAL: Remove 2016 for current year in output.
-  var currentYear = new Date().getFullYear();
-
-  if(_.isEqual(dateObj.getFullYear(), currentYear)) return month + ' ' + day;
+  // If 'val' is within current year,
+  // remove year from date output.
+  // Ex: March 7, 2016 => March 7
+  if(isEqual(dateObj.getFullYear(), currentYear)) return month + ' ' + day;
 
   // If 'val' is undefined or null,
   // return an empty string.
-  if (_.isNil(val)) return '';
+  if (isNil(val)) return '';
 
   // If 'val' is not a valid date,
   // return msg.
-  if(!_.isDate(dateObj)) return 'Not a date';
+  if(!isDate(dateObj)) return 'Not a date';
 
   // If 'val' is an integer,
   // return msg.
-  if (_.isInteger(val)) return 'Not a date';
+  if (isInteger(val)) return 'Not a date';
 
   // If 'val' is an integer,
   // return empty string.
-  if (_.isEmpty(val)) return '';
+  if (isEmpty(val)) return '';
 
-  return month + " " + day + ', ' + year;
+  return month + ' ' + day + ', ' + year;
 };
-
-
-module.exports = apdate;
