@@ -1,6 +1,6 @@
-import lookup from './lookup';
+import lookup from './lookup'
 
-import AP_STATES from './data/states';
+import AP_STATES from './data/states'
 
 /**
  * Converts state and U.S. territory names into USPS postal codes, and back. If
@@ -16,23 +16,23 @@ import AP_STATES from './data/states';
  * @return {String}
  * @example
  *
- * var journalize = require('journalize');
+ * var journalize = require('journalize')
  *
- * journalize.postal('Arizona');
+ * journalize.postal('Arizona')
  * // returns 'AZ'
  *
- * journalize.postal('District of Columbia');
+ * journalize.postal('District of Columbia')
  * // returns 'DC'
  *
- * journalize.postal('Texas');
+ * journalize.postal('Texas')
  * // returns 'TX'
  *
- * journalize.postal('Ontario');
+ * journalize.postal('Ontario')
  * // returns 'Ontario'
  *
- * journalize.postal('DC', true);
+ * journalize.postal('DC', true)
  * // returns 'District of Columbia'
  */
 export default function postal (val, reverse) {
-  return lookup(val, reverse, AP_STATES, 'state', 'usps');
+  return lookup(val, reverse, AP_STATES, 'state', 'usps')
 }

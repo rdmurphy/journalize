@@ -1,5 +1,5 @@
-import isFinite from 'lodash/isFinite';
-import isNil from 'lodash/isNil';
+import isFinite from 'lodash/isFinite'
+import isNil from 'lodash/isNil'
 
 /**
  * Converts a number to include commas, if necessary.
@@ -11,9 +11,9 @@ import isNil from 'lodash/isNil';
  * @return {String}
  */
 function numberWithCommas (n) {
-  var parts = n.toString().split('.');
-  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  return parts.join('.');
+  var parts = n.toString().split('.')
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  return parts.join('.')
 }
 
 /**
@@ -24,22 +24,22 @@ function numberWithCommas (n) {
  * @return {String}
  * @example
  *
- * var journalize = require('journalize');
+ * var journalize = require('journalize')
  *
- * journalize.intcomma(10311);
+ * journalize.intcomma(10311)
  * // returns '10,311'
  *
- * journalize.intcomma('1234567.1234567');
+ * journalize.intcomma('1234567.1234567')
  * // returns '1,234,567.1234567'
  */
 export default function intcomma (val) {
   // if `val` is undefined or null, return an empty string
-  if (isNil(val)) return '';
+  if (isNil(val)) return ''
 
-  var convertedVal = +val;
+  var convertedVal = +val
 
   // if `convertedVal` is not a number, don't waste time converting it
-  if (!isFinite(convertedVal)) return val;
+  if (!isFinite(convertedVal)) return val
 
-  return numberWithCommas(convertedVal);
+  return numberWithCommas(convertedVal)
 }
