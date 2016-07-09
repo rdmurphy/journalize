@@ -1,5 +1,5 @@
-import commonjs from 'rollup-plugin-commonjs';
-import node from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs'
+import node from 'rollup-plugin-node-resolve'
 
 export default {
   format: 'umd',
@@ -11,4 +11,4 @@ export default {
       main: true
     })
   ]
-};
+}

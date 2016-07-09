@@ -294,4 +294,4 @@ export default [
     'ap': '',
     'usps': 'VI'
   }
-];
+]
