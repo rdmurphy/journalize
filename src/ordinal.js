@@ -1,6 +1,4 @@
-import isInteger from 'lodash/isInteger'
-import isNil from 'lodash/isNil'
-import includes from 'lodash/includes'
+import { isInteger, isNil } from './utils'
 
 /**
  * A list of suffixes for conversions.
@@ -39,7 +37,7 @@ export default function ordinal (val) {
   if (!isInteger(convertedVal)) return val
 
   // if `convertedVal` is 11, 12 or 13, English gets weird
-  if (includes([11, 12, 13], convertedVal % 100)) return convertedVal + SUFFIXES[0]
+  if ([11, 12, 13].indexOf(convertedVal % 100) !== -1) return convertedVal + SUFFIXES[0]
 
   return convertedVal + SUFFIXES[convertedVal % 10]
 }

@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "description": "A collection of functions useful for making prose more reader friendly. Inspired by Django's `django.contrib.humanize`.",
   "main": "lib/index.js",
-  "jsnext:main": "es/index.js",
+  "jsnext:main": "src/index.js",
   "files": [
     "dist",
     "lib",
@@ -11,10 +11,9 @@
     "src"
   ],
   "scripts": {
-    "build": "npm run build:commonjs && npm run build:es && npm run build:dist",
+    "build": "npm run build:commonjs && npm run build:dist",
     "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir lib",
     "build:dist": "mkdirp dist && npm run build:umd && npm run build:umd:min",
-    "build:es": "BABEL_ENV=es babel src --out-dir es",
     "build:umd": "BABEL_ENV=commonjs rollup --config -- src/index.js | uglifyjs --beautify --indent-level 2 --output ./dist/journalize.js",
     "build:umd:min": "BABEL_ENV=commonjs rollup --config -- src/index.js | uglifyjs --compress --mangle --output ./dist/journalize.min.js",
     "clean": "rimraf coverage dist es lib",
@@ -44,10 +43,6 @@
     "url": "https://github.com/rdmurphy/journalize/issues"
   },
   "homepage": "https://github.com/rdmurphy/journalize#readme",
-  "dependencies": {
-    "lodash": "^4.11.1",
-    "lodash-es": "^4.11.1"
-  },
   "devDependencies": {
     "babel-cli": "^6.8.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.7.4",

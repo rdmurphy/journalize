@@ -1,7 +1,4 @@
-import find from 'lodash/find'
-import isEmpty from 'lodash/isEmpty'
-import isNil from 'lodash/isNil'
-import isString from 'lodash/isString'
+import { find, isNil, isString } from './utils'
 
 /**
  * Searches a list of objects for a `val` that matches the value of `key_one`.
@@ -40,7 +37,9 @@ export default function lookup (val, reverse, list, keyOne, keyTwo) {
   }
 
   // look for a match in the list
-  var match = find(list, [lookupKey, val])
+  var match = find(list, function (obj) {
+    return obj[lookupKey] === val
+  })
 
   // if no match is found, return the original `val`
   if (!match) return val
@@ -49,7 +48,7 @@ export default function lookup (val, reverse, list, keyOne, keyTwo) {
   var newVal = match[outputKey]
 
   // if `newVal` is empty, return the original `val`
-  if (isEmpty(newVal)) return val
+  if (!newVal) return val
 
   return newVal
 }

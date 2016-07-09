@@ -1,5 +1,4 @@
-import isFinite from 'lodash/isFinite'
-import isNil from 'lodash/isNil'
+import { isFiniteNumber, isNil } from './utils'
 
 /**
  * Converts a number to include commas, if necessary.
@@ -39,7 +38,7 @@ export default function intcomma (val) {
   var convertedVal = +val
 
   // if `convertedVal` is not a number, don't waste time converting it
-  if (!isFinite(convertedVal)) return val
+  if (!isFiniteNumber(convertedVal)) return val
 
   return numberWithCommas(convertedVal)
 }
