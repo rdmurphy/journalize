@@ -60,7 +60,7 @@
     "mocha-lcov-reporter": "^1.2.0",
     "rimraf": "^2.5.2",
     "rollup": "^0.34.1",
-    "rollup-plugin-commonjs": "^3.0.0",
+    "rollup-plugin-commonjs": "^4.0.0",
     "rollup-plugin-node-resolve": "^2.0.0",
     "standard": "^7.1.2",
     "uglify-js": "^2.6.2"
