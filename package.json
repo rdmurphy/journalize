@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/rdmurphy/journalize#readme",
   "dependencies": {
-    "lodash": "^4.11.1",
+    "lodash": "^4.16.5",
     "lodash-es": "^4.11.1"
   },
   "devDependencies": {
