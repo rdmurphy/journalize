@@ -59,7 +59,7 @@
     "mocha": "^3.0.1",
     "mocha-lcov-reporter": "^1.2.0",
     "rimraf": "^2.5.2",
-    "rollup": "^0.38.0",
+    "rollup": "^0.39.2",
     "rollup-plugin-commonjs": "^7.0.0",
     "rollup-plugin-node-resolve": "^2.0.0",
     "standard": "^8.2.0",
