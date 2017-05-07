@@ -44,10 +44,6 @@
     "url": "https://github.com/rdmurphy/journalize/issues"
   },
   "homepage": "https://github.com/rdmurphy/journalize#readme",
-  "dependencies": {
-    "lodash": "^4.11.1",
-    "lodash-es": "^4.11.1"
-  },
   "devDependencies": {
     "babel-cli": "^6.8.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.7.4",

@@ -1,5 +1,4 @@
-import isFinite from 'lodash/isFinite'
-import isNil from 'lodash/isNil'
+import { isFinite, isNil } from './utils'
 
 /**
  * Converts a number to include commas, if necessary.

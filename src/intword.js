@@ -1,5 +1,4 @@
-import isInteger from 'lodash/isInteger'
-import isNil from 'lodash/isNil'
+import { isInteger, isNil } from './utils'
 
 /**
  * Array of suffixes to be used by intword.
