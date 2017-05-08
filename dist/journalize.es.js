@@ -992,14 +992,14 @@ function aptime(input) {
     if (hours === 12) return 'noon';
   }
 
-  var period = hours < 12 ? 'a.m.' : 'p.m.';
+  var period, hour;
 
-  var hour;
-
-  if (hours > 12) {
-    hour = hours - 12;
-  } else {
+  if (hours < 12) {
+    period = 'a.m.';
     hour = hours;
+  } else {
+    period = 'p.m.';
+    hour = hours - 12;
   }
 
   if (minutesAreZero) {
