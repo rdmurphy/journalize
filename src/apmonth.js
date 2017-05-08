@@ -26,7 +26,7 @@ export var AP_MONTHS = {
  * Returns an AP-formatted month string that corresponds with the supplied
  * Date, timestamp or date string. Relies on date-fns/parse to smooth over
  * browser ISO 8601 parsing inconsistencies. If an `input` is not passed, it
- * will use the result of `new Date();`;
+ * will use the result of `new Date();`.
  *
  * @param  {Date|Number|String} [input] JavaScript Date object, numerical
  * timestamp or ISO 8601 string, defaults to current date if not passed

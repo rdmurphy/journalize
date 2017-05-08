@@ -4,7 +4,7 @@ import parse from 'date-fns/parse';
  * Returns an AP-formatted time string that corresponds with the supplied
  * Date, timestamp or datetime string. Relies on date-fns/parse to smooth over
  * ISO 8601 parsing inconsistencies. If an `input` is not passed, it will use
- * the result of `new Date();`;
+ * the result of `new Date();`.
  *
  * @param  {Date|Number|String} [input] JavaScript Date object, numerical
  * timestamp or ISO 8601 string, defaults to current date if not passed
