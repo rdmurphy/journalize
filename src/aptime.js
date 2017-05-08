@@ -1,0 +1,68 @@
+import parse from 'date-fns/parse';
+
+/**
+ * Returns an AP-formatted time string that corresponds with the supplied
+ * Date, timestamp or datetime string. Relies on date-fns/parse to smooth over
+ * ISO 8601 parsing inconsistencies.
+ *
+ * @param  {Date|Number|String} input JavaScript Date object, numerical
+ * timestamp or ISO 8601 string
+ * @return {String}
+ * @example
+ *
+ * var journalize = require('journalize');
+ *
+ * // Bright and early
+ * journalize.aptime(new Date(2016, 10, 8, 6, 30));
+ * // returns '6:30 a.m.'
+ *
+ * // It can handle `p.m.` too
+ * journalize.aptime(new Date(2016, 10, 8, 16, 30));
+ * // returns '4:30 p.m.'
+ *
+ * // Much better to write and pass around in ISO 8601
+ * journalize.aptime('2016-11-08T16:30');
+ * // returns '4:30 p.m.'
+ *
+ * // Minutes are left off if zero
+ * journalize.aptime('2016-11-08T16:00');
+ * // returns '4 p.m.'
+ *
+ * // Also understands midnight...
+ * journalize.aptime('2016-11-08T00:00');
+ * // returns 'midnight'
+ *
+ * // ...and noon
+ * journalize.aptime('2016-11-08T12:00');
+ * // returns 'noon'
+ *
+ */
+export default function aptime(input) {
+  var date = parse(input);
+
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+
+  var minutesAreZero = minutes === 0;
+
+  if (minutesAreZero) {
+    if (hours === 0) return 'midnight';
+    if (hours === 12) return 'noon';
+  }
+
+  var period = hours < 12 ? 'a.m.' : 'p.m.';
+
+  var hour;
+
+  if (hours > 12) {
+    hour = hours - 12;
+  } else {
+    hour = hours;
+  }
+
+  if (minutesAreZero) {
+    return hour + ' ' + period;
+  }
+
+  return hour + ':' + minutes + ' ' + period;
+}

@@ -23,15 +23,15 @@ var ENGLISH_ORDINAL_EXCEPTIONS = [11, 12, 13];
  * @return {String}
  * @example
  *
- * var journalize = require('journalize')
+ * var journalize = require('journalize');
  *
- * journalize.ordinal(5)
+ * journalize.ordinal(5);
  * // returns '5th'
  *
- * journalize.ordinal(13)
+ * journalize.ordinal(13);
  * // returns '13th'
  *
- * journalize.ordinal(103)
+ * journalize.ordinal(103);
  * // returns '103rd'
  */
 export default function ordinal(val) {

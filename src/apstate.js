@@ -8,7 +8,7 @@ import AP_STATES from './data/states';
  * original value is returned. If the value is not a string, the original will
  * also be returned.
  *
- * If `reverse` is true, `apstate` will convert a abbreviation back to a full
+ * If `reverse` is true, `apstate` will convert an abbreviation back to a full
  * string.
  *
  * @param  {String} val
@@ -16,21 +16,21 @@ import AP_STATES from './data/states';
  * @return {String}
  * @example
  *
- * var journalize = require('journalize')
+ * var journalize = require('journalize');
  *
- * journalize.apstate('Arizona')
+ * journalize.apstate('Arizona');
  * // returns 'Ariz.'
  *
- * journalize.apstate('District of Columbia')
+ * journalize.apstate('District of Columbia');
  * // returns 'D.C.'
  *
- * journalize.apstate('Texas')
+ * journalize.apstate('Texas');
  * // returns 'Texas'
  *
- * journalize.apstate('Ontario')
+ * journalize.apstate('Ontario');
  * // returns 'Ontario'
  *
- * journalize.apstate('D.C.', true)
+ * journalize.apstate('D.C.', true);
  * // returns 'District of Columbia'
  */
 export default function apstate(val, reverse) {

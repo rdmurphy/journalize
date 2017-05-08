@@ -23,12 +23,12 @@ function numberWithCommas(n) {
  * @return {String}
  * @example
  *
- * var journalize = require('journalize')
+ * var journalize = require('journalize');
  *
- * journalize.intcomma(10311)
+ * journalize.intcomma(10311);
  * // returns '10,311'
  *
- * journalize.intcomma('1234567.1234567')
+ * journalize.intcomma('1234567.1234567');
  * // returns '1,234,567.1234567'
  */
 export default function intcomma(val) {

@@ -37,12 +37,12 @@ function getLengthOfNumber(n) {
  * @return {String}
  * @example
  *
- * var journalize = require('journalize')
+ * var journalize = require('journalize');
  *
- * journalize.intword(1000000)
+ * journalize.intword(1000000);
  * // returns '1 million'
  *
- * journalize.intword(6500000000000)
+ * journalize.intword(6500000000000);
  * // returns '6.5 trillion'
  */
 export default function intword(val) {

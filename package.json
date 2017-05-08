@@ -54,5 +54,8 @@
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "uglify-js": "^2.6.2"
+  },
+  "dependencies": {
+    "date-fns": "^1.28.4"
   }
 }

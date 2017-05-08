@@ -22,19 +22,19 @@ var AP_NUMBERS = [
  * integer is not one that would be converted, it is returned in its original
  * form.
  *
- * If a non-integer is given, it will be returned in its original form, as
+ * If a non-integer is given, it will be returned in its original form as
  * well.
  *
  * @param  {Number} val
  * @return {String}
  * @example
  *
- * var journalize = require('journalize')
+ * var journalize = require('journalize');
  *
- * journalize.apnumber(8)
+ * journalize.apnumber(8);
  * // returns 'eight'
  *
- * journalize.apnumber(42)
+ * journalize.apnumber(42);
  * // returns 42
  *
  */
