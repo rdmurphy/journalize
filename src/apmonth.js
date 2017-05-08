@@ -25,10 +25,11 @@ export var AP_MONTHS = {
 /**
  * Returns an AP-formatted month string that corresponds with the supplied
  * Date, timestamp or date string. Relies on date-fns/parse to smooth over
- * browser ISO 8601 parsing inconsistencies.
+ * browser ISO 8601 parsing inconsistencies. If an `input` is not passed, it
+ * will use the result of `new Date();`;
  *
- * @param  {Date|Number|String} input JavaScript Date object, numerical
- * timestamp or ISO 8601 string
+ * @param  {Date|Number|String} [input] JavaScript Date object, numerical
+ * timestamp or ISO 8601 string, defaults to current date if not passed
  * @return {String}
  * @example
  *
@@ -45,8 +46,12 @@ export var AP_MONTHS = {
  * // Accounts for the non-abbreviated months, too
  * journalize.apmonth('2016-06-04');
  * // returns 'July'
+ *
+ * // Uses the current date if no parameter is passed
+ * journalize.apmonth();
+ * // returns 'July' (pretend it is actually July)
  */
 export default function apmonth(input) {
-  var date = parse(input);
+  var date = parse(input || new Date());
   return AP_MONTHS[date.getMonth()];
 }

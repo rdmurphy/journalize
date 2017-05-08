@@ -1,5 +1,8 @@
 import apmonth, { AP_MONTHS } from './apmonth';
 
+const nativeDate = global.Date;
+const mockDate = jest.fn(() => new nativeDate(2016, 10, 8, 10, 30));
+
 describe('apmonth', () => {
   const inputs = [
     new Date(2017, 0, 1),
@@ -20,5 +23,19 @@ describe('apmonth', () => {
     inputs.forEach((val, idx) => {
       expect(apmonth(val)).toBe(AP_MONTHS[idx]);
     });
+  });
+});
+
+describe('apmonth default', () => {
+  beforeAll(() => {
+    global.Date = mockDate;
+  });
+
+  afterAll(() => {
+    global.Date = nativeDate;
+  });
+
+  it('should use current month if no parameter is passed', () => {
+    expect(apmonth()).toBe('Nov.');
   });
 });

@@ -3,10 +3,11 @@ import parse from 'date-fns/parse';
 /**
  * Returns an AP-formatted time string that corresponds with the supplied
  * Date, timestamp or datetime string. Relies on date-fns/parse to smooth over
- * ISO 8601 parsing inconsistencies.
+ * ISO 8601 parsing inconsistencies. If an `input` is not passed, it will use
+ * the result of `new Date();`;
  *
- * @param  {Date|Number|String} input JavaScript Date object, numerical
- * timestamp or ISO 8601 string
+ * @param  {Date|Number|String} [input] JavaScript Date object, numerical
+ * timestamp or ISO 8601 string, defaults to current date if not passed
  * @return {String}
  * @example
  *
@@ -36,9 +37,13 @@ import parse from 'date-fns/parse';
  * journalize.aptime('2016-11-08T12:00');
  * // returns 'noon'
  *
+ * // Uses the current time if no parameter is passed
+ * journalize.aptime();
+ * // returns '6:45 p.m.' (pretend it is actually 6:45 p.m. right now)
+ *
  */
 export default function aptime(input) {
-  var date = parse(input);
+  var date = parse(input || new Date());
 
   var hours = date.getHours();
   var minutes = date.getMinutes();
@@ -64,5 +69,6 @@ export default function aptime(input) {
     return hour + ' ' + period;
   }
 
-  return hour + ':' + minutes + ' ' + period;
+  var minute = minutes < 10 ? '0' + minutes : minutes;
+  return hour + ':' + minute + ' ' + period;
 }

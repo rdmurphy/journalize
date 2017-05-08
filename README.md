@@ -61,12 +61,13 @@ And finally, if you're old school and just wanna grab-and-go - check out the `di
 
 Returns an AP-formatted date string that corresponds with the supplied
 Date, timestamp or date string. Relies on date-fns/parse to smooth over
-browser ISO 8601 parsing inconsistencies.
+browser ISO 8601 parsing inconsistencies. If an `input` is not passed, it
+will use the result of `new Date();`;
 
 **Parameters**
 
--   `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))** JavaScript Date object, numerical
-    timestamp or ISO 8601 string
+-   `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))?** JavaScript Date object, numerical
+    timestamp or ISO 8601 string, defaults to current date if not passed
 
 **Examples**
 
@@ -84,6 +85,10 @@ journalize.apdate('2016-11-08');
 // Accounts for the non-abbreviated months, too
 journalize.apdate('2016-06-04');
 // returns 'July 4, 2016'
+
+// Uses the current date if no parameter is passed
+journalize.apdate();
+// returns 'July 4, 2016' (pretend it is actually July 4, 2016)
 ```
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
@@ -92,12 +97,13 @@ Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 Returns an AP-formatted month string that corresponds with the supplied
 Date, timestamp or date string. Relies on date-fns/parse to smooth over
-browser ISO 8601 parsing inconsistencies.
+browser ISO 8601 parsing inconsistencies. If an `input` is not passed, it
+will use the result of `new Date();`;
 
 **Parameters**
 
--   `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))** JavaScript Date object, numerical
-    timestamp or ISO 8601 string
+-   `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))?** JavaScript Date object, numerical
+    timestamp or ISO 8601 string, defaults to current date if not passed
 
 **Examples**
 
@@ -115,6 +121,10 @@ journalize.apmonth('2016-11-08');
 // Accounts for the non-abbreviated months, too
 journalize.apmonth('2016-06-04');
 // returns 'July'
+
+// Uses the current date if no parameter is passed
+journalize.apmonth();
+// returns 'July' (pretend it is actually July)
 ```
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
@@ -188,12 +198,13 @@ Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 Returns an AP-formatted time string that corresponds with the supplied
 Date, timestamp or datetime string. Relies on date-fns/parse to smooth over
-ISO 8601 parsing inconsistencies.
+ISO 8601 parsing inconsistencies. If an `input` is not passed, it will use
+the result of `new Date();`;
 
 **Parameters**
 
--   `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))** JavaScript Date object, numerical
-    timestamp or ISO 8601 string
+-   `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))?** JavaScript Date object, numerical
+    timestamp or ISO 8601 string, defaults to current date if not passed
 
 **Examples**
 
@@ -223,6 +234,10 @@ journalize.aptime('2016-11-08T00:00');
 // ...and noon
 journalize.aptime('2016-11-08T12:00');
 // returns 'noon'
+
+// Uses the current time if no parameter is passed
+journalize.aptime();
+// returns '6:45 p.m.' (pretend it is actually 6:45 p.m. right now)
 ```
 
 Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
