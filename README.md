@@ -62,7 +62,7 @@ And finally, if you're old school and just wanna grab-and-go - check out the `di
 Returns an AP-formatted date string that corresponds with the supplied
 Date, timestamp or date string. Relies on date-fns/parse to smooth over
 browser ISO 8601 parsing inconsistencies. If an `input` is not passed, it
-will use the result of `new Date();`;
+will use the result of `new Date();`.
 
 **Parameters**
 
@@ -98,7 +98,7 @@ Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 Returns an AP-formatted month string that corresponds with the supplied
 Date, timestamp or date string. Relies on date-fns/parse to smooth over
 browser ISO 8601 parsing inconsistencies. If an `input` is not passed, it
-will use the result of `new Date();`;
+will use the result of `new Date();`.
 
 **Parameters**
 
@@ -199,7 +199,7 @@ Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 Returns an AP-formatted time string that corresponds with the supplied
 Date, timestamp or datetime string. Relies on date-fns/parse to smooth over
 ISO 8601 parsing inconsistencies. If an `input` is not passed, it will use
-the result of `new Date();`;
+the result of `new Date();`.
 
 **Parameters**
 
