@@ -53,12 +53,18 @@ export function isInteger(value) {
  * @param  {Array} arr
  * @param  {Function} predicate
  * @return {*|undefined}
+ * @throws {TypeError} Argument predicate must be a function
  */
 export function find(arr, predicate) {
+  if (typeof predicate !== 'function') {
+    throw new TypeError('predicate must be a function');
+  }
+
   for (var i = 0; i < arr.length; i++) {
     if (predicate(arr[i], i, arr)) {
       return arr[i];
     }
   }
+
   return undefined;
 }

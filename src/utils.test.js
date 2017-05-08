@@ -7,6 +7,7 @@ describe('isNil', () => {
 
   it('returns true on undefined', () => {
     expect(isNil(undefined)).toBe(true);
+    expect(isNil(void 0)).toBe(true);
   });
 
   it('returns false on other falsey values', () => {
@@ -107,5 +108,11 @@ describe('find', () => {
     });
 
     expect(result).toBeUndefined();
+  });
+
+  it('should throw when not passed a predicate', () => {
+    const trap = () => find(arr);
+
+    expect(trap).toThrow(TypeError);
   });
 });
