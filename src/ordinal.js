@@ -1,18 +1,18 @@
-import { isInteger, isNil } from './utils'
+import { isInteger, isNil } from './utils';
 
 /**
  * A list of suffixes for conversions.
  * @private
  * @type {Array}
  */
-var SUFFIXES = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th']
+var SUFFIXES = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th'];
 
 /**
  * A list of funky English ordinals.
  * @private
  * @type {Array}
  */
-var ENGLISH_ORDINAL_EXCEPTIONS = [11, 12, 13]
+var ENGLISH_ORDINAL_EXCEPTIONS = [11, 12, 13];
 
 /**
  * Converts an integer into its ordinal form. Handles the special cases of 11,
@@ -34,17 +34,18 @@ var ENGLISH_ORDINAL_EXCEPTIONS = [11, 12, 13]
  * journalize.ordinal(103)
  * // returns '103rd'
  */
-export default function ordinal (val) {
+export default function ordinal(val) {
   // if `val` is undefined or null, return an empty string
-  if (isNil(val)) return ''
+  if (isNil(val)) return '';
 
-  var convertedVal = +val
+  var convertedVal = +val;
 
   // if `convertedVal` is not an integer, return `val`
-  if (!isInteger(convertedVal)) return val
+  if (!isInteger(convertedVal)) return val;
 
   // if `convertedVal` is 11, 12 or 13, English gets weird
-  if (ENGLISH_ORDINAL_EXCEPTIONS.indexOf(convertedVal % 100) > -1) return convertedVal + SUFFIXES[0]
+  if (ENGLISH_ORDINAL_EXCEPTIONS.indexOf(convertedVal % 100) > -1)
+    return convertedVal + SUFFIXES[0];
 
-  return convertedVal + SUFFIXES[convertedVal % 10]
+  return convertedVal + SUFFIXES[convertedVal % 10];
 }

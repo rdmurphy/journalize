@@ -1,14 +1,11 @@
-import commonjs from 'rollup-plugin-commonjs'
-import node from 'rollup-plugin-node-resolve'
+const moduleName = 'journalize';
 
 export default {
-  format: 'umd',
-  moduleName: 'journalize',
-  plugins: [
-    commonjs(),
-    node({
-      jsnext: true,
-      main: true
-    })
+  entry: 'src/index.js',
+  moduleName,
+  targets: [
+    { dest: `dist/${moduleName}.cjs.js`, format: 'cjs' },
+    { dest: `dist/${moduleName}.umd.js`, format: 'umd' },
+    { dest: `dist/${moduleName}.es.js`, format: 'es' },
   ]
-}
+};

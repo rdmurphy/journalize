@@ -1,6 +1,6 @@
-import lookup from './lookup'
+import lookup from './lookup';
 
-import AP_STATES from './data/states'
+import AP_STATES from './data/states';
 
 /**
  * Converts state names into AP abbreviations, and back. If the supplied
@@ -33,6 +33,6 @@ import AP_STATES from './data/states'
  * journalize.apstate('D.C.', true)
  * // returns 'District of Columbia'
  */
-export default function apstate (val, reverse) {
-  return lookup(val, reverse, AP_STATES, 'state', 'ap')
+export default function apstate(val, reverse) {
+  return lookup(val, reverse, AP_STATES, 'state', 'ap');
 }

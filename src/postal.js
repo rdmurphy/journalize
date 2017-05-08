@@ -1,6 +1,6 @@
-import lookup from './lookup'
+import lookup from './lookup';
 
-import AP_STATES from './data/states'
+import AP_STATES from './data/states';
 
 /**
  * Converts state and U.S. territory names into USPS postal codes, and back. If
@@ -33,6 +33,6 @@ import AP_STATES from './data/states'
  * journalize.postal('DC', true)
  * // returns 'District of Columbia'
  */
-export default function postal (val, reverse) {
-  return lookup(val, reverse, AP_STATES, 'state', 'usps')
+export default function postal(val, reverse) {
+  return lookup(val, reverse, AP_STATES, 'state', 'usps');
 }

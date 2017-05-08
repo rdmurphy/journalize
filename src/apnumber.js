@@ -1,11 +1,21 @@
-import { isInteger, isNil } from './utils'
+import { isInteger, isNil } from './utils';
 
 /**
  * List of spelled out numbers per AP style.
  * @private
  * @type {Array}
  */
-var AP_NUMBERS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+var AP_NUMBERS = [
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine'
+];
 
 /**
  * Converts an integer to string representation per AP style rules. If an
@@ -28,17 +38,17 @@ var AP_NUMBERS = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'
  * // returns 42
  *
  */
-export default function apnumber (val) {
+export default function apnumber(val) {
   // if `val` is undefined or null, return an empty string
-  if (isNil(val)) return ''
+  if (isNil(val)) return '';
 
-  var convertedVal = +val
+  var convertedVal = +val;
 
   // if `convertedVal` is not an integer, return `val`
-  if (!isInteger(convertedVal)) return val
+  if (!isInteger(convertedVal)) return val;
 
   // if `convertedVal` is not between 0 and 10, return `val`
-  if (convertedVal <= 0 || convertedVal >= 10) return val
+  if (convertedVal <= 0 || convertedVal >= 10) return val;
 
-  return AP_NUMBERS[convertedVal - 1]
+  return AP_NUMBERS[convertedVal - 1];
 }
