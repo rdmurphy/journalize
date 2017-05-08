@@ -9,7 +9,6 @@ A collection of functions useful for making prose reader friendly. Inspired by (
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Why did you create this?](#why-did-you-create-this)
 - [Installation](#installation)
@@ -29,29 +28,42 @@ A collection of functions useful for making prose reader friendly. Inspired by (
 
 ## Why did you create this?
 
-I've always really appreciated the built-in functionality provided by Django's `humanize`, and I wanted to port it over to JavaScript/Node.js. Originally this was to be a collection of custom [Nunjucks](http://mozilla.github.io/nunjucks/) filters, but I think this could be just as useful as a generic library, instead of trapping it all in the Nunjucks ecosystem.
-
-..and because I wanted to. ¯\\\_(ツ)\_/¯
+I've always really appreciated the built-in functionality provided by Django's `humanize`, and I wanted to port it over to JavaScript/Node.js. Originally this was to be a collection of custom [Nunjucks](http://mozilla.github.io/nunjucks/) filters, but I think it could be just as useful as a generic library.
 
 ## Installation
 
-If you plan to actively use this in a project (you intend to `require()` it), then install with `--save`.
-
 ```sh
-npm install --save journalize
-```
+yarn add [--dev] journalize
 
-If you're using it client side, like with a static site generator, it may make more sense to use `--save-dev`.
-
-```sh
-npm install --save-dev journalize
+# if you are not using yarn, npm works too, of course
+npm install --save[-dev] journalize
 ```
 
 `journalize` tries to support the many ways to load packages in the Node.js ecosystem.
 
-If you use a module bundler like [Browserify](http://browserify.org) or [Webpack](http://webpack.github.io), a version of `journalize` is built to be compatible. The `main` key in `package.json` points to this file. If you're one of the cool kids and want to use ES6 modules with something like [Rollup](http://rollupjs.org), `jsnext:main` in `package.json` points at a ES6 module version.
+If you use a module bundler like [Browserify](http://browserify.org) or [Webpack](http://webpack.github.io), a version of `journalize` is built to be compatible. The `main` key in `package.json` points to this file. This enables the following:
 
-And finally, if you're old school and just wanna grab-and-go - check out the `dist` folder. There you'll find the latest compiled development and production versions. This version has a [`umd`](https://github.com/umdjs/umd) wrapper. It's compatible with both [require.js](http://requirejs.org) and [CommonJS](http://www.commonjs.org). Finally, if neither are available, it'll add a `journalize` object to the browser's global scope.
+```js
+const journalize = require('journalize');
+
+// you can also reach in and grab specific functions
+const intcomma = require('journalize').intcomma;
+// or
+const { intcomma } = require('journalize');
+```
+
+If you're one of the cool kids and want to use ES6 modules with something like [Rollup](http://rollupjs.org) or [Webpack 2](https://webpack.js.org/), `jsnext:main` and `module` in `package.json` point at a ES6 module version. This enables ES6 imports:
+
+```js
+import { intcomma } from 'journalize';
+
+// or if you want the whole thing
+import * as journalize from 'journalize';
+```
+
+And finally, if you're old school and just wanna grab-and-go - check out the `dist` folder. There you'll find the latest compiled development and production versions. You're looking for the ones with [`umd`](https://github.com/umdjs/umd) in their names - the `.min` one is minified. Both are compatible with both [require.js](http://requirejs.org) and [CommonJS](http://www.commonjs.org).
+
+Or if you aren't using any in-browser loaders, include one of the `umd` versions in your page with a `<script>` tag, and it'll add a `journalize` object to the browser's global scope.
 
 ## API Docs
 
@@ -91,7 +103,7 @@ journalize.apdate();
 // returns 'July 4, 2016' (pretend it is actually July 4, 2016)
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ### apmonth
 
@@ -127,7 +139,7 @@ journalize.apmonth();
 // returns 'July' (pretend it is actually July)
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ### apnumber
 
@@ -140,7 +152,7 @@ well.
 
 **Parameters**
 
--   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
 
 **Examples**
 
@@ -154,7 +166,7 @@ journalize.apnumber(42);
 // returns 42
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ### apstate
 
@@ -168,7 +180,7 @@ string.
 
 **Parameters**
 
--   `val` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `val` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 -   `reverse` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**  (optional, default `false`)
 
 **Examples**
@@ -192,7 +204,7 @@ journalize.apstate('D.C.', true);
 // returns 'District of Columbia'
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ### aptime
 
@@ -240,7 +252,7 @@ journalize.aptime();
 // returns '6:45 p.m.' (pretend it is actually 6:45 p.m. right now)
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ### intcomma
 
@@ -249,7 +261,7 @@ an empty string is returned.
 
 **Parameters**
 
--   `val` **([Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))** 
+-   `val` **([Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))**
 
 **Examples**
 
@@ -263,7 +275,7 @@ journalize.intcomma('1234567.1234567');
 // returns '1,234,567.1234567'
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ### intword
 
@@ -272,7 +284,7 @@ numbers at least 1 million or more.
 
 **Parameters**
 
--   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
 
 **Examples**
 
@@ -286,7 +298,7 @@ journalize.intword(6500000000000);
 // returns '6.5 trillion'
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ### ordinal
 
@@ -296,7 +308,7 @@ original form.
 
 **Parameters**
 
--   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
 
 **Examples**
 
@@ -313,7 +325,7 @@ journalize.ordinal(103);
 // returns '103rd'
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ### postal
 
@@ -327,7 +339,7 @@ string.
 
 **Parameters**
 
--   `val` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `val` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 -   `reverse` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**  (optional, default `false`)
 
 **Examples**
@@ -351,7 +363,7 @@ journalize.postal('DC', true);
 // returns 'District of Columbia'
 ```
 
-Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
 ## Shout-outs
 

@@ -2,7 +2,7 @@
   "name": "journalize",
   "version": "2.0.0-dev",
   "description": "A collection of functions useful for making prose more reader friendly. Inspired by Django's `django.contrib.humanize`.",
-  "main": "dist/journalize.cjs.js",
+  "main": "dist/journalize.umd.js",
   "jsnext:main": "dist/journalize.es.js",
   "module": "dist/journalize.es.js",
   "browser": "dist/journalize.umd.js",
