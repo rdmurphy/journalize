@@ -1,6 +1,6 @@
 {
   "name": "journalize",
-  "version": "2.0.0-dev",
+  "version": "2.0.0-beta",
   "description": "A collection of functions useful for making prose more reader friendly. Inspired by Django's `django.contrib.humanize`.",
   "source": "src/index.js",
   "module": "dist/journalize.es.js",
@@ -8,19 +8,19 @@
   "umd:main": "dist/journalize.umd.js",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "src"
   ],
   "scripts": {
     "build": "microbundle",
-    "build:minify": "uglifyjs dist/journalize.umd.js --compress --mangle --output ./dist/journalize.umd.min.js",
     "docs:build": "documentation readme --readme-file README.md --section 'API Docs' ./src/index.js",
     "docs:serve": "documentation serve --watch ./src/index.js",
-    "format": "prettier --single-quote --write \"src/**/*.js\"",
     "precommit": "lint-staged",
     "test": "jest",
     "test:cov": "npm run test -- --coverage",
     "test:coveralls": "cat ./coverage/lcov.info | coveralls",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "watch": "microbundle watch"
   },
   "repository": {
     "type": "git",
