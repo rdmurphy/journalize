@@ -50,9 +50,7 @@
     "microbundle": "^0.4.4",
     "prettier": "1.10.2"
   },
-  "dependencies": {
-    "date-fns": "^1.29.0"
-  },
+  "dependencies": {},
   "prettier": {
     "bracketSpacing": true,
     "printWidth": 80,
