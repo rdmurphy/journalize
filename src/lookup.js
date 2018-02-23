@@ -25,7 +25,7 @@ export default function lookup(val, reverse, list, keyOne, keyTwo) {
   // if `val` is not a string, abort and return `val`
   if (!isString(val)) return val;
 
-  var lookupKey, outputKey;
+  let lookupKey, outputKey;
 
   // if `reverse` is true, flip the key and value
   if (reverse) {
@@ -37,7 +37,7 @@ export default function lookup(val, reverse, list, keyOne, keyTwo) {
   }
 
   // look for a match in the list
-  var match = find(list, function(el) {
+  const match = find(list, function(el) {
     return el[lookupKey] === val;
   });
 
@@ -45,7 +45,7 @@ export default function lookup(val, reverse, list, keyOne, keyTwo) {
   if (!match) return val;
 
   // get the output value from the `match` object
-  var newVal = match[outputKey];
+  const newVal = match[outputKey];
 
   // if `newVal` is empty, return the original `val`
   if (newVal.length === 0 || isNil(newVal)) return val;

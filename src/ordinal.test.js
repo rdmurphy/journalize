@@ -13,7 +13,7 @@ describe('ordinal', () => {
       '101',
       '102',
       '103',
-      '111'
+      '111',
     ];
     const resultList = [
       '1st',
@@ -26,7 +26,7 @@ describe('ordinal', () => {
       '101st',
       '102nd',
       '103rd',
-      '111th'
+      '111th',
     ];
 
     testList.forEach((n, idx) => {

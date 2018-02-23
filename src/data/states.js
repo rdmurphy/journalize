@@ -12,286 +12,286 @@ export default [
   {
     state: 'Alabama',
     ap: 'Ala.',
-    usps: 'AL'
+    usps: 'AL',
   },
   {
     state: 'Alaska',
     ap: 'Alaska',
-    usps: 'AK'
+    usps: 'AK',
   },
   {
     state: 'Arizona',
     ap: 'Ariz.',
-    usps: 'AZ'
+    usps: 'AZ',
   },
   {
     state: 'Arkansas',
     ap: 'Ark.',
-    usps: 'AR'
+    usps: 'AR',
   },
   {
     state: 'California',
     ap: 'Calif.',
-    usps: 'CA'
+    usps: 'CA',
   },
   {
     state: 'Colorado',
     ap: 'Colo.',
-    usps: 'CO'
+    usps: 'CO',
   },
   {
     state: 'Connecticut',
     ap: 'Conn.',
-    usps: 'CT'
+    usps: 'CT',
   },
   {
     state: 'Delaware',
     ap: 'Del.',
-    usps: 'DE'
+    usps: 'DE',
   },
   {
     state: 'District of Columbia',
     ap: 'D.C.',
-    usps: 'DC'
+    usps: 'DC',
   },
   {
     state: 'Florida',
     ap: 'Fla.',
-    usps: 'FL'
+    usps: 'FL',
   },
   {
     state: 'Georgia',
     ap: 'Ga.',
-    usps: 'GA'
+    usps: 'GA',
   },
   {
     state: 'Hawaii',
     ap: 'Hawaii',
-    usps: 'HI'
+    usps: 'HI',
   },
   {
     state: 'Idaho',
     ap: 'Idaho',
-    usps: 'ID'
+    usps: 'ID',
   },
   {
     state: 'Illinois',
     ap: 'Ill.',
-    usps: 'IL'
+    usps: 'IL',
   },
   {
     state: 'Indiana',
     ap: 'Ind.',
-    usps: 'IN'
+    usps: 'IN',
   },
   {
     state: 'Iowa',
     ap: 'Iowa',
-    usps: 'IA'
+    usps: 'IA',
   },
   {
     state: 'Kansas',
     ap: 'Kan.',
-    usps: 'KS'
+    usps: 'KS',
   },
   {
     state: 'Kentucky',
     ap: 'Ky.',
-    usps: 'KY'
+    usps: 'KY',
   },
   {
     state: 'Louisiana',
     ap: 'La.',
-    usps: 'LA'
+    usps: 'LA',
   },
   {
     state: 'Maine',
     ap: 'Maine',
-    usps: 'ME'
+    usps: 'ME',
   },
   {
     state: 'Maryland',
     ap: 'Md.',
-    usps: 'MD'
+    usps: 'MD',
   },
   {
     state: 'Massachusetts',
     ap: 'Mass.',
-    usps: 'MA'
+    usps: 'MA',
   },
   {
     state: 'Michigan',
     ap: 'Mich.',
-    usps: 'MI'
+    usps: 'MI',
   },
   {
     state: 'Minnesota',
     ap: 'Minn.',
-    usps: 'MN'
+    usps: 'MN',
   },
   {
     state: 'Mississippi',
     ap: 'Miss.',
-    usps: 'MS'
+    usps: 'MS',
   },
   {
     state: 'Missouri',
     ap: 'Mo.',
-    usps: 'MO'
+    usps: 'MO',
   },
   {
     state: 'Montana',
     ap: 'Mont.',
-    usps: 'MT'
+    usps: 'MT',
   },
   {
     state: 'Nebraska',
     ap: 'Neb.',
-    usps: 'NE'
+    usps: 'NE',
   },
   {
     state: 'Nevada',
     ap: 'Nev.',
-    usps: 'NV'
+    usps: 'NV',
   },
   {
     state: 'New Hampshire',
     ap: 'N.H.',
-    usps: 'NH'
+    usps: 'NH',
   },
   {
     state: 'New Jersey',
     ap: 'N.J.',
-    usps: 'NJ'
+    usps: 'NJ',
   },
   {
     state: 'New Mexico',
     ap: 'N.M.',
-    usps: 'NM'
+    usps: 'NM',
   },
   {
     state: 'New York',
     ap: 'N.Y.',
-    usps: 'NY'
+    usps: 'NY',
   },
   {
     state: 'North Carolina',
     ap: 'N.C.',
-    usps: 'NC'
+    usps: 'NC',
   },
   {
     state: 'North Dakota',
     ap: 'N.D.',
-    usps: 'ND'
+    usps: 'ND',
   },
   {
     state: 'Ohio',
     ap: 'Ohio',
-    usps: 'OH'
+    usps: 'OH',
   },
   {
     state: 'Oklahoma',
     ap: 'Okla.',
-    usps: 'OK'
+    usps: 'OK',
   },
   {
     state: 'Oregon',
     ap: 'Ore.',
-    usps: 'OR'
+    usps: 'OR',
   },
   {
     state: 'Pennsylvania',
     ap: 'Pa.',
-    usps: 'PA'
+    usps: 'PA',
   },
   {
     state: 'Rhode Island',
     ap: 'R.I.',
-    usps: 'RI'
+    usps: 'RI',
   },
   {
     state: 'South Carolina',
     ap: 'S.C.',
-    usps: 'SC'
+    usps: 'SC',
   },
   {
     state: 'South Dakota',
     ap: 'S.D.',
-    usps: 'SD'
+    usps: 'SD',
   },
   {
     state: 'Tennessee',
     ap: 'Tenn.',
-    usps: 'TN'
+    usps: 'TN',
   },
   {
     state: 'Texas',
     ap: 'Texas',
-    usps: 'TX'
+    usps: 'TX',
   },
   {
     state: 'Utah',
     ap: 'Utah',
-    usps: 'UT'
+    usps: 'UT',
   },
   {
     state: 'Vermont',
     ap: 'Vt.',
-    usps: 'VT'
+    usps: 'VT',
   },
   {
     state: 'Virginia',
     ap: 'Va.',
-    usps: 'VA'
+    usps: 'VA',
   },
   {
     state: 'Washington',
     ap: 'Wash.',
-    usps: 'WA'
+    usps: 'WA',
   },
   {
     state: 'West Virginia',
     ap: 'W.Va.',
-    usps: 'WV'
+    usps: 'WV',
   },
   {
     state: 'Wisconsin',
     ap: 'Wis.',
-    usps: 'WI'
+    usps: 'WI',
   },
   {
     state: 'Wyoming',
     ap: 'Wyo.',
-    usps: 'WY'
+    usps: 'WY',
   },
   {
     state: 'American Samoa',
     ap: '',
-    usps: 'AS'
+    usps: 'AS',
   },
   {
     state: 'Guam',
     ap: '',
-    usps: 'GU'
+    usps: 'GU',
   },
   {
     state: 'Northern Mariana Islands',
     ap: '',
-    usps: 'MP'
+    usps: 'MP',
   },
   {
     state: 'Puerto Rico',
     ap: '',
-    usps: 'PR'
+    usps: 'PR',
   },
   {
     state: 'U.S. Minor Outlying Islands',
     ap: '',
-    usps: 'UM'
+    usps: 'UM',
   },
   {
     state: 'U.S. Virgin Islands',
     ap: '',
-    usps: 'VI'
-  }
+    usps: 'VI',
+  },
 ];

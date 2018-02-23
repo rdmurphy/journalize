@@ -60,7 +60,7 @@ export function find(arr, predicate) {
     throw new TypeError('predicate must be a function');
   }
 
-  for (var i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (predicate(arr[i], i, arr)) {
       return arr[i];
     }

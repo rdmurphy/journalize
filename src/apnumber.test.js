@@ -18,7 +18,7 @@ describe('apnumber', () => {
       'seven',
       'eight',
       'nine',
-      '10'
+      '10',
     ];
 
     testList.forEach((n, idx) => {

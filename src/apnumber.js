@@ -5,7 +5,7 @@ import { isInteger, isNil } from './utils';
  * @private
  * @type {Array}
  */
-var AP_NUMBERS = [
+const AP_NUMBERS = [
   'one',
   'two',
   'three',
@@ -14,7 +14,7 @@ var AP_NUMBERS = [
   'six',
   'seven',
   'eight',
-  'nine'
+  'nine',
 ];
 
 /**
@@ -42,7 +42,7 @@ export default function apnumber(val) {
   // if `val` is undefined or null, return an empty string
   if (isNil(val)) return '';
 
-  var convertedVal = +val;
+  const convertedVal = +val;
 
   // if `convertedVal` is not an integer, return `val`
   if (!isInteger(convertedVal)) return val;

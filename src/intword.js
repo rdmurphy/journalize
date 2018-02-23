@@ -5,7 +5,7 @@ import { isInteger, isNil } from './utils';
  * @private
  * @type {Array}
  */
-var SUFFIXES = [
+const SUFFIXES = [
   'million',
   'billion',
   'trillion',
@@ -15,7 +15,7 @@ var SUFFIXES = [
   'septillion',
   'octillion',
   'nonillion',
-  'decillion'
+  'decillion',
 ];
 
 /**
@@ -49,7 +49,7 @@ export default function intword(val) {
   // if `val` is undefined or null, return an empty string
   if (isNil(val)) return '';
 
-  var convertedVal = +val;
+  const convertedVal = +val;
 
   // if `convertedVal` is not an integer, return `val`
   if (!isInteger(convertedVal)) return val;
@@ -59,11 +59,11 @@ export default function intword(val) {
 
   // get the number of digits in the number, and substract remainder to get
   // exponent value
-  var numDigits = getLengthOfNumber(convertedVal) - 1;
-  var exponent = numDigits - numDigits % 3;
+  const numDigits = getLengthOfNumber(convertedVal) - 1;
+  const exponent = numDigits - numDigits % 3;
 
   // calculate the rounded version of `convertedVal`
-  var newVal = convertedVal / Math.pow(10, exponent);
+  let newVal = convertedVal / Math.pow(10, exponent);
   newVal = Math.round(newVal * 10) / 10;
 
   return newVal + ' ' + SUFFIXES[Math.floor(exponent / 3) - 2];

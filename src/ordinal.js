@@ -5,14 +5,14 @@ import { isInteger, isNil } from './utils';
  * @private
  * @type {Array}
  */
-var SUFFIXES = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th'];
+const SUFFIXES = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th'];
 
 /**
  * A list of funky English ordinals.
  * @private
  * @type {Array}
  */
-var ENGLISH_ORDINAL_EXCEPTIONS = [11, 12, 13];
+const ENGLISH_ORDINAL_EXCEPTIONS = [11, 12, 13];
 
 /**
  * Converts an integer into its ordinal form. Handles the special cases of 11,
@@ -38,7 +38,7 @@ export default function ordinal(val) {
   // if `val` is undefined or null, return an empty string
   if (isNil(val)) return '';
 
-  var convertedVal = +val;
+  const convertedVal = +val;
 
   // if `convertedVal` is not an integer, return `val`
   if (!isInteger(convertedVal)) return val;

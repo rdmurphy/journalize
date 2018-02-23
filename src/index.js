@@ -17,5 +17,5 @@ export {
   intcomma,
   intword,
   ordinal,
-  postal
+  postal,
 };

@@ -10,7 +10,7 @@ import { _isFinite, isNil } from './utils';
  * @return {String}
  */
 function numberWithCommas(n) {
-  var parts = n.toString().split('.');
+  const parts = n.toString().split('.');
   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   return parts.join('.');
 }
@@ -35,7 +35,7 @@ export default function intcomma(val) {
   // if `val` is undefined or null, return an empty string
   if (isNil(val)) return '';
 
-  var convertedVal = +val;
+  const convertedVal = +val;
 
   // if `convertedVal` is not a number, don't waste time converting it
   if (!_isFinite(convertedVal)) return val;

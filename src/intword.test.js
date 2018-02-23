@@ -14,7 +14,7 @@ describe('intword', () => {
       '603000000000000',
       '1300000000000000',
       '3500000000000000000000',
-      '8100000000000000000000000000000000'
+      '8100000000000000000000000000000000',
     ];
     const resultList = [
       '100',
@@ -28,7 +28,7 @@ describe('intword', () => {
       '603 trillion',
       '1.3 quadrillion',
       '3.5 sextillion',
-      '8.1 decillion'
+      '8.1 decillion',
     ];
 
     testList.forEach((n, idx) => {

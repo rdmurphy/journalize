@@ -7,7 +7,7 @@ describe('postal', () => {
     'District of Columbia',
     'Wyoming',
     'Ontario',
-    'Puerto Rico'
+    'Puerto Rico',
   ];
   const resultList = ['AZ', 'TX', 'DC', 'WY', 'Ontario', 'PR'];
 

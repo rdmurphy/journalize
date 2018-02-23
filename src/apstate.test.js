@@ -7,7 +7,7 @@ describe('apstate', () => {
     'District of Columbia',
     'Wyoming',
     'Ontario',
-    'Puerto Rico'
+    'Puerto Rico',
   ];
   const resultList = [
     'Ariz.',
@@ -15,7 +15,7 @@ describe('apstate', () => {
     'D.C.',
     'Wyo.',
     'Ontario',
-    'Puerto Rico'
+    'Puerto Rico',
   ];
 
   it('should convert state names into AP abbreviations', () => {

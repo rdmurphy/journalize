@@ -16,7 +16,7 @@ describe('apmonth', () => {
     new Date(2017, 8, 1),
     new Date(2017, 9, 1),
     new Date(2017, 10, 1),
-    new Date(2017, 11, 1)
+    new Date(2017, 11, 1),
   ];
 
   it('should return the correct month string', () => {
