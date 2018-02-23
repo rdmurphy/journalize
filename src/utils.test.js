@@ -82,12 +82,12 @@ describe('isInteger', () => {
     expect(isInteger(5.5)).toBe(false);
     expect(isInteger(undefined)).toBe(false);
     expect(isInteger(null)).toBe(false);
+  });
 
-    it('returns false on special numbers', () => {
-      expect(isInteger(Infinity)).toBe(false);
-      expect(isInteger(-Infinity)).toBe(false);
-      expect(isInteger(NaN)).toBe(false);
-    });
+  it('returns false on special numbers', () => {
+    expect(isInteger(Infinity)).toBe(false);
+    expect(isInteger(-Infinity)).toBe(false);
+    expect(isInteger(NaN)).toBe(false);
   });
 });
 

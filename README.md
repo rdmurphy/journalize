@@ -8,21 +8,22 @@ A collection of functions useful for making prose reader friendly. Inspired by (
 [![npm](https://img.shields.io/npm/dm/journalize.svg?style=flat-square)](https://www.npmjs.com/package/journalize)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Why did you create this?](#why-did-you-create-this)
-- [Installation](#installation)
-- [API Docs](#api-docs)
-  - [apdate](#apdate)
-  - [apmonth](#apmonth)
-  - [apnumber](#apnumber)
-  - [apstate](#apstate)
-  - [aptime](#aptime)
-  - [intcomma](#intcomma)
-  - [intword](#intword)
-  - [ordinal](#ordinal)
-  - [postal](#postal)
-- [Shout-outs](#shout-outs)
+* [Why did you create this?](#why-did-you-create-this)
+* [Installation](#installation)
+* [API Docs](#api-docs)
+  * [apdate](#apdate)
+  * [apmonth](#apmonth)
+  * [apnumber](#apnumber)
+  * [apstate](#apstate)
+  * [aptime](#aptime)
+  * [intcomma](#intcomma)
+  * [intword](#intword)
+  * [ordinal](#ordinal)
+  * [postal](#postal)
+* [Shout-outs](#shout-outs)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -33,10 +34,11 @@ I've always really appreciated the built-in functionality provided by Django's `
 ## Installation
 
 ```sh
-yarn add [--dev] journalize
+npm install journalize
 
-# if you are not using yarn, npm works too, of course
-npm install --save[-dev] journalize
+# or
+
+yarn add journalize
 ```
 
 `journalize` tries to support the many ways to load packages in the Node.js ecosystem.
@@ -78,8 +80,8 @@ will use the result of `new Date();`.
 
 **Parameters**
 
--   `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))?** JavaScript Date object, numerical
-    timestamp or ISO 8601 string, defaults to current date if not passed
+* `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))?** JavaScript Date object, numerical
+  timestamp or ISO 8601 string, defaults to current date if not passed
 
 **Examples**
 
@@ -114,8 +116,8 @@ will use the result of `new Date();`.
 
 **Parameters**
 
--   `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))?** JavaScript Date object, numerical
-    timestamp or ISO 8601 string, defaults to current date if not passed
+* `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))?** JavaScript Date object, numerical
+  timestamp or ISO 8601 string, defaults to current date if not passed
 
 **Examples**
 
@@ -152,7 +154,7 @@ well.
 
 **Parameters**
 
--   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
+* `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
 
 **Examples**
 
@@ -180,8 +182,8 @@ string.
 
 **Parameters**
 
--   `val` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
--   `reverse` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**  (optional, default `false`)
+* `val` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
+* `reverse` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** (optional, default `false`)
 
 **Examples**
 
@@ -215,8 +217,8 @@ the result of `new Date();`.
 
 **Parameters**
 
--   `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))?** JavaScript Date object, numerical
-    timestamp or ISO 8601 string, defaults to current date if not passed
+* `input` **([Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) \| [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))?** JavaScript Date object, numerical
+  timestamp or ISO 8601 string, defaults to current date if not passed
 
 **Examples**
 
@@ -261,7 +263,7 @@ an empty string is returned.
 
 **Parameters**
 
--   `val` **([Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))**
+* `val` **([Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))**
 
 **Examples**
 
@@ -284,7 +286,7 @@ numbers at least 1 million or more.
 
 **Parameters**
 
--   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
+* `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
 
 **Examples**
 
@@ -308,7 +310,7 @@ original form.
 
 **Parameters**
 
--   `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
+* `val` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**
 
 **Examples**
 
@@ -339,8 +341,8 @@ string.
 
 **Parameters**
 
--   `val` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
--   `reverse` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**  (optional, default `false`)
+* `val` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)**
+* `reverse` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** (optional, default `false`)
 
 **Examples**
 
@@ -367,5 +369,5 @@ Returns **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## Shout-outs
 
--   Thanks to [Mike Bostock](https://twitter.com/mbostock) and his work on the in-progress [v4 of d3.js](https://github.com/mbostock/d3/tree/4) — it's a good example of how to modularize a project with Rollup.
--   Thanks to [Rollup](https://github.com/rollup/rollup) for being awesome. It's a great fit for creating a modular library.
+* Thanks to [Mike Bostock](https://twitter.com/mbostock) and his work on the in-progress [v4 of d3.js](https://github.com/mbostock/d3/tree/4) — it's a good example of how to modularize a project with Rollup.
+* Thanks to [Rollup](https://github.com/rollup/rollup) for being awesome. It's a great fit for creating a modular library.
