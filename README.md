@@ -7,25 +7,10 @@ A collection of functions useful for making prose reader friendly. Inspired by (
 [![npm version](https://img.shields.io/npm/v/journalize.svg?style=flat-square)](https://www.npmjs.com/package/journalize)
 [![npm](https://img.shields.io/npm/dm/journalize.svg?style=flat-square)](https://www.npmjs.com/package/journalize)
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 * [Why did you create this?](#why-did-you-create-this)
 * [Installation](#installation)
 * [API Docs](#api-docs)
-  * [apdate](#apdate)
-  * [apmonth](#apmonth)
-  * [apnumber](#apnumber)
-  * [apstate](#apstate)
-  * [aptime](#aptime)
-  * [intcomma](#intcomma)
-  * [intword](#intword)
-  * [ordinal](#ordinal)
-  * [postal](#postal)
-* [Shout-outs](#shout-outs)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+* [License](#license)
 
 ## Why did you create this?
 
@@ -77,6 +62,7 @@ import * as journalize from 'journalize';
 * [intcomma](#intcomma)
 * [intword](#intword)
 * [ordinal](#ordinal)
+* [pluralize](#pluralize)
 * [postal](#postal)
 
 ### apdate
@@ -295,6 +281,44 @@ journalize.ordinal(13);
 
 journalize.ordinal(103);
 // returns '103rd'
+```
+
+Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+
+### pluralize
+
+Returns a plural suffix if the value is not 1. By default, `pluralize`
+uses "s" as the suffix. If a `String` is provided, `pluralize` will attempt
+to convert it into a `Number`. If an `Array` is provided instead of a
+number, the length of the `Array` is used to determine the suffix. An
+alternative plural suffix can be provided as the second parameter, and if
+necessary, an alternative singular suffix can be provided as the third.
+
+**Parameters**
+
+* `value` **([Number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array))**
+* `pluralSuffix` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'s'`)
+* `singularSuffix` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `''`)
+
+**Examples**
+
+```javascript
+var journalize = require('journalize');
+
+// typical usage
+'vote' + journalize.pluralize(0); // votes
+'vote' + journalize.pluralize(1); // vote
+'vote' + journalize.pluralize(2); // votes
+
+// the plural suffix may be changed
+'class' + journalize.pluralize(0, 'es'); // classes
+'class' + journalize.pluralize(1, 'es'); // class
+'class' + journalize.pluralize(2, 'es'); // classes
+
+// some words also need a custom singular suffix
+'cand' + journalize.pluralize(0, 'ies', 'y'); // candies
+'cand' + journalize.pluralize(1, 'ies', 'y'); // candy
+'cand' + journalize.pluralize(2, 'ies', 'y'); // candies
 ```
 
 Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**

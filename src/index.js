@@ -6,6 +6,7 @@ import aptime from './aptime';
 import intcomma from './intcomma';
 import intword from './intword';
 import ordinal from './ordinal';
+import pluralize from './pluralize';
 import postal from './postal';
 
 export {
@@ -17,5 +18,6 @@ export {
   intcomma,
   intword,
   ordinal,
+  pluralize,
   postal,
 };
