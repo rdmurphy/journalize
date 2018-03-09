@@ -22,21 +22,26 @@
  * // returns '6:45 p.m.' (pretend it is actually 6:45 p.m. right now)
  */
 export default function aptime(date = new Date()) {
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
 
-  var minutesAreZero = minutes === 0;
+  const minutesAreZero = minutes === 0;
 
   if (minutesAreZero) {
     if (hours === 0) return 'midnight';
     if (hours === 12) return 'noon';
   }
 
-  var period, hour;
+  let period, hour;
 
   if (hours < 12) {
     period = 'a.m.';
-    hour = hours;
+    // account for how Date() returns 12 a.m. as 0
+    if (hours > 0) {
+      hour = hours;
+    } else {
+      hour = 12;
+    }
   } else {
     period = 'p.m.';
     hour = hours - 12;
@@ -46,6 +51,6 @@ export default function aptime(date = new Date()) {
     return hour + ' ' + period;
   }
 
-  var minute = minutes < 10 ? '0' + minutes : minutes;
+  const minute = minutes < 10 ? '0' + minutes : minutes;
   return hour + ':' + minute + ' ' + period;
 }

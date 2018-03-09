@@ -24,6 +24,10 @@ describe('aptime', () => {
   it('should left-pad the minutes when less than ten', () => {
     expect(aptime(new Date(2016, 10, 8, 10, 5))).toBe('10:05 a.m.');
   });
+
+  it('should return the correct time at 12 a.m.', () => {
+    expect(aptime(new Date(2016, 10, 8, 0, 35))).toBe('12:35 a.m.');
+  });
 });
 
 describe('aptime default', () => {
