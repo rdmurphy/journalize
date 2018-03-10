@@ -65,6 +65,7 @@ import * as journalize from 'journalize';
 * [ordinal](#ordinal)
 * [pluralize](#pluralize)
 * [postal](#postal)
+* [yesno](#yesno)
 
 ### apdate
 
@@ -380,6 +381,39 @@ journalize.postal('DC', true);
 ```
 
 Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+
+### yesno
+
+Given a mapping of arguments for `true`, `false`, and (optionally)
+`null`/`undefined`, return a string according to the value. If `maybe` is not
+provided, a `null` or `undefined` value will return the `no` argument.
+
+**Parameters**
+
+* `val` **([Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean) \| [Null](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) \| [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined))**
+* `yes` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'yes'`)
+* `no` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'no'`)
+* `maybe` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'maybe'`)
+
+**Examples**
+
+```javascript
+var journalize = require('journalize');
+
+journalize.yesno(true);
+// returns 'yes'
+journalize.yesno(false);
+// returns 'no'
+journalize.yesno(null);
+// returns 'maybe'
+
+journalize.yesno(true, 'yay', 'nay', 'shruggie');
+// returns 'yay'
+journalize.yesno(false, 'yay', 'nay', 'shruggie');
+// returns 'nay'
+journalize.yesno(null, 'yay', 'nay', 'shruggie');
+// returns 'shruggie'
+```
 
 ## License
 

@@ -9,6 +9,7 @@ import intword from './intword';
 import ordinal from './ordinal';
 import pluralize from './pluralize';
 import postal from './postal';
+import yesno from './yesno';
 
 export {
   apdate,
@@ -22,4 +23,5 @@ export {
   ordinal,
   pluralize,
   postal,
+  yesno,
 };
