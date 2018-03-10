@@ -10,11 +10,12 @@ A collection of functions useful for making prose reader friendly. Inspired by (
 * [Why did you create this?](#why-did-you-create-this)
 * [Installation](#installation)
 * [API Docs](#api-docs)
+* [What if I do want to use this in Nunjucks?](#what-if-i-do-want-to-use-this-in-nunjucks)
 * [License](#license)
 
 ## Why did you create this?
 
-I've always really appreciated the built-in functionality provided by Django's `humanize`, and I wanted to port it over to JavaScript/Node.js. Originally this was to be a collection of custom [Nunjucks](http://mozilla.github.io/nunjucks/) filters, but I think it could be just as useful as a generic library.
+I've always really appreciated the built-in functionality provided by Django's `humanize`, and I wanted to port it over to JavaScript/Node.js. Originally this was to be a [collection of custom filters](#what-if-i-do-want-to-use-this-in-nunjucks), but I think it could be just as useful as a generic library.
 
 ## Installation
 
@@ -414,6 +415,34 @@ journalize.yesno(false, 'yay', 'nay', 'shruggie');
 journalize.yesno(null, 'yay', 'nay', 'shruggie');
 // returns 'shruggie'
 ```
+
+## What if I do want to use this in [Nunjucks](http://mozilla.github.io/nunjucks/)?
+
+Great question! I cannot speak to whether this is the best way, but it's what
+I've done without issue since `journalize` was released.
+
+Once you have your `nunjucks` environment, you can loop through the
+properties of `journalize` and add each function as a filter.
+
+```js
+const journalize = require('journalize');
+const nunjucks = require('nunjucks');
+
+const env = nunjucks.configure(/* */);
+
+/*
+Set up `journalize`.
+ */
+for (let key in journalize) {
+  let func = journalize[key];
+
+  if (typeof func === 'function') {
+    env.addFilter(key, func); // this would work with env.addGlobal, too
+  }
+}
+```
+
+Now every function of `journalize` is now available in your templates!
 
 ## License
 
