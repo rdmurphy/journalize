@@ -442,7 +442,7 @@ for (let key in journalize) {
 }
 ```
 
-Now every function of `journalize` is now available in your templates!
+Now every function of `journalize` is available in your templates!
 
 ## License
 
