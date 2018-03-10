@@ -59,6 +59,7 @@ import * as journalize from 'journalize';
 * [apnumber](#apnumber)
 * [apstate](#apstate)
 * [aptime](#aptime)
+* [capfirst](#capfirst)
 * [intcomma](#intcomma)
 * [intword](#intword)
 * [ordinal](#ordinal)
@@ -208,6 +209,25 @@ journalize.aptime(new Date(2016, 10, 8, 16, 30));
 // Uses the current time if no parameter is passed
 journalize.aptime();
 // returns '6:45 p.m.' (pretend it is actually 6:45 p.m. right now)
+```
+
+Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+
+### capfirst
+
+Capitalizes the first character of a value and returns it.
+
+**Parameters**
+
+* `val` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+
+**Examples**
+
+```javascript
+var journalize = require('journalize');
+
+journalize.capfirst('hello world');
+// returns 'Hello world'
 ```
 
 Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
