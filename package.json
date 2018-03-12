@@ -1,31 +1,27 @@
 {
   "name": "journalize",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "A collection of functions useful for making prose more reader friendly. Inspired by Django's `django.contrib.humanize`.",
-  "main": "lib/index.js",
-  "jsnext:main": "es/index.js",
+  "source": "src/index.js",
+  "module": "dist/journalize.es.js",
+  "main": "dist/journalize.js",
+  "umd:main": "dist/journalize.umd.js",
   "files": [
     "dist",
-    "lib",
-    "es",
+    "README.md",
     "src"
   ],
   "scripts": {
-    "build": "npm run build:commonjs && npm run build:es && npm run build:dist",
-    "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir lib",
-    "build:dist": "mkdirp dist && npm run build:umd && npm run build:umd:min",
-    "build:es": "BABEL_ENV=es babel src --out-dir es",
-    "build:umd": "BABEL_ENV=commonjs rollup --config -- src/index.js | uglifyjs --beautify --indent-level 2 --output ./dist/journalize.js",
-    "build:umd:min": "BABEL_ENV=commonjs rollup --config -- src/index.js | uglifyjs --compress --mangle --output ./dist/journalize.min.js",
-    "clean": "rimraf coverage dist es lib",
-    "docs:build": "documentation readme --readme-file README.md --section 'API Docs' ./src/index.js",
+    "build": "microbundle",
+    "docs:build": "documentation readme --readme-file README.md --section 'API Docs' ./src/index.js && prettier --write README.md",
     "docs:serve": "documentation serve --watch ./src/index.js",
-    "lint": "standard",
-    "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
-    "test": "npm run lint && BABEL_ENV=commonjs mocha --compilers js:babel-register",
-    "test:cov": "BABEL_ENV=commonjs babel-node $(npm bin)/isparta cover --root ./src $(npm bin)/_mocha -- ./test/test",
+    "precommit": "lint-staged",
+    "prepublishOnly": "npm run test && npm run build",
+    "test": "jest",
+    "test:cov": "npm run test -- --coverage",
     "test:coveralls": "cat ./coverage/lcov.info | coveralls",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "watch": "microbundle watch"
   },
   "repository": {
     "type": "git",
@@ -38,36 +34,36 @@
     "editing",
     "prose"
   ],
-  "author": "Ryan Murphy <hey@ryan.fail>",
+  "author": "Ryan Murphy <ryan@rdmurphy.org>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rdmurphy/journalize/issues"
   },
   "homepage": "https://github.com/rdmurphy/journalize#readme",
-  "dependencies": {
-    "lodash": "^4.11.1",
-    "lodash-es": "^4.11.1"
-  },
   "devDependencies": {
-    "babel-cli": "^6.8.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.7.4",
-    "babel-register": "^6.7.2",
-    "coveralls": "^2.11.9",
-    "documentation": "^4.0.0-beta2",
-    "isparta": "^4.0.0",
-    "mkdirp": "^0.5.1",
-    "mocha": "^3.0.1",
-    "mocha-lcov-reporter": "^1.2.0",
-    "rimraf": "^2.5.2",
-    "rollup": "^0.41.1",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "standard": "^10.0.2",
-    "uglify-js": "^2.6.2"
+    "babel-jest": "^22.4.1",
+    "babel-preset-env": "^1.6.1",
+    "coveralls": "^3.0.0",
+    "documentation": "^5.4.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.2",
+    "lint-staged": "^7.0.0",
+    "microbundle": "^0.4.4",
+    "prettier": "1.10.2"
   },
-  "standard": {
-    "ignore": [
-      "dist"
+  "dependencies": {},
+  "prettier": {
+    "bracketSpacing": true,
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
     ]
   }
 }
