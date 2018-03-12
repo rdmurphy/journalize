@@ -1,4 +1,4 @@
-import { find, _isFinite, isInteger, isNil, isString } from './utils';
+import { _isFinite, isInteger, isNil } from './utils';
 
 describe('isNil', () => {
   it('returns true on null', () => {
@@ -25,16 +25,6 @@ describe('isNil', () => {
     expect(isNil('hello')).toBe(false);
     expect(isNil([])).toBe(false);
     expect(isNil({})).toBe(false);
-  });
-});
-
-describe('isString', () => {
-  it('returns true on string', () => {
-    expect(isString('hello')).toBe(true);
-  });
-
-  it('returns false on not string', () => {
-    expect(isString(5)).toBe(false);
   });
 });
 
@@ -88,31 +78,5 @@ describe('isInteger', () => {
     expect(isInteger(Infinity)).toBe(false);
     expect(isInteger(-Infinity)).toBe(false);
     expect(isInteger(NaN)).toBe(false);
-  });
-});
-
-describe('find', () => {
-  const arr = [1, 2, 3];
-
-  it('returns matching element', () => {
-    const result = find(arr, el => {
-      return el === 2;
-    });
-
-    expect(result).toBe(2);
-  });
-
-  it('returns undefined with no matching element', () => {
-    const result = find(arr, el => {
-      return el === 4;
-    });
-
-    expect(result).toBeUndefined();
-  });
-
-  it('should throw when not passed a predicate', () => {
-    const trap = () => find(arr);
-
-    expect(trap).toThrow(TypeError);
   });
 });
