@@ -17,7 +17,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 
 * Removed `date-fns` dependency, which means date/time based functions (`apdate`, `apmonth`, `aptime`) no longer can parse ISO date strings (or anything else someone may have thrown at it that `date-fns/parse` could have handled)
-* Removed `lodash` dependency, and moved needed utilities into the project
+* Removed `lodash` dependency
+* Removed `apstate` and `postal` functions, they were slightly too specific and out of scope and probably should exist as their own libraries
 
 ## [1.2.0]
 
