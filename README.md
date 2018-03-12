@@ -58,14 +58,12 @@ import * as journalize from 'journalize';
 * [apdate](#apdate)
 * [apmonth](#apmonth)
 * [apnumber](#apnumber)
-* [apstate](#apstate)
 * [aptime](#aptime)
 * [capfirst](#capfirst)
 * [intcomma](#intcomma)
 * [intword](#intword)
 * [ordinal](#ordinal)
 * [pluralize](#pluralize)
-* [postal](#postal)
 * [yesno](#yesno)
 
 ### apdate
@@ -143,44 +141,6 @@ journalize.apnumber(8);
 
 journalize.apnumber(42);
 // returns 42
-```
-
-Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
-
-### apstate
-
-Converts state names into AP abbreviations, and back. If the supplied
-string has no match, or if there is a match and the lookup is empty, the
-original value is returned. If the value is not a string, the original will
-also be returned.
-
-If `reverse` is true, `apstate` will convert an abbreviation back to a full
-string.
-
-**Parameters**
-
-* `val` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
-* `reverse` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** (optional, default `false`)
-
-**Examples**
-
-```javascript
-var journalize = require('journalize');
-
-journalize.apstate('Arizona');
-// returns 'Ariz.'
-
-journalize.apstate('District of Columbia');
-// returns 'D.C.'
-
-journalize.apstate('Texas');
-// returns 'Texas'
-
-journalize.apstate('Ontario');
-// returns 'Ontario'
-
-journalize.apstate('D.C.', true);
-// returns 'District of Columbia'
 ```
 
 Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
@@ -341,44 +301,6 @@ var journalize = require('journalize');
 'cand' + journalize.pluralize(0, 'ies', 'y'); // candies
 'cand' + journalize.pluralize(1, 'ies', 'y'); // candy
 'cand' + journalize.pluralize(2, 'ies', 'y'); // candies
-```
-
-Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
-
-### postal
-
-Converts state and U.S. territory names into USPS postal codes, and back. If
-the supplied string has no match, or if there is a match and the lookup is
-empty, the original value is returned. If the value is not a string, the
-original will also be returned.
-
-If `reverse` is true, `postal` will convert a postal code back to a full
-string.
-
-**Parameters**
-
-* `val` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
-* `reverse` **[Boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** (optional, default `false`)
-
-**Examples**
-
-```javascript
-var journalize = require('journalize');
-
-journalize.postal('Arizona');
-// returns 'AZ'
-
-journalize.postal('District of Columbia');
-// returns 'DC'
-
-journalize.postal('Texas');
-// returns 'TX'
-
-journalize.postal('Ontario');
-// returns 'Ontario'
-
-journalize.postal('DC', true);
-// returns 'District of Columbia'
 ```
 
 Returns **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
