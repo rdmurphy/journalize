@@ -3,7 +3,7 @@
  *
  * @private
  * @param  {*}  value
- * @return {Boolean}
+ * @return {boolean}
  */
 export function isNil(value) {
   return value == null;
@@ -16,7 +16,7 @@ export function isNil(value) {
  *
  * @private
  * @param  {*}  value
- * @return {Boolean}
+ * @return {boolean}
  */
 export function _isFinite(value) {
   return typeof value === 'number' && isFinite(value);
@@ -29,7 +29,7 @@ export function _isFinite(value) {
  *
  * @private
  * @param  {*}  value
- * @return {Boolean}
+ * @return {boolean}
  */
 export function isInteger(value) {
   return _isFinite(value) && Math.floor(value) === value;

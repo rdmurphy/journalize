@@ -25,8 +25,8 @@ const AP_NUMBERS = [
  * If a non-integer is given, it will be returned in its original form as
  * well.
  *
- * @param  {Number} val
- * @return {String}
+ * @param  {number} val
+ * @return {string}
  * @example
  *
  * var journalize = require('journalize');

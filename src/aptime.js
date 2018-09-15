@@ -4,7 +4,7 @@
  *
  * @param  {Date} [date] JavaScript Date object, defaults to current date if
  *                       not passed
- * @return {String}
+ * @return {string}
  * @example
  *
  * var journalize = require('journalize');
@@ -44,7 +44,12 @@ export default function aptime(date = new Date()) {
     }
   } else {
     period = 'p.m.';
-    hour = hours - 12;
+
+    if (hours === 12) {
+      hour = hours;
+    } else {
+      hour = hours - 12;
+    }
   }
 
   if (minutesAreZero) {

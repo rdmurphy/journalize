@@ -6,7 +6,7 @@ import apmonth from './apmonth';
  *
  * @param  {Date} [date] JavaScript Date object, defaults to current date if
  *                       not passed
- * @return {String}
+ * @return {string}
  * @example
  *
  * var journalize = require('journalize');

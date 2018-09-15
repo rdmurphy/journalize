@@ -28,6 +28,10 @@ describe('aptime', () => {
   it('should return the correct time at 12 a.m.', () => {
     expect(aptime(new Date(2016, 10, 8, 0, 35))).toBe('12:35 a.m.');
   });
+
+  it('should return the correct time at 12 p.m.', () => {
+    expect(aptime(new Date(2016, 8, 15, 12, 39))).toBe('12:39 p.m.');
+  });
 });
 
 describe('aptime default', () => {

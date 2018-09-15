@@ -3,8 +3,8 @@ import { isNil } from './utils';
 /**
  * Capitalizes the first character of a value and returns it.
  *
- * @param {String} val
- * @returns {String}
+ * @param {string} val
+ * @returns {string}
  * @example
  *
  * var journalize = require('journalize');
