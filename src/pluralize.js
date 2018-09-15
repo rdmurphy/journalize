@@ -6,10 +6,10 @@
  * alternative plural suffix can be provided as the second parameter, and if
  * necessary, an alternative singular suffix can be provided as the third.
  *
- * @param {Number|String|Array} value
- * @param {String} [pluralSuffix='s']
- * @param {String} [singularSuffix='']
- * @return {String}
+ * @param {number|string|Array} value
+ * @param {string} [pluralSuffix='s']
+ * @param {string} [singularSuffix='']
+ * @return {string}
  * @example
  *
  * var journalize = require('journalize');

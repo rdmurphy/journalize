@@ -3,7 +3,7 @@
  * JavaScript's life choices. Exported for testing purposes.
  *
  * @private
- * @type {object}
+ * @type {Object}
  */
 export const AP_MONTHS = {
   0: 'Jan.',
@@ -26,7 +26,7 @@ export const AP_MONTHS = {
  *
  * @param  {Date} [date] JavaScript Date object, defaults to current date if
  *                       not passed
- * @return {String}
+ * @return {string}
  * @example
  *
  * var journalize = require('journalize');

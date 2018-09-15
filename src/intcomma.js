@@ -6,8 +6,8 @@ import { _isFinite, isNil } from './utils';
  * Source: http://stackoverflow.com/a/2901298
  *
  * @private
- * @param  {Number|String} n
- * @return {String}
+ * @param  {number|string} n
+ * @return {string}
  */
 function numberWithCommas(n) {
   const parts = n.toString().split('.');
@@ -19,8 +19,8 @@ function numberWithCommas(n) {
  * Alters a string or number to include commas. If `val` is undefined or null,
  * an empty string is returned.
  *
- * @param  {Number|String} val
- * @return {String}
+ * @param  {number|string} val
+ * @return {string}
  * @example
  *
  * var journalize = require('journalize');

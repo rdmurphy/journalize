@@ -19,8 +19,8 @@ const ENGLISH_ORDINAL_EXCEPTIONS = [11, 12, 13];
  * 12 and 13, too. If a non-integer is submitted, it will be returned in its
  * original form.
  *
- * @param  {Number} val
- * @return {String}
+ * @param  {number} val
+ * @return {string}
  * @example
  *
  * var journalize = require('journalize');
