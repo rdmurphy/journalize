@@ -7,6 +7,7 @@ import intcomma from './intcomma';
 import intword from './intword';
 import ordinal from './ordinal';
 import pluralize from './pluralize';
+import widont from './widont';
 import yesno from './yesno';
 
 export {
@@ -19,5 +20,6 @@ export {
   intword,
   ordinal,
   pluralize,
+  widont,
   yesno,
 };

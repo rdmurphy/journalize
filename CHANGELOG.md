@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Added `unpkg` and `jsdelivr` fields to package.json
+- Added `widont` function
 
 ### Removed
 
