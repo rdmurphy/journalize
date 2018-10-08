@@ -82,8 +82,10 @@ import * as journalize from 'journalize';
 - [pluralize](#pluralize)
   - [Parameters](#parameters-8)
   - [Examples](#examples-8)
-- [yesno](#yesno)
+- [widont](#widont)
   - [Parameters](#parameters-9)
+- [yesno](#yesno)
+  - [Parameters](#parameters-10)
   - [Examples](#examples-9)
 
 ### apdate
@@ -322,6 +324,19 @@ var journalize = require('journalize');
 'cand' + journalize.pluralize(1, 'ies', 'y'); // candy
 'cand' + journalize.pluralize(2, 'ies', 'y'); // candies
 ```
+
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+
+### widont
+
+Prevents "widows" - a word by itself on a line - from appearing in strings
+by replacing the space between the last two words with a non-breaking space
+character.
+
+#### Parameters
+
+- `val` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+- `replaceChar` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The character to replace the space with (optional, default `'\xA0'`)
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
