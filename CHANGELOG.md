@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Added `unpkg` and `jsdelivr` fields to package.json
+
+### Removed
+
+- Removed `umd:main` field from package.json
+
 ## [2.0.1]
 
 ### Fixed
