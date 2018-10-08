@@ -5,7 +5,8 @@
   "source": "src/index.js",
   "module": "dist/journalize.es.js",
   "main": "dist/journalize.js",
-  "umd:main": "dist/journalize.umd.js",
+  "unpkg": "dist/journalize.umd.js",
+  "jsdelivr": "dist/journalize.umd.js",
   "files": [
     "dist",
     "README.md",
