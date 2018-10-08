@@ -25,6 +25,16 @@ const widontRegex = new RegExp(/\s+([^\s]*)\s*$/);
  * @param {string} val
  * @param {string} [replaceChar='\xA0'] The character to replace the space with
  * @returns {string}
+ * @example
+ *
+ * var journalize = require('journalize');
+ *
+ * journalize.widont('this is a string');
+ * // returns 'this is a&nbsp;string'
+ *
+ * journalize.widont('this is a string', 'HELLO');
+ * // returns 'this is aHELLOstring'
+ *
  */
 export default function widont(val, replaceChar = nbsp) {
   // if `val` is undefined or null, return an empty string

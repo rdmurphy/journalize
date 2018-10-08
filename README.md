@@ -84,9 +84,10 @@ import * as journalize from 'journalize';
   - [Examples](#examples-8)
 - [widont](#widont)
   - [Parameters](#parameters-9)
+  - [Examples](#examples-9)
 - [yesno](#yesno)
   - [Parameters](#parameters-10)
-  - [Examples](#examples-9)
+  - [Examples](#examples-10)
 
 ### apdate
 
@@ -337,6 +338,18 @@ character.
 
 - `val` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 - `replaceChar` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The character to replace the space with (optional, default `'\xA0'`)
+
+#### Examples
+
+```javascript
+var journalize = require('journalize');
+
+journalize.widont('this is a string');
+// returns 'this is a&nbsp;string'
+
+journalize.widont('this is a string', 'HELLO');
+// returns 'this is aHELLOstring'
+```
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
 
