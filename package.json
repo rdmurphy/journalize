@@ -5,6 +5,7 @@
   "source": "src/index.js",
   "module": "dist/journalize.es.js",
   "main": "dist/journalize.js",
+  "types": "types/index.d.ts",
   "unpkg": "dist/journalize.umd.js",
   "jsdelivr": "dist/journalize.umd.js",
   "files": [
