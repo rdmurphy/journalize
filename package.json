@@ -16,7 +16,7 @@
     "build": "microbundle",
     "docs:build": "documentation readme --readme-file README.md --section 'API Docs' --sort-order alpha ./src/index.js && prettier --write README.md",
     "docs:serve": "documentation serve --watch ./src/index.js",
-    "precommit": "lint-staged",
+    "git-pre-commit": "precise-commits",
     "prepublishOnly": "npm run test && npm run build",
     "test": "jest",
     "test:cov": "npm run test -- --coverage",
@@ -42,15 +42,15 @@
   },
   "homepage": "https://github.com/rdmurphy/journalize#readme",
   "devDependencies": {
+    "@zeit/git-hooks": "^0.1.4",
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "coveralls": "^3.0.2",
     "documentation": "^9.0.0",
-    "husky": "^1.2.0",
     "jest": "^23.6.0",
-    "lint-staged": "^8.1.0",
     "microbundle": "^0.8.3",
-    "prettier": "^1.15.3"
+    "precise-commits": "^1.0.2",
+    "prettier": "^1.16.4"
   },
   "dependencies": {},
   "prettier": {
