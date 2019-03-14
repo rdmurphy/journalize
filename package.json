@@ -44,10 +44,10 @@
   "devDependencies": {
     "@babel/preset-env": "^7.3.4",
     "@zeit/git-hooks": "^0.1.4",
-    "coveralls": "^3.0.2",
-    "documentation": "^9.0.0",
+    "coveralls": "^3.0.3",
+    "documentation": "^9.3.1",
     "jest": "^24.5.0",
-    "microbundle": "^0.8.3",
+    "microbundle": "^0.11.0",
     "precise-commits": "^1.0.2",
     "prettier": "^1.16.4"
   },
