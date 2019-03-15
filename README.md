@@ -152,7 +152,7 @@ well.
 
 #### Parameters
 
-- `val` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
 
 #### Examples
 
@@ -247,7 +247,7 @@ numbers at least 1 million or more.
 
 #### Parameters
 
-- `val` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
 
 #### Examples
 
@@ -271,7 +271,7 @@ original form.
 
 #### Parameters
 
-- `val` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
 
 #### Examples
 
@@ -385,6 +385,8 @@ journalize.yesno(false, 'yay', 'nay', 'shruggie');
 journalize.yesno(null, 'yay', 'nay', 'shruggie');
 // returns 'shruggie'
 ```
+
+Returns **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean) \| [Null](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) \| [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined))**
 
 ## What if I do want to use this in [Nunjucks](http://mozilla.github.io/nunjucks/)?
 

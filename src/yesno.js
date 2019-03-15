@@ -5,11 +5,11 @@ import { isNil } from './utils';
  * `null`/`undefined`, return a string according to the value. If `maybe` is not
  * provided, a `null` or `undefined` value will return the `no` argument.
  *
- * @param {boolean|null|undefined} val
+ * @param {boolean|Null|undefined} val
  * @param {string} [yes='yes']
  * @param {string} [no='no']
  * @param {string} [maybe='maybe']
- * @returns {string|boolean|null|undefined}
+ * @returns {string|boolean|Null|undefined}
  * @example
  *
  * var journalize = require('journalize');
