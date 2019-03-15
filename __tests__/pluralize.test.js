@@ -18,8 +18,10 @@ describe('pluralize', () => {
   it('should correctly return the default pluralSuffix when value is an array', () => {
     expect(pluralize([])).toBe('s');
     expect(pluralize([1])).toBe('');
+    expect(pluralize([3])).toBe('');
     expect(pluralize([1, 2])).toBe('s');
     expect(pluralize([1, 2, 3])).toBe('s');
+    expect(pluralize([3, 2, 1])).toBe('s');
   });
 
   it('should accept an alternative pluralSuffix', () => {
