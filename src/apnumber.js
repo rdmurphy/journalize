@@ -25,7 +25,7 @@ const AP_NUMBERS = [
  * If a non-integer is given, it will be returned in its original form as
  * well.
  *
- * @param  {number} val
+ * @param  {number|string} val
  * @return {string}
  * @example
  *
@@ -42,13 +42,14 @@ export default function apnumber(val) {
   // if `val` is undefined or null, return an empty string
   if (isNil(val)) return '';
 
+  // convert `val` to a number
   const convertedVal = +val;
 
-  // if `convertedVal` is not an integer, return `val`
-  if (!isInteger(convertedVal)) return val;
+  // if `convertedVal` is not an integer, return `val` coerced to a string
+  if (!isInteger(convertedVal)) return val.toString();
 
-  // if `convertedVal` is not between 0 and 10, return `val`
-  if (convertedVal <= 0 || convertedVal >= 10) return val;
+  // if `convertedVal` is not between 0 and 10, return `val` coerced to a string
+  if (convertedVal <= 0 || convertedVal >= 10) return val.toString();
 
   return AP_NUMBERS[convertedVal - 1];
 }

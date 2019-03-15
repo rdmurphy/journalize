@@ -33,7 +33,7 @@ function getLengthOfNumber(n) {
  * Converts a large integer into a string representation. Only makes sense for
  * numbers at least 1 million or more.
  *
- * @param  {number} val
+ * @param  {number|string} val
  * @return {string}
  * @example
  *
@@ -52,10 +52,10 @@ export default function intword(val) {
   const convertedVal = +val;
 
   // if `convertedVal` is not an integer, return `val`
-  if (!isInteger(convertedVal)) return val;
+  if (!isInteger(convertedVal)) return val.toString();
 
   // if `convertedVal` is less than 1 million, no conversion is needed
-  if (convertedVal < 1000000) return val;
+  if (convertedVal < 1000000) return val.toString();
 
   // get the number of digits in the number, and substract remainder to get
   // exponent value

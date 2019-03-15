@@ -38,7 +38,7 @@ export default function intcomma(val) {
   const convertedVal = +val;
 
   // if `convertedVal` is not a number, don't waste time converting it
-  if (!_isFinite(convertedVal)) return val;
+  if (!_isFinite(convertedVal)) return val.toString();
 
   return numberWithCommas(convertedVal);
 }

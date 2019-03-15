@@ -19,7 +19,7 @@ const ENGLISH_ORDINAL_EXCEPTIONS = [11, 12, 13];
  * 12 and 13, too. If a non-integer is submitted, it will be returned in its
  * original form.
  *
- * @param  {number} val
+ * @param  {number|string} val
  * @return {string}
  * @example
  *
@@ -41,7 +41,7 @@ export default function ordinal(val) {
   const convertedVal = +val;
 
   // if `convertedVal` is not an integer, return `val`
-  if (!isInteger(convertedVal)) return val;
+  if (!isInteger(convertedVal)) return val.toString();
 
   // if `convertedVal` is 11, 12 or 13, English gets weird
   if (ENGLISH_ORDINAL_EXCEPTIONS.indexOf(convertedVal % 100) > -1)
