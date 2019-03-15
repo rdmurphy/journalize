@@ -1,4 +1,4 @@
-import apdate from './apdate';
+import apdate from '../src/apdate';
 
 const nativeDate = global.Date;
 const mockDate = jest.fn(() => new nativeDate(2016, 10, 8, 10, 30));

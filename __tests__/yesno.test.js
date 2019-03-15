@@ -1,4 +1,4 @@
-import yesno from './yesno';
+import yesno from '../src/yesno';
 
 describe('yesno', () => {
   it('should return "yes" when value is true', () => {

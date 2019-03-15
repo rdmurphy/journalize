@@ -1,4 +1,4 @@
-import intword from './intword';
+import intword from '../src/intword';
 
 describe('intword', () => {
   it('should correctly convert integers to words', () => {

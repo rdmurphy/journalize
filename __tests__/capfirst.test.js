@@ -1,4 +1,4 @@
-import capfirst from './capfirst';
+import capfirst from '../src/capfirst';
 
 describe('capfirst', () => {
   it('should capitalize the first letter of the input if it is a string', () => {

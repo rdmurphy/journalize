@@ -1,4 +1,4 @@
-import pluralize from './pluralize';
+import pluralize from '../src/pluralize';
 
 describe('pluralize', () => {
   it('should correctly return the default pluralSuffix', () => {

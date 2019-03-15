@@ -1,4 +1,4 @@
-import intcomma from './intcomma';
+import intcomma from '../src/intcomma';
 
 describe('intcomma', () => {
   it('should successfully add commas to numbers', () => {

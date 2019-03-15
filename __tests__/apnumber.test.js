@@ -1,4 +1,4 @@
-import apnumber from './apnumber';
+import apnumber from '../src/apnumber';
 
 describe('apnumber', () => {
   it('should correctly convert numbers', () => {

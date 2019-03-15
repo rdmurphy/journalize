@@ -1,4 +1,4 @@
-import widont, { nbsp } from './widont';
+import widont, { nbsp } from '../src/widont';
 
 describe('widont', () => {
   it('should replace the last space with a non-breaking space character', () => {

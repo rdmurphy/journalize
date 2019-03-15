@@ -1,4 +1,4 @@
-import apmonth, { AP_MONTHS } from './apmonth';
+import apmonth, { AP_MONTHS } from '../src/apmonth';
 
 const nativeDate = global.Date;
 const mockDate = jest.fn(() => new nativeDate(2016, 10, 8, 10, 30));

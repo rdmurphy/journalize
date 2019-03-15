@@ -1,4 +1,4 @@
-import ordinal from './ordinal';
+import ordinal from '../src/ordinal';
 
 describe('ordinal', () => {
   it('should correctly convert ordinals', () => {

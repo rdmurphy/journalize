@@ -1,4 +1,4 @@
-import { _isFinite, isInteger, isNil } from './utils';
+import { _isFinite, isInteger, isNil } from '../src/utils';
 
 describe('isNil', () => {
   it('returns true on null', () => {
