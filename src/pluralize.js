@@ -34,11 +34,17 @@ export default function pluralize(
   pluralSuffix = 's',
   singularSuffix = ''
 ) {
-  if (parseFloat(value) !== 1) {
-    return pluralSuffix;
+  // if this is an array, base the return value on the length
+  if (Array.isArray(value)) {
+    if (value.length !== 1) {
+      return pluralSuffix;
+    } else {
+      return singularSuffix;
+    }
   }
 
-  if (Array.isArray(value) && value.length !== 1) {
+  // otherwise we have a string or number - convert it and test if its 1
+  if (Number(value) !== 1) {
     return pluralSuffix;
   }
 
