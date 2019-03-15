@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.1.1]
+
+### Fixed
+
+- Fixed bug with `pluralize` where an Array with a single number in it that's not `1` is considered plural due to `parseFloat` and `Number` being weird when passed an Array.
+
 ## [2.1.0]
 
 ### Added
