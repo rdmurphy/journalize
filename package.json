@@ -7,6 +7,7 @@
   "main": "dist/journalize.js",
   "unpkg": "dist/journalize.umd.js",
   "jsdelivr": "dist/journalize.umd.js",
+  "types": "types/index.d.ts",
   "files": [
     "dist",
     "README.md",
