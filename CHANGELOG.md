@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Added TypeScript type file.
+
+### Fixed
+
+- Fixed a bug with `pluralize` where an Array with a single number in it that's _not_ `1` is considered plural due to `parseFloat` and `Number` being weird when passed an Array.
+- Explicitly convert supplied values to strings with `toString()` in functions that short circuit to guarantee it returns the correct type.
+
 ### Changed
 
 - Updated LICENSE year to 2019
