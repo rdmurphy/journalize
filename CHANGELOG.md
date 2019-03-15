@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated dependencies
 - General housekeeping of the repo
 - Add Node 11 to test matrix
+- Moved tests to `__tests__` directory so we stop shipping them in the npm bundle
 
 ## [2.1.0]
 
