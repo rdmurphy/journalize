@@ -13,7 +13,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- Fixed a bug with `pluralize` where an Array with a single number in it that's _not_ `1` is considered plural due to `parseFloat` and `Number` being weird when passed an Array.
 - Explicitly convert supplied values to strings with `toString()` in functions that short circuit to guarantee it returns the correct type.
 
 ### Changed
@@ -23,6 +22,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - General housekeeping of the repo
 - Add Node 11 to test matrix
 - Moved tests to `__tests__` directory so we stop shipping them in the npm bundle
+
+## [2.1.1]
+
+### Fixed
+
+- Fixed bug with `pluralize` where an Array with a single number in it that's not `1` is considered plural due to `parseFloat` and `Number` being weird when passed an Array.
 
 ## [2.1.0]
 
