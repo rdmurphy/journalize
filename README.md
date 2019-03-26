@@ -67,7 +67,7 @@ import * as journalize from 'journalize';
 - [aptime](#aptime)
   - [Parameters](#parameters-3)
   - [Examples](#examples-3)
-- [aptime](#apstate)
+- [apstate](#apstate)
   - [Parameters](#parameters-4)
   - [Examples](#examples-4)
 - [capfirst](#capfirst)
@@ -236,7 +236,7 @@ journalize.apstate('Ariz.', 'ap', 'abbrev');
 
 //AP style to state name
 journalize.apstate('N.H.', 'ap', 'state');
-// returns 'New Hampshire
+// returns 'New Hampshire'
 ```
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**

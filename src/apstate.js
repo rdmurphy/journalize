@@ -1,6 +1,4 @@
-import {
-  isNil
-} from './utils';
+import { isNil } from './utils';
 
 /**
  * List of possible formats
