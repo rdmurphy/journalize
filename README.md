@@ -67,27 +67,30 @@ import * as journalize from 'journalize';
 - [aptime](#aptime)
   - [Parameters](#parameters-3)
   - [Examples](#examples-3)
-- [capfirst](#capfirst)
+- [aptime](#apstate)
   - [Parameters](#parameters-4)
   - [Examples](#examples-4)
-- [intcomma](#intcomma)
+- [capfirst](#capfirst)
   - [Parameters](#parameters-5)
   - [Examples](#examples-5)
-- [intword](#intword)
+- [intcomma](#intcomma)
   - [Parameters](#parameters-6)
   - [Examples](#examples-6)
-- [ordinal](#ordinal)
+- [intword](#intword)
   - [Parameters](#parameters-7)
   - [Examples](#examples-7)
-- [pluralize](#pluralize)
+- [ordinal](#ordinal)
   - [Parameters](#parameters-8)
   - [Examples](#examples-8)
-- [widont](#widont)
+- [pluralize](#pluralize)
   - [Parameters](#parameters-9)
   - [Examples](#examples-9)
-- [yesno](#yesno)
+- [widont](#widont)
   - [Parameters](#parameters-10)
   - [Examples](#examples-10)
+- [yesno](#yesno)
+  - [Parameters](#parameters-11)
+  - [Examples](#examples-11)
 
 ### apdate
 
@@ -194,6 +197,46 @@ journalize.aptime(new Date(2016, 10, 8, 16, 30));
 // Uses the current time if no parameter is passed
 journalize.aptime();
 // returns '6:45 p.m.' (pretend it is actually 6:45 p.m. right now)
+```
+
+### apstate
+
+Returns a state name, state abbreviation, or AP-formatted state string that corresponds with the supplied input and input/output types.
+
+#### Parameters
+
+- `val` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+- `from` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+- `to` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+
+#### Examples
+
+```javascript
+var journalize = require('journalize');
+
+// State name to AP style
+journalize.apstate('New York', 'state', 'ap');
+// returns 'N.Y.'
+
+//State name to state abbreviation
+journalize.apstate('Wisconsin', 'state', 'abbrev');
+// returns 'WI'
+
+//State abbreviation to AP style
+journalize.apstate('CA', 'abbrev', 'ap');
+// returns 'Calif.'
+
+//State abbreviation to state name
+journalize.apstate('SD', 'abbrev', 'state'); 
+// returns 'South Dakota'
+
+//AP style to state abbreviation
+journalize.apstate('Ariz.', 'ap', 'abbrev');
+// returns 'AZ'
+
+//AP style to state name
+journalize.apstate('N.H.', 'ap', 'state');
+// returns 'New Hampshire
 ```
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
