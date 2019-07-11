@@ -46,7 +46,7 @@
     "@babel/preset-env": "^7.3.4",
     "@zeit/git-hooks": "^0.1.4",
     "coveralls": "^3.0.3",
-    "documentation": "^11.0.0",
+    "documentation": "^12.0.0",
     "jest": "^24.5.0",
     "microbundle": "^0.11.0",
     "precise-commits": "^1.0.2",
