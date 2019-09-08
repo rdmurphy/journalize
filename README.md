@@ -15,7 +15,7 @@ A collection of functions useful for making prose reader friendly. Inspired by (
 
 ## Why did you create this?
 
-I've always really appreciated the built-in functionality provided by Django's `humanize`, and I wanted to port it over to JavaScript/Node.js. Originally this was to be a [collection of custom filters](#what-if-i-do-want-to-use-this-in-nunjucks), but I think it could be just as useful as a generic library.
+I've always appreciated the built-in functionality provided by Django's `humanize`, and I wanted to port it over to JavaScript/Node.js. Originally this was to be a [collection of custom filters](#what-if-i-do-want-to-use-this-in-nunjucks), but I think it could be just as useful as a generic library.
 
 ## Installation
 
