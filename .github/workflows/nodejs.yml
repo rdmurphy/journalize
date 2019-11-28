@@ -10,6 +10,9 @@ jobs:
       matrix:
         node-version: [8.x, 10.x, 12.x, 13.x]
 
+    env:
+      CI: "true"
+
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
@@ -20,13 +23,16 @@ jobs:
         run: |
           npm ci
           npm run test:cov
-        env:
-          CI: "true"
+
       - name: Coverage
         uses: coverallsapp/github-action@v1.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           parallel: "true"
+
+  coverage_complete:
+    runs-on: ubuntu-latest
+    steps:
       - name: Coverage complete
         uses: coverallsapp/github-action@v1.0.1
         with:
