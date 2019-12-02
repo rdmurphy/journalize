@@ -32,6 +32,8 @@ jobs:
 
   coverage_complete:
     runs-on: ubuntu-latest
+    needs:
+      - test
     steps:
       - name: Coverage complete
         uses: coverallsapp/github-action@v1.0.1
