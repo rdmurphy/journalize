@@ -2,7 +2,7 @@ import apnumber from '../src/apnumber';
 
 describe('apnumber', () => {
   it('should correctly convert numbers', () => {
-    const testList = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(n =>
+    const testList = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) =>
       n.toString()
     );
 

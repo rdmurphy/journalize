@@ -7,6 +7,8 @@ describe('ordinal', () => {
       '2',
       '3',
       '4',
+      '9',
+      '10',
       '11',
       '12',
       '13',
@@ -20,6 +22,23 @@ describe('ordinal', () => {
       '2nd',
       '3rd',
       '4th',
+      '9th',
+      '10th',
+      '11th',
+      '12th',
+      '13th',
+      '101st',
+      '102nd',
+      '103rd',
+      '111th',
+    ];
+    const spelledOutOrdinalResultList = [
+      'first',
+      'second',
+      'third',
+      'fourth',
+      'ninth',
+      '10th',
       '11th',
       '12th',
       '13th',
@@ -31,6 +50,10 @@ describe('ordinal', () => {
 
     testList.forEach((n, idx) => {
       expect(ordinal(n)).toBe(resultList[idx]);
+    });
+
+    testList.forEach((n, idx) => {
+      expect(ordinal(n, true)).toBe(spelledOutOrdinalResultList[idx]);
     });
   });
 

@@ -3,7 +3,7 @@
  * JavaScript's life choices. Exported for testing purposes.
  *
  * @private
- * @type {Object}
+ * @type {object}
  */
 export const AP_MONTHS = {
   0: 'Jan.',

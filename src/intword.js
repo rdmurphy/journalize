@@ -3,7 +3,7 @@ import { isInteger, isNil } from './utils';
 /**
  * Array of suffixes to be used by intword.
  * @private
- * @type {Array}
+ * @type {string[]}
  */
 const SUFFIXES = [
   'million',

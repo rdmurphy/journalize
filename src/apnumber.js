@@ -3,7 +3,7 @@ import { isInteger, isNil } from './utils';
 /**
  * List of spelled out numbers per AP style.
  * @private
- * @type {Array}
+ * @type {string[]}
  */
 const AP_NUMBERS = [
   'one',

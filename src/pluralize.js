@@ -6,7 +6,7 @@
  * alternative plural suffix can be provided as the second parameter, and if
  * necessary, an alternative singular suffix can be provided as the third.
  *
- * @param {number|string|Array} value
+ * @param {number|string|array} value
  * @param {string} [pluralSuffix='s']
  * @param {string} [singularSuffix='']
  * @return {string}

@@ -65,14 +65,19 @@ export function intcomma(val: number | string): string;
 export function intword(val: number | string): string;
 
 /**
- * Converts an integer into its ordinal form. Handles the special cases of 11,
- * 12 and 13, too. If a non-integer is submitted, it will be returned in its
- * original form.
+ * Converts an integer into its ordinal form. If `spellOutOrdinals` is `true`,
+ * 1 through 9 will be spelled out per AP style. Handles the special cases of
+ * 11, 12 and 13, too. If a non-integer is submitted it will be returned in
+ * its original form.
  *
  * @param val The supplied value
+ * @param spellOutOrdinals If true, 1 through 9 will be spelled out
  * @returns The converted value
  */
-export function ordinal(val: number | string): string;
+export function ordinal(
+  val: number | string,
+  spellOutOrdinals?: boolean
+): string;
 
 /**
  * Returns a plural suffix if the value is not 1. By default, `pluralize`

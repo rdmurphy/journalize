@@ -3,7 +3,7 @@ name: Node CI
 on: [push, pull_request]
 
 env:
-  CI: "true"
+  CI: 'true'
 
 jobs:
   test:
@@ -28,7 +28,7 @@ jobs:
         uses: coverallsapp/github-action@v1.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          parallel: "true"
+          parallel: 'true'
   # coverage_complete:
   #   runs-on: ubuntu-latest
   #   needs:
