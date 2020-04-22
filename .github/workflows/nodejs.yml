@@ -2,40 +2,43 @@ name: Node CI
 
 on: [push, pull_request]
 
-env:
-  CI: 'true'
-
 jobs:
   test:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [8.x, 10.x, 12.x, 13.x]
+        node-version: [10.x, 12.x, 13.x]
 
     steps:
-      - uses: actions/checkout@v1
+      - name: Clone repository
+        uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install and test
-        run: |
-          npm ci
-          npm run test:cov
+
+      - name: npm install
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test:cov
 
       - name: Coverage
-        uses: coverallsapp/github-action@v1.0.1
+        uses: coverallsapp/github-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          parallel: 'true'
-  # coverage_complete:
-  #   runs-on: ubuntu-latest
-  #   needs:
-  #     - test
-  #   steps:
-  #     - name: Coverage complete
-  #       uses: coverallsapp/github-action@v1.0.1
-  #       with:
-  #         github-token: ${{ secrets.GITHUB_TOKEN }}
-  #         parallel-finished: "true"
+          flag-name: run-${{ matrix.node-version }}
+          parallel: true
+
+  finish:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel-finished: true
