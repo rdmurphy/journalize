@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.3.0]
+
+### Added
+
+- `ordinal` now accepts a second boolean parameter (that defaults to `false`) that outputs 1 through 9 as spelled out (first, third, seventh, etc.) instead of as numeral ordinals, per AP style rules.
+
 ## [2.2.1]
 
 ### Fixed

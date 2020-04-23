@@ -265,13 +265,15 @@ Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 ### ordinal
 
-Converts an integer into its ordinal form. Handles the special cases of 11,
-12 and 13, too. If a non-integer is submitted, it will be returned in its
-original form.
+Converts an integer into its ordinal form. If `spellOutOrdinals` is `true`,
+1 through 9 will be spelled out per AP style. Handles the special cases of
+11, 12 and 13, too. If a non-integer is submitted it will be returned in
+its original form.
 
 #### Parameters
 
 - `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
+- `spellOutOrdinals` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** (optional, default `false`)
 
 #### Examples
 
@@ -286,6 +288,9 @@ journalize.ordinal(13);
 
 journalize.ordinal(103);
 // returns '103rd'
+
+journalize.ordinal(7, true);
+// returns 'seventh'
 ```
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
@@ -301,7 +306,7 @@ necessary, an alternative singular suffix can be provided as the third.
 
 #### Parameters
 
-- `value` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array))**
+- `value` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array))**
 - `pluralSuffix` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'s'`)
 - `singularSuffix` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `''`)
 
