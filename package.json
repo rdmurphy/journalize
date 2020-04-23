@@ -1,6 +1,6 @@
 {
   "name": "journalize",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "A collection of functions useful for making prose more reader friendly. Inspired by Django's `django.contrib.humanize`.",
   "source": "src/index.js",
   "module": "dist/journalize.es.js",
