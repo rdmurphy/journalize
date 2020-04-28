@@ -1,18 +1,24 @@
 import { _isFinite, isNil } from './utils';
 
 /**
- * Converts a number to include commas, if necessary.
- *
- * Source: http://stackoverflow.com/a/2901298
- *
+ * A mapping of pre-built Intl.NumberFormat instances.
+ * @type {Map<string, Intl.NumberFormat>}
  * @private
- * @param  {number|string} n
- * @return {string}
  */
-function numberWithCommas(n) {
-  const parts = n.toString().split('.');
-  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  return parts.join('.');
+const preparedFormatters = new Map();
+
+function getFormatter(locale) {
+  if (!preparedFormatters.has(locale)) {
+    preparedFormatters.set(
+      locale,
+      new Intl.NumberFormat(locale, {
+        style: 'decimal',
+        maximumSignificantDigits: 21,
+      })
+    );
+  }
+
+  return preparedFormatters.get(locale);
 }
 
 /**
@@ -20,6 +26,7 @@ function numberWithCommas(n) {
  * an empty string is returned.
  *
  * @param  {number|string} val
+ * @param  {string} [locale]
  * @return {string}
  * @example
  *
@@ -31,14 +38,19 @@ function numberWithCommas(n) {
  * journalize.intcomma('1234567.1234567');
  * // returns '1,234,567.1234567'
  */
-export default function intcomma(val) {
+export default function intcomma(val, locale = 'en-US') {
   // if `val` is undefined or null, return an empty string
   if (isNil(val)) return '';
 
+  // Attempt to force value to be a number
   const convertedVal = +val;
 
   // if `convertedVal` is not a number, don't waste time converting it
   if (!_isFinite(convertedVal)) return val.toString();
 
-  return numberWithCommas(convertedVal);
+  // get or create our NumberFormat instance
+  const formatter = getFormatter(locale);
+
+  // re-format the value
+  return formatter.format(convertedVal);
 }
