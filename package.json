@@ -50,7 +50,7 @@
     "@zeit/git-hooks": "^0.1.4",
     "coveralls": "^3.0.13",
     "documentation": "^12.0.0",
-    "jest": "^25.1.0",
+    "jest": "^26.0.0",
     "microbundle": "^0.11.0",
     "precise-commits": "^1.0.2",
     "prettier": "^2.0.5"
