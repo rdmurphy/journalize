@@ -49,7 +49,7 @@
     "@types/jest": "^25.2.1",
     "@zeit/git-hooks": "^0.1.4",
     "coveralls": "^3.0.13",
-    "documentation": "^12.0.0",
+    "documentation": "^13.0.0",
     "jest": "^26.0.1",
     "microbundle": "^0.11.0",
     "precise-commits": "^1.0.2",
