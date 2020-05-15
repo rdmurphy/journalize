@@ -54,12 +54,15 @@ export default function intword(val) {
   // if `convertedVal` is not an integer, return `val`
   if (!isInteger(convertedVal)) return val.toString();
 
+  // get the absolute value to de-sign it
+  const absConvertedVal = Math.abs(convertedVal);
+
   // if `convertedVal` is less than 1 million, no conversion is needed
-  if (convertedVal < 1000000) return val.toString();
+  if (absConvertedVal < 1000000) return val.toString();
 
   // get the number of digits in the number, and substract remainder to get
   // exponent value
-  const numDigits = getLengthOfNumber(convertedVal) - 1;
+  const numDigits = getLengthOfNumber(absConvertedVal) - 1;
   const exponent = numDigits - (numDigits % 3);
 
   // calculate the rounded version of `convertedVal`
