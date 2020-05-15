@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- `intword` now supports negative integers.
+- `intcomma` now has tests confirming it does support negative numbers, but no changes were made to the code.
+
+### Changed
+
+- Bumped LICENSE to 2020.
+
 ## [2.3.0]
 
 ### Added
