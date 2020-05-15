@@ -46,12 +46,12 @@
   "devDependencies": {
     "@babel/preset-env": "^7.3.4",
     "@newswire/prettier-config": "^3.0.0",
-    "@types/jest": "^25.2.1",
+    "@types/jest": "^25.2.2",
     "@zeit/git-hooks": "^0.1.4",
     "coveralls": "^3.0.13",
     "documentation": "^13.0.0",
     "jest": "^26.0.1",
-    "microbundle": "^0.11.0",
+    "microbundle": "^0.12.0",
     "precise-commits": "^1.0.2",
     "prettier": "^2.0.5"
   },
