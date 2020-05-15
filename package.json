@@ -15,7 +15,7 @@
     "types"
   ],
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle --format cjs,es,umd",
     "docs:build": "documentation readme --readme-file README.md --section 'API Docs' --sort-order alpha ./src/index.js && prettier --write README.md",
     "docs:serve": "documentation serve --watch ./src/index.js",
     "git-pre-commit": "precise-commits",
@@ -24,7 +24,7 @@
     "test:cov": "npm run test -- --coverage",
     "test:coveralls": "cat ./coverage/lcov.info | coveralls",
     "test:watch": "npm run test -- --watch",
-    "watch": "microbundle watch"
+    "watch": "microbundle watch --format cjs,es,umd"
   },
   "repository": {
     "type": "git",
