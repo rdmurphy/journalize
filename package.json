@@ -21,7 +21,7 @@
     "git-pre-commit": "precise-commits",
     "prepublishOnly": "npm run test && npm run build",
     "test": "uvu -r esm",
-    "test:cov": "c8 --reporter lcovonly npm run test",
+    "test:cov": "c8 --reporter text --reporter lcovonly npm run test",
     "test:coveralls": "cat ./coverage/lcov.info | coveralls",
     "test:watch": "npm run test -- --watch",
     "watch": "microbundle watch --format cjs,es,umd"
