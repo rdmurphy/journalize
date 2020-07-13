@@ -20,8 +20,8 @@
     "docs:serve": "documentation serve --watch ./src/index.js",
     "git-pre-commit": "precise-commits",
     "prepublishOnly": "npm run test && npm run build",
-    "test": "jest",
-    "test:cov": "npm run test -- --coverage",
+    "test": "uvu -r esm",
+    "test:cov": "c8 --reporter lcovonly npm run test",
     "test:coveralls": "cat ./coverage/lcov.info | coveralls",
     "test:watch": "npm run test -- --watch",
     "watch": "microbundle watch --format cjs,es,umd"
@@ -45,13 +45,16 @@
   "homepage": "https://github.com/rdmurphy/journalize#readme",
   "devDependencies": {
     "@newswire/prettier-config": "^3.0.0",
+    "@sinonjs/fake-timers": "^6.0.1",
     "@zeit/git-hooks": "^0.1.4",
     "c8": "^7.2.1",
     "coveralls": "^3.0.13",
     "documentation": "^13.0.0",
+    "esm": "^3.2.25",
     "microbundle": "^0.12.0",
     "precise-commits": "^1.0.2",
     "prettier": "^2.0.5",
+    "sinon": "^9.0.2",
     "uvu": "^0.2.1"
   },
   "dependencies": {},

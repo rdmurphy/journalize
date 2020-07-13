@@ -44,7 +44,7 @@ export function aptime(date?: Date): string;
  * @param val The supplied value
  * @returns The converted value
  */
-export function capfirst(val: string): string;
+export function capfirst(val: any): string;
 
 /**
  * Alters a string or number to include commas. If `val` is undefined or null,

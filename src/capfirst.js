@@ -3,7 +3,7 @@ import { isNil } from './utils';
 /**
  * Capitalizes the first character of a value and returns it.
  *
- * @param {string} val
+ * @param {any} val
  * @returns {string}
  * @example
  *

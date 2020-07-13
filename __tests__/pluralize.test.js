@@ -1,40 +1,45 @@
+import { suite } from 'uvu';
+import assert from 'uvu/assert';
+
 import pluralize from '../src/pluralize';
 
-describe('pluralize', () => {
-  it('should correctly return the default pluralSuffix', () => {
-    expect(pluralize(0)).toBe('s');
-    expect(pluralize(1)).toBe('');
-    expect(pluralize(2)).toBe('s');
-    expect(pluralize(3)).toBe('s');
-  });
+const it = suite('pluralize');
 
-  it('should correctly return the default pluralSuffix when value is a string', () => {
-    expect(pluralize('0')).toBe('s');
-    expect(pluralize('1')).toBe('');
-    expect(pluralize('2')).toBe('s');
-    expect(pluralize('3')).toBe('s');
-  });
-
-  it('should correctly return the default pluralSuffix when value is an array', () => {
-    expect(pluralize([])).toBe('s');
-    expect(pluralize([1])).toBe('');
-    expect(pluralize([3])).toBe('');
-    expect(pluralize([1, 2])).toBe('s');
-    expect(pluralize([1, 2, 3])).toBe('s');
-    expect(pluralize([3, 2, 1])).toBe('s');
-  });
-
-  it('should accept an alternative pluralSuffix', () => {
-    expect(pluralize(0, 'es')).toBe('es');
-    expect(pluralize(1, 'es')).toBe('');
-    expect(pluralize(2, 'es')).toBe('es');
-    expect(pluralize(3, 'es')).toBe('es');
-  });
-
-  it('should accept an alternative pluralSuffix and singularSuffix', () => {
-    expect(pluralize(0, 'ies', 'y')).toBe('ies');
-    expect(pluralize(1, 'ies', 'y')).toBe('y');
-    expect(pluralize(2, 'ies', 'y')).toBe('ies');
-    expect(pluralize(3, 'ies', 'y')).toBe('ies');
-  });
+it('should correctly return the default pluralSuffix', () => {
+  assert.is(pluralize(0), 's');
+  assert.is(pluralize(1), '');
+  assert.is(pluralize(2), 's');
+  assert.is(pluralize(3), 's');
 });
+
+it('should correctly return the default pluralSuffix when value is a string', () => {
+  assert.is(pluralize('0'), 's');
+  assert.is(pluralize('1'), '');
+  assert.is(pluralize('2'), 's');
+  assert.is(pluralize('3'), 's');
+});
+
+it('should correctly return the default pluralSuffix when value is an array', () => {
+  assert.is(pluralize([]), 's');
+  assert.is(pluralize([1]), '');
+  assert.is(pluralize([3]), '');
+  assert.is(pluralize([1, 2]), 's');
+  assert.is(pluralize([1, 2, 3]), 's');
+  assert.is(pluralize([3, 2, 1]), 's');
+});
+
+it('should accept an alternative pluralSuffix', () => {
+  assert.is(pluralize(0, 'es'), 'es');
+  assert.is(pluralize(1, 'es'), '');
+  assert.is(pluralize(2, 'es'), 'es');
+  assert.is(pluralize(3, 'es'), 'es');
+});
+
+it('should accept an alternative pluralSuffix and singularSuffix', () => {
+  assert.is(pluralize(0, 'ies', 'y'), 'ies');
+  assert.is(pluralize(1, 'ies', 'y'), 'y');
+  assert.is(pluralize(2, 'ies', 'y'), 'ies');
+  assert.is(pluralize(3, 'ies', 'y'), 'ies');
+});
+
+it.run();
