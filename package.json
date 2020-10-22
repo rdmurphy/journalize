@@ -8,6 +8,12 @@
   "unpkg": "dist/journalize.umd.js",
   "jsdelivr": "dist/journalize.umd.js",
   "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/journalize.es.js",
+      "require": "./dist/journalize.js"
+    }
+  },
   "files": [
     "dist",
     "README.md",
