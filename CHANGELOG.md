@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.5.0]
+
+### Added
+
+- Add export map to `package.json`.
+
 ## [2.4.0]
 
 ### Added
