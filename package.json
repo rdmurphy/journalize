@@ -51,7 +51,7 @@
   "homepage": "https://github.com/rdmurphy/journalize#readme",
   "devDependencies": {
     "@newswire/prettier-config": "^3.0.0",
-    "@sinonjs/fake-timers": "^6.0.1",
+    "@sinonjs/fake-timers": "^7.0.0",
     "@zeit/git-hooks": "^0.1.4",
     "c8": "^7.2.1",
     "coveralls": "^3.0.13",
