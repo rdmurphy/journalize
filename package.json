@@ -3,14 +3,14 @@
   "version": "2.5.0",
   "description": "A collection of functions useful for making prose more reader friendly. Inspired by Django's `django.contrib.humanize`.",
   "source": "src/index.js",
-  "module": "dist/journalize.es.js",
+  "module": "dist/journalize.mjs",
   "main": "dist/journalize.js",
   "unpkg": "dist/journalize.umd.js",
   "jsdelivr": "dist/journalize.umd.js",
   "types": "types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/journalize.es.js",
+      "import": "./dist/journalize.mjs",
       "require": "./dist/journalize.js"
     }
   },
@@ -25,7 +25,7 @@
     "docs:build": "documentation readme --readme-file README.md --section 'API Docs' --sort-order alpha ./src/index.js && prettier --write README.md",
     "docs:serve": "documentation serve --watch ./src/index.js",
     "git-pre-commit": "precise-commits",
-    "prepublishOnly": "npm run test && npm run build",
+    "prepublishOnly": "npm run test",
     "test": "uvu -r esm",
     "test:cov": "c8 --reporter text --reporter lcovonly npm run test",
     "test:coveralls": "cat ./coverage/lcov.info | coveralls",
@@ -63,6 +63,5 @@
     "sinon": "^9.0.2",
     "uvu": "^0.5.1"
   },
-  "dependencies": {},
   "prettier": "@newswire/prettier-config"
 }

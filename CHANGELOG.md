@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.5.1]
+
+### Fixed
+
+- Due to how Node module resolution works with ECMAScript modules, the `module` and `exports.import` files must have `.mjs` extensions.
+
 ## [2.5.0]
 
 ### Added
