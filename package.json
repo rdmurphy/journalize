@@ -60,7 +60,7 @@
     "microbundle": "^0.13.0",
     "precise-commits": "^1.0.2",
     "prettier": "^2.0.5",
-    "sinon": "^10.0.0",
+    "sinon": "^11.0.0",
     "uvu": "^0.5.1"
   },
   "prettier": "@newswire/prettier-config"
