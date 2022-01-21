@@ -3,7 +3,7 @@
 A collection of functions useful for making prose reader friendly. Inspired by (and initially based on) Django's [`django.contrib.humanize`](https://docs.djangoproject.com/en/dev/ref/contrib/humanize/).
 
 [![build status](https://img.shields.io/github/workflow/status/rdmurphy/journalize/Node%20CI?style=flat-square)](https://github.com/rdmurphy/journalize/actions?query=workflow%3A%22Node+CI%22)
-[![Coveralls branch](https://img.shields.io/coveralls/rdmurphy/journalize/master.svg?style=flat-square)](https://coveralls.io/github/rdmurphy/journalize)
+[![coverage status](https://img.shields.io/coveralls/rdmurphy/journalize/main.svg?style=flat-square)](https://coveralls.io/github/rdmurphy/journalize)
 [![npm version](https://img.shields.io/npm/v/journalize.svg?style=flat-square)](https://www.npmjs.com/package/journalize)
 [![npm](https://img.shields.io/npm/dm/journalize.svg?style=flat-square)](https://www.npmjs.com/package/journalize)
 
