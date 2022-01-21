@@ -28,6 +28,6 @@ jobs:
         run: npx playwright install-deps ${{ matrix.browser }}
 
       - name: Run tests
-        run: npm test:browser
+        run: npm run test:browser
         env:
           BROWSER: ${{ matrix.browser }}
