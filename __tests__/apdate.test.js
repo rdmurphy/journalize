@@ -1,8 +1,8 @@
 import { suite } from 'uvu';
-import assert from 'uvu/assert';
+import * as assert from 'uvu/assert';
 import { install } from '@sinonjs/fake-timers';
 
-import apdate from '../src/apdate';
+import apdate from '../src/apdate.js';
 
 const it = suite('apdate');
 

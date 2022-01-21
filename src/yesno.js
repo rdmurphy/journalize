@@ -1,4 +1,4 @@
-import { isNil } from './utils';
+import { isNil } from './utils.js';
 
 /**
  * Given a mapping of arguments for `true`, `false`, and (optionally)

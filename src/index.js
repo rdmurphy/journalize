@@ -1,14 +1,14 @@
-import apdate from './apdate';
-import apmonth from './apmonth';
-import apnumber from './apnumber';
-import aptime from './aptime';
-import capfirst from './capfirst';
-import intcomma from './intcomma';
-import intword from './intword';
-import ordinal from './ordinal';
-import pluralize from './pluralize';
-import widont from './widont';
-import yesno from './yesno';
+import apdate from './apdate.js';
+import apmonth from './apmonth.js';
+import apnumber from './apnumber.js';
+import aptime from './aptime.js';
+import capfirst from './capfirst.js';
+import intcomma from './intcomma.js';
+import intword from './intword.js';
+import ordinal from './ordinal.js';
+import pluralize from './pluralize.js';
+import widont from './widont.js';
+import yesno from './yesno.js';
 
 export {
 	apdate,

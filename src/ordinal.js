@@ -1,4 +1,4 @@
-import { isInteger, isNil } from './utils';
+import { isInteger, isNil } from './utils.js';
 
 /**
  * A list of suffixes for conversions.

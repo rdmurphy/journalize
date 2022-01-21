@@ -1,4 +1,4 @@
-import apmonth from './apmonth';
+import apmonth from './apmonth.js';
 
 /**
  * Returns an AP-formatted date string that corresponds with the supplied

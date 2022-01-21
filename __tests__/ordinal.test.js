@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
-import assert from 'uvu/assert';
+import * as assert from 'uvu/assert';
 
-import ordinal from '../src/ordinal';
+import ordinal from '../src/ordinal.js';
 
 const it = suite('ordinal');
 

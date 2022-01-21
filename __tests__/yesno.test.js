@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
-import assert from 'uvu/assert';
+import * as assert from 'uvu/assert';
 
-import yesno from '../src/yesno';
+import yesno from '../src/yesno.js';
 
 const it = suite('yesno');
 

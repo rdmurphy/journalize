@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
-import assert from 'uvu/assert';
+import * as assert from 'uvu/assert';
 
-import widont, { nbsp } from '../src/widont';
+import widont, { nbsp } from '../src/widont.js';
 
 const it = suite('widont');
 
