@@ -13,11 +13,11 @@ import { isNil } from './utils';
  * // returns 'Hello world'
  */
 export default function capfirst(val) {
-  // if `val` is undefined or null, return an empty string
-  if (isNil(val)) return '';
+	// if `val` is undefined or null, return an empty string
+	if (isNil(val)) return '';
 
-  // coerce value to a String
-  const str = String(val);
+	// coerce value to a String
+	const str = String(val);
 
-  return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+	return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 }

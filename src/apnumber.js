@@ -6,15 +6,15 @@ import { isInteger, isNil } from './utils';
  * @type {string[]}
  */
 const AP_NUMBERS = [
-  'one',
-  'two',
-  'three',
-  'four',
-  'five',
-  'six',
-  'seven',
-  'eight',
-  'nine',
+	'one',
+	'two',
+	'three',
+	'four',
+	'five',
+	'six',
+	'seven',
+	'eight',
+	'nine',
 ];
 
 /**
@@ -39,17 +39,17 @@ const AP_NUMBERS = [
  *
  */
 export default function apnumber(val) {
-  // if `val` is undefined or null, return an empty string
-  if (isNil(val)) return '';
+	// if `val` is undefined or null, return an empty string
+	if (isNil(val)) return '';
 
-  // convert `val` to a number
-  const convertedVal = +val;
+	// convert `val` to a number
+	const convertedVal = +val;
 
-  // if `convertedVal` is not an integer, return `val` coerced to a string
-  if (!isInteger(convertedVal)) return val.toString();
+	// if `convertedVal` is not an integer, return `val` coerced to a string
+	if (!isInteger(convertedVal)) return val.toString();
 
-  // if `convertedVal` is not between 0 and 10, return `val` coerced to a string
-  if (convertedVal <= 0 || convertedVal >= 10) return val.toString();
+	// if `convertedVal` is not between 0 and 10, return `val` coerced to a string
+	if (convertedVal <= 0 || convertedVal >= 10) return val.toString();
 
-  return AP_NUMBERS[convertedVal - 1];
+	return AP_NUMBERS[convertedVal - 1];
 }

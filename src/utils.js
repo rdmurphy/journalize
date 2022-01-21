@@ -6,7 +6,7 @@
  * @return {boolean}
  */
 export function isNil(value) {
-  return value == null;
+	return value == null;
 }
 
 /**
@@ -19,7 +19,7 @@ export function isNil(value) {
  * @return {boolean}
  */
 export function _isFinite(value) {
-  return typeof value === 'number' && isFinite(value);
+	return typeof value === 'number' && isFinite(value);
 }
 
 /**
@@ -32,5 +32,5 @@ export function _isFinite(value) {
  * @return {boolean}
  */
 export function isInteger(value) {
-  return _isFinite(value) && Math.floor(value) === value;
+	return _isFinite(value) && Math.floor(value) === value;
 }

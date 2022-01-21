@@ -29,23 +29,23 @@ import { isNil } from './utils';
  * // returns 'shruggie'
  */
 export default function yesno(val, yes = 'yes', no = 'no', maybe = 'maybe') {
-  const numberOfArguments = arguments.length;
+	const numberOfArguments = arguments.length;
 
-  // if the user only passes the value and a `yes` argument that's too
-  // ambiguous, so we give up
-  if (numberOfArguments === 2) return val;
-  // if the user passes the value, a `yes` and a `no` argument, don't assume
-  // the default `maybe` is what they want and use `no` instead
-  if (numberOfArguments === 3) maybe = no;
+	// if the user only passes the value and a `yes` argument that's too
+	// ambiguous, so we give up
+	if (numberOfArguments === 2) return val;
+	// if the user passes the value, a `yes` and a `no` argument, don't assume
+	// the default `maybe` is what they want and use `no` instead
+	if (numberOfArguments === 3) maybe = no;
 
-  // if null or undefined, use `maybe`
-  if (isNil(val)) return maybe;
+	// if null or undefined, use `maybe`
+	if (isNil(val)) return maybe;
 
-  // if true, use `yes`
-  if (val) {
-    return yes;
-  }
+	// if true, use `yes`
+	if (val) {
+		return yes;
+	}
 
-  // otherwise, must be `no`
-  return no;
+	// otherwise, must be `no`
+	return no;
 }

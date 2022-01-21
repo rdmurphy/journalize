@@ -11,15 +11,15 @@ import widont from './widont';
 import yesno from './yesno';
 
 export {
-  apdate,
-  apmonth,
-  apnumber,
-  aptime,
-  capfirst,
-  intcomma,
-  intword,
-  ordinal,
-  pluralize,
-  widont,
-  yesno,
+	apdate,
+	apmonth,
+	apnumber,
+	aptime,
+	capfirst,
+	intcomma,
+	intword,
+	ordinal,
+	pluralize,
+	widont,
+	yesno,
 };

@@ -20,9 +20,9 @@ import apmonth from './apmonth';
  * // returns 'July 4, 2016' (pretend it is actually July 4, 2016)
  */
 export default function apdate(date = new Date()) {
-  const month = apmonth(date);
-  const dayOfMonth = date.getDate();
-  const year = date.getFullYear();
+	const month = apmonth(date);
+	const dayOfMonth = date.getDate();
+	const year = date.getFullYear();
 
-  return `${month} ${dayOfMonth}, ${year}`;
+	return `${month} ${dayOfMonth}, ${year}`;
 }

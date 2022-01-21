@@ -152,7 +152,7 @@ well.
 
 #### Parameters
 
-- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
 
 #### Examples
 
@@ -204,7 +204,7 @@ Capitalizes the first character of a value and returns it.
 
 #### Parameters
 
-- `val` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+- `val` **any**
 
 #### Examples
 
@@ -224,7 +224,7 @@ an empty string is returned.
 
 #### Parameters
 
-- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
 
 #### Examples
 
@@ -247,7 +247,7 @@ numbers at least 1 million or more.
 
 #### Parameters
 
-- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
 
 #### Examples
 
@@ -272,7 +272,7 @@ its original form.
 
 #### Parameters
 
-- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
 - `spellOutOrdinals` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** (optional, default `false`)
 
 #### Examples
@@ -306,7 +306,7 @@ necessary, an alternative singular suffix can be provided as the third.
 
 #### Parameters
 
-- `value` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array))**
+- `value` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array))**
 - `pluralSuffix` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'s'`)
 - `singularSuffix` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `''`)
 
@@ -366,7 +366,7 @@ provided, a `null` or `undefined` value will return the `no` argument.
 
 #### Parameters
 
-- `val` **([boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean) \| [Null](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) \| [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined))**
+- `val` **([boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | [Null](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) | [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined))**
 - `yes` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'yes'`)
 - `no` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'no'`)
 - `maybe` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'maybe'`)
@@ -391,7 +391,7 @@ journalize.yesno(null, 'yay', 'nay', 'shruggie');
 // returns 'shruggie'
 ```
 
-Returns **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean) \| [Null](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) \| [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined))**
+Returns **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | [Null](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) | [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined))**
 
 ## What if I do want to use this in [Nunjucks](http://mozilla.github.io/nunjucks/)?
 
@@ -411,11 +411,11 @@ const env = nunjucks.configure(/* */);
 Set up `journalize`.
  */
 for (let key in journalize) {
-  let func = journalize[key];
+	let func = journalize[key];
 
-  if (typeof func === 'function') {
-    env.addFilter(key, func); // this would work with env.addGlobal, too
-  }
+	if (typeof func === 'function') {
+		env.addFilter(key, func); // this would work with env.addGlobal, too
+	}
 }
 ```
 

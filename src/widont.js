@@ -37,11 +37,11 @@ const widontRegex = new RegExp(/\s+([^\s]*)\s*$/);
  *
  */
 export default function widont(val, replaceChar = nbsp) {
-  // if `val` is undefined or null, return an empty string
-  if (isNil(val)) return '';
+	// if `val` is undefined or null, return an empty string
+	if (isNil(val)) return '';
 
-  // coerce value to a String
-  const str = String(val);
+	// coerce value to a String
+	const str = String(val);
 
-  return str.replace(widontRegex, `${replaceChar}$1`);
+	return str.replace(widontRegex, `${replaceChar}$1`);
 }

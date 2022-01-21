@@ -13,15 +13,15 @@ const SUFFIXES = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th'];
  * @type {string[]}
  */
 const AP_ORDINALS = [
-  'first',
-  'second',
-  'third',
-  'fourth',
-  'fifth',
-  'sixth',
-  'seventh',
-  'eighth',
-  'ninth',
+	'first',
+	'second',
+	'third',
+	'fourth',
+	'fifth',
+	'sixth',
+	'seventh',
+	'eighth',
+	'ninth',
 ];
 
 /**
@@ -57,23 +57,23 @@ const ENGLISH_ORDINAL_EXCEPTIONS = [11, 12, 13];
  * // returns 'seventh'
  */
 export default function ordinal(val, spellOutOrdinals = false) {
-  // if `val` is undefined or null, return an empty string
-  if (isNil(val)) return '';
+	// if `val` is undefined or null, return an empty string
+	if (isNil(val)) return '';
 
-  const convertedVal = +val;
+	const convertedVal = +val;
 
-  // if `convertedVal` is not an integer, return `val`
-  if (!isInteger(convertedVal)) return val.toString();
+	// if `convertedVal` is not an integer, return `val`
+	if (!isInteger(convertedVal)) return val.toString();
 
-  // if `spellOutOrdinals` is true, return the spelled out versions of 1-9
-  if (spellOutOrdinals && convertedVal < 10) {
-    return AP_ORDINALS[convertedVal - 1];
-  }
+	// if `spellOutOrdinals` is true, return the spelled out versions of 1-9
+	if (spellOutOrdinals && convertedVal < 10) {
+		return AP_ORDINALS[convertedVal - 1];
+	}
 
-  // if `convertedVal` is 11, 12 or 13, English gets weird
-  if (ENGLISH_ORDINAL_EXCEPTIONS.indexOf(convertedVal % 100) > -1) {
-    return convertedVal + SUFFIXES[0];
-  }
+	// if `convertedVal` is 11, 12 or 13, English gets weird
+	if (ENGLISH_ORDINAL_EXCEPTIONS.indexOf(convertedVal % 100) > -1) {
+		return convertedVal + SUFFIXES[0];
+	}
 
-  return convertedVal + SUFFIXES[convertedVal % 10];
+	return convertedVal + SUFFIXES[convertedVal % 10];
 }
