@@ -7,6 +7,7 @@ import intcomma from './intcomma.js';
 import intword from './intword.js';
 import ordinal from './ordinal.js';
 import pluralize from './pluralize.js';
+import settings from './settings.js';
 import widont from './widont.js';
 import yesno from './yesno.js';
 
@@ -20,6 +21,7 @@ export {
 	intword,
 	ordinal,
 	pluralize,
+	settings,
 	widont,
 	yesno,
 };

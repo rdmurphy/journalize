@@ -27,9 +27,10 @@
     "docs:serve": "documentation serve --watch ./src/index.js",
     "git-pre-commit": "precise-commits",
     "prepublishOnly": "npm run test",
-    "test": "uvu --ignore browser",
+    "test": "npm run test:node && npm run test:browser",
+    "test:node": "uvu --ignore browser",
     "test:browser": "node __tests__/browser/runner.js",
-    "test:cov": "c8 --reporter text --reporter lcovonly npm run test",
+    "test:cov": "c8 --reporter text --reporter lcovonly npm run test:node",
     "test:coveralls": "cat ./coverage/lcov.info | coveralls",
     "test:watch": "npm run test -- --watch",
     "watch": "microbundle watch --format cjs,es,umd"
