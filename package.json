@@ -55,7 +55,7 @@
     "@zeit/git-hooks": "^0.1.4",
     "c8": "^7.9.0",
     "coveralls": "^3.1.1",
-    "documentation": "^13.2.5",
+    "documentation": "^14.0.0",
     "esm": "^3.2.25",
     "microbundle": "^0.13.3",
     "precise-commits": "^1.0.2",
