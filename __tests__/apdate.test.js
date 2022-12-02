@@ -26,14 +26,17 @@ it('should use current date if no parameter is passed', () => {
 
 it('should use return AP formatted date with hyphenated date string', () => {
   assert.is(apdate('2016-11-08'), 'Nov. 8, 2016');
+  assert.is(apdate('2016-1-8'), 'Jan. 8, 2016');
 });
 
 it('should use return AP formatted date with a standard date string', () => {
   assert.is(apdate('11-08-2016'), 'Nov. 8, 2016');
+  assert.is(apdate('1-8-2016'), 'Jan. 8, 2016');
 });
 
 it('should use return AP formatted slashed dates', () => {
   assert.is(apdate('11/08/2016'), 'Nov. 8, 2016');
+  assert.is(apdate('1/8/2016'), 'Jan. 8, 2016');
 });
 
 it.run();
