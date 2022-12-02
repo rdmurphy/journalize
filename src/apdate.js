@@ -1,4 +1,5 @@
 import apmonth from './apmonth';
+import formatDateString from './formatDateString';
 
 /**
  * Returns an AP-formatted date string that corresponds with the supplied
@@ -19,7 +20,10 @@ import apmonth from './apmonth';
  * journalize.apdate();
  * // returns 'July 4, 2016' (pretend it is actually July 4, 2016)
  */
-export default function apdate(date = new Date()) {
+
+export default function apdate(inputDate = new Date()) {
+  const date = formatDateString(inputDate);
+
   const month = apmonth(date);
   const dayOfMonth = date.getDate();
   const year = date.getFullYear();
