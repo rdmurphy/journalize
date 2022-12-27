@@ -8,6 +8,15 @@
 export function apdate(date?: Date): string;
 
 /**
+ * Returns a tabular AP-formatted date string that corresponds with the supplied
+ * Date. If an `input` is not passed, it will use the result of `new Date();`.
+ *
+ * @param date - The supplied Date
+ * @returns The converted date as a string
+ */
+export function apdatetab(date?: Date): string;
+
+/**
  * Returns an AP-formatted month string that corresponds with the supplied
  * Date. If an `input` is not passed, it will use the result of `new Date();`.
  *
@@ -15,6 +24,15 @@ export function apdate(date?: Date): string;
  * @returns The converted date as a string
  */
 export function apmonth(date?: Date): string;
+
+/**
+ * Returns a tabular AP-formatted month string that corresponds with the supplied
+ * Date. If an `input` is not passed, it will use the result of `new Date();`.
+ *
+ * @param date - The supplied Date
+ * @returns The converted date as a string
+ */
+export function apmonthtab(date?: Date): string;
 
 /**
  * Converts an integer to string representation per AP style rules. If an
