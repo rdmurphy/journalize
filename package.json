@@ -26,7 +26,7 @@
     "docs:serve": "documentation serve --watch ./src/index.js",
     "git-pre-commit": "precise-commits",
     "prepublishOnly": "npm run test",
-    "test": "uvu -r esm",
+    "test": "uvu",
     "test:cov": "c8 --reporter text --reporter lcovonly npm run test",
     "test:coveralls": "cat ./coverage/lcov.info | coveralls",
     "test:watch": "npm run test -- --watch",
@@ -58,7 +58,6 @@
     "esm": "^3.2.25",
     "lefthook": "^1.2.6",
     "microbundle": "^0.13.3",
-    "precise-commits": "^1.0.2",
     "prettier": "^2.4.1",
     "sinon": "^11.1.2",
     "uvu": "^0.5.1"
