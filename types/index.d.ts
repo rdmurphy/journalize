@@ -98,6 +98,16 @@ export function ordinal(
 ): string;
 
 /**
+ * Determines the ordinal suffix for a given integer. Handles the special
+ * cases of 11, 12 and 13. If a non-integer is submitted an empty string will
+ * be returned.
+ *
+ * @param val The supplied value
+ * @returns The converted value
+ */
+export function ordinalsuffix(val: number | string): string;
+
+/**
  * Returns a plural suffix if the value is not 1. By default, `pluralize`
  * uses "s" as the suffix. If a `String` is provided, `pluralize` will attempt
  * to convert it into a `Number`. If an `Array` is provided instead of a
@@ -108,6 +118,7 @@ export function ordinal(
  * @param value The supplied value
  * @param pluralSuffix An optional custom plural suffix
  * @param singularSuffix An optional custom singular suffix
+ * @returns The converted value
  */
 export function pluralize(
   value: number | string | any[],

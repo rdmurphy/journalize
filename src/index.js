@@ -8,6 +8,7 @@ import capfirst from './capfirst';
 import intcomma from './intcomma';
 import intword from './intword';
 import ordinal from './ordinal';
+import ordinalsuffix from './ordinalsuffix';
 import pluralize from './pluralize';
 import widont from './widont';
 import yesno from './yesno';
@@ -23,6 +24,7 @@ export {
   intcomma,
   intword,
   ordinal,
+  ordinalsuffix,
   pluralize,
   widont,
   yesno,
