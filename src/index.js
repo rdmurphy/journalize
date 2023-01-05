@@ -1,5 +1,7 @@
 import apdate from './apdate';
+import apdatetab from './apdatetab';
 import apmonth from './apmonth';
+import apmonthtab from './apmonthtab';
 import apnumber from './apnumber';
 import aptime from './aptime';
 import capfirst from './capfirst';
@@ -12,7 +14,9 @@ import yesno from './yesno';
 
 export {
   apdate,
+  apdatetab,
   apmonth,
+  apmonthtab,
   apnumber,
   aptime,
   capfirst,
