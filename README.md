@@ -58,36 +58,42 @@ import * as journalize from 'journalize';
 - [apdate](#apdate)
   - [Parameters](#parameters)
   - [Examples](#examples)
-- [apmonth](#apmonth)
+- [apdatetab](#apdatetab)
   - [Parameters](#parameters-1)
   - [Examples](#examples-1)
-- [apnumber](#apnumber)
+- [apmonth](#apmonth)
   - [Parameters](#parameters-2)
   - [Examples](#examples-2)
-- [aptime](#aptime)
+- [apmonthtab](#apmonthtab)
   - [Parameters](#parameters-3)
   - [Examples](#examples-3)
-- [capfirst](#capfirst)
+- [apnumber](#apnumber)
   - [Parameters](#parameters-4)
   - [Examples](#examples-4)
-- [intcomma](#intcomma)
+- [aptime](#aptime)
   - [Parameters](#parameters-5)
   - [Examples](#examples-5)
-- [intword](#intword)
+- [capfirst](#capfirst)
   - [Parameters](#parameters-6)
   - [Examples](#examples-6)
-- [ordinal](#ordinal)
+- [intcomma](#intcomma)
   - [Parameters](#parameters-7)
   - [Examples](#examples-7)
-- [pluralize](#pluralize)
+- [intword](#intword)
   - [Parameters](#parameters-8)
   - [Examples](#examples-8)
-- [widont](#widont)
+- [ordinal](#ordinal)
   - [Parameters](#parameters-9)
   - [Examples](#examples-9)
-- [yesno](#yesno)
+- [pluralize](#pluralize)
   - [Parameters](#parameters-10)
   - [Examples](#examples-10)
+- [widont](#widont)
+  - [Parameters](#parameters-11)
+  - [Examples](#examples-11)
+- [yesno](#yesno)
+  - [Parameters](#parameters-12)
+  - [Examples](#examples-12)
 
 ### apdate
 
@@ -113,7 +119,33 @@ journalize.apdate();
 // returns 'July 4, 2016' (pretend it is actually July 4, 2016)
 ```
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
+
+### apdatetab
+
+Returns a tabular AP-formatted date string that corresponds with the supplied
+Date. If an `input` is not passed, it will use the result of `new Date();`.
+
+#### Parameters
+
+- `date` **[Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)?** JavaScript Date object, defaults to current date if
+  not passed (optional, default `new Date()`)
+
+#### Examples
+
+```javascript
+var journalize = require('journalize');
+
+// Remember that JavaScript zero-indexes months!
+journalize.apdate(new Date(2016, 10, 8));
+// returns 'Nov 8, 2016'
+
+// Uses the current date if no parameter is passed
+journalize.apdate();
+// returns 'Jul 4, 2016' (pretend it is actually July 4, 2016)
+```
+
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 ### apmonth
 
@@ -139,7 +171,33 @@ journalize.apmonth();
 // returns 'July' (pretend it is actually July)
 ```
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
+
+### apmonthtab
+
+Returns a tabular AP-formatted month string that corresponds with the supplied
+Date. If an `input` is not passed, it will use the result of `new Date();`.
+
+#### Parameters
+
+- `date` **[Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)?** JavaScript Date object, defaults to current date if
+  not passed (optional, default `new Date()`)
+
+#### Examples
+
+```javascript
+var journalize = require('journalize');
+
+// Remember that JavaScript zero-indexes months!
+journalize.apmonth(new Date(2016, 10, 8));
+// returns 'Nov'
+
+// Uses the current date if no parameter is passed
+journalize.apmonth();
+// returns 'Jul' (pretend it is actually July)
+```
+
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 ### apnumber
 
@@ -152,7 +210,7 @@ well.
 
 #### Parameters
 
-- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**&#x20;
 
 #### Examples
 
@@ -166,7 +224,7 @@ journalize.apnumber(42);
 // returns 42
 ```
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 ### aptime
 
@@ -196,7 +254,7 @@ journalize.aptime();
 // returns '6:45 p.m.' (pretend it is actually 6:45 p.m. right now)
 ```
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 ### capfirst
 
@@ -204,7 +262,7 @@ Capitalizes the first character of a value and returns it.
 
 #### Parameters
 
-- `val` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+- `val` **any**&#x20;
 
 #### Examples
 
@@ -215,7 +273,7 @@ journalize.capfirst('hello world');
 // returns 'Hello world'
 ```
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 ### intcomma
 
@@ -224,7 +282,7 @@ an empty string is returned.
 
 #### Parameters
 
-- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**&#x20;
 
 #### Examples
 
@@ -238,7 +296,7 @@ journalize.intcomma('1234567.1234567');
 // returns '1,234,567.1234567'
 ```
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 ### intword
 
@@ -247,7 +305,7 @@ numbers at least 1 million or more.
 
 #### Parameters
 
-- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**&#x20;
 
 #### Examples
 
@@ -261,7 +319,7 @@ journalize.intword(6500000000000);
 // returns '6.5 trillion'
 ```
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 ### ordinal
 
@@ -272,7 +330,7 @@ its original form.
 
 #### Parameters
 
-- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**&#x20;
 - `spellOutOrdinals` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** (optional, default `false`)
 
 #### Examples
@@ -293,7 +351,7 @@ journalize.ordinal(7, true);
 // returns 'seventh'
 ```
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 ### pluralize
 
@@ -306,7 +364,7 @@ necessary, an alternative singular suffix can be provided as the third.
 
 #### Parameters
 
-- `value` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array))**
+- `value` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array))**&#x20;
 - `pluralSuffix` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'s'`)
 - `singularSuffix` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `''`)
 
@@ -331,7 +389,7 @@ var journalize = require('journalize');
 'cand' + journalize.pluralize(2, 'ies', 'y'); // candies
 ```
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 ### widont
 
@@ -341,7 +399,7 @@ character.
 
 #### Parameters
 
-- `val` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+- `val` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 - `replaceChar` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The character to replace the space with (optional, default `'\xA0'`)
 
 #### Examples
@@ -356,7 +414,7 @@ journalize.widont('this is a string', 'HELLO');
 // returns 'this is aHELLOstring'
 ```
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
 
 ### yesno
 
@@ -366,7 +424,7 @@ provided, a `null` or `undefined` value will return the `no` argument.
 
 #### Parameters
 
-- `val` **([boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean) \| [Null](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) \| [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined))**
+- `val` **([boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | [Null](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) | [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined))**&#x20;
 - `yes` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'yes'`)
 - `no` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'no'`)
 - `maybe` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** (optional, default `'maybe'`)
@@ -391,7 +449,7 @@ journalize.yesno(null, 'yay', 'nay', 'shruggie');
 // returns 'shruggie'
 ```
 
-Returns **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean) \| [Null](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) \| [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined))**
+Returns **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | [Null](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/null) | [undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined))**&#x20;
 
 ## What if I do want to use this in [Nunjucks](http://mozilla.github.io/nunjucks/)?
 
