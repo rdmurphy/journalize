@@ -52,11 +52,11 @@
   "devDependencies": {
     "@newswire/prettier-config": "^3.0.0",
     "@sinonjs/fake-timers": "^7.0.0",
-    "@zeit/git-hooks": "^0.1.4",
     "c8": "^7.9.0",
     "coveralls": "^3.1.1",
     "documentation": "^14.0.1",
     "esm": "^3.2.25",
+    "lefthook": "^1.2.6",
     "microbundle": "^0.13.3",
     "precise-commits": "^1.0.2",
     "prettier": "^2.4.1",
