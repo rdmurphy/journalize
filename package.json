@@ -26,7 +26,7 @@
     "docs:serve": "documentation serve --watch ./src/index.js",
     "git-pre-commit": "precise-commits",
     "prepublishOnly": "npm run test",
-    "test": "uvu",
+    "test": "uvu -r esm",
     "test:cov": "c8 --reporter text --reporter lcovonly npm run test",
     "test:coveralls": "cat ./coverage/lcov.info | coveralls",
     "test:watch": "npm run test -- --watch",
