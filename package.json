@@ -45,7 +45,6 @@
     "documentation": "^14.0.1",
     "lefthook": "^1.2.6",
     "prettier": "^2.4.1",
-    "sinon": "^11.1.2",
     "uvu": "^0.5.1"
   },
   "prettier": "@newswire/prettier-config"
