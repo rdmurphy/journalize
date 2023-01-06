@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 
-import intcomma from '../lib/intcomma.js';
+import intcomma from 'journalize/intcomma';
 
 const it = suite('intcomma');
 

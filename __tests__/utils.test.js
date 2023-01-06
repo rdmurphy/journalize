@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 
-import { _isFinite, isInteger, isNil } from '../lib/utils.js';
+import { _isFinite, isInteger, isNil } from 'journalize/utils';
 
 const utilsSuite = suite('utils');
 

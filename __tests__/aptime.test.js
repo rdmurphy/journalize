@@ -2,7 +2,7 @@ import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 import { install } from '@sinonjs/fake-timers';
 
-import aptime from '../lib/aptime.js';
+import aptime from 'journalize/aptime';
 
 const it = suite('aptime');
 

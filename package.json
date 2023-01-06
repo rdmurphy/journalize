@@ -3,7 +3,10 @@
   "version": "2.6.0",
   "description": "A collection of functions useful for making prose more reader friendly. Inspired by Django's `django.contrib.humanize`.",
   "type": "module",
-  "exports": "./lib/index.js",
+  "exports": {
+    ".": "./index.js",
+    "./*": "./lib/*.js"
+  },
   "types": "types/index.d.ts",
   "files": [
     "dist",

@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 
-import apnumber from '../lib/apnumber.js';
+import apnumber from 'journalize/apnumber';
 
 const it = suite('apnumber');
 

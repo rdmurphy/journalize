@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 
-import intword from '../lib/intword.js';
+import intword from 'journalize/intword';
 
 const it = suite('intword');
 

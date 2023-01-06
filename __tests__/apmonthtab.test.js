@@ -2,7 +2,7 @@ import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 import { install } from '@sinonjs/fake-timers';
 
-import apmonthtab, { AP_MONTHS_TAB } from '../lib/apmonthtab.js';
+import apmonthtab, { AP_MONTHS_TAB } from 'journalize/apmonthtab';
 
 const it = suite('apmonth');
 

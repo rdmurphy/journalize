@@ -2,7 +2,7 @@ import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 import { install } from '@sinonjs/fake-timers';
 
-import apdatetab from '../lib/apdatetab.js';
+import apdatetab from 'journalize/apdatetab';
 
 const it = suite('apdate');
 

@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 
-import pluralize from '../lib/pluralize.js';
+import pluralize from 'journalize/pluralize';
 
 const it = suite('pluralize');
 
