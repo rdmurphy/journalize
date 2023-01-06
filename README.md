@@ -25,28 +25,32 @@ npm install journalize
 # or
 
 yarn add journalize
+
+# or
+
+pnpm add journalize
 ```
 
-`journalize` tries to support the many ways to load packages in the Node.js ecosystem.
+As of version `3.0.0` the `journalize` package is now exclusively provided as an ESM module. (If that won't work for you I recommend rolling back to the latest version of `2.x.x`!)
 
-If you use a module bundler like [Browserify](http://browserify.org) or [Webpack](http://webpack.github.io), a version of `journalize` is built to be compatible.
+If you use a module bundler like [Vite](https://vitejs.dev) or [Webpack](http://webpack.github.io) `journalize` should work out of the box.
 
 ```js
-const journalize = require('journalize');
+// import the whole thing
+import * as journalize from 'journalize';
 
 // you can also reach in and grab specific functions
-const intcomma = require('journalize').intcomma;
-// or
-const { intcomma } = require('journalize');
+import { intcomma } from 'journalize';
 ```
 
-It also supports ES6 imports:
+`journalize` is also compatible with any CDN that supports ESM modules. For example, you can use [esm.sh](https://esm.sh) or [Skypack](https://www.skypack.dev) to import it directly into your browser.
 
-```js
-import { intcomma } from 'journalize';
-
-// or if you want the whole thing
-import * as journalize from 'journalize';
+```html
+<script type="module">
+  import * as journalize from 'https://esm.sh/journalize@3';
+  // or
+  import * as journalize from 'https://cdn.skypack.dev/journalize@^3';
+</script>
 ```
 
 ## API Docs
