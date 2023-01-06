@@ -1,11 +1,5 @@
 import { isInteger, isNil } from './utils';
-
-/**
- * A list of suffixes for conversions.
- * @private
- * @type {string[]}
- */
-const SUFFIXES = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th'];
+import ordinalsuffix from './ordinalsuffix';
 
 /**
  * List of spelled out ordinals per AP style.
@@ -23,13 +17,6 @@ const AP_ORDINALS = [
   'eighth',
   'ninth',
 ];
-
-/**
- * A list of funky English ordinals.
- * @private
- * @type {number[]}
- */
-const ENGLISH_ORDINAL_EXCEPTIONS = [11, 12, 13];
 
 /**
  * Converts an integer into its ordinal form. If `spellOutOrdinals` is `true`,
@@ -60,6 +47,7 @@ export default function ordinal(val, spellOutOrdinals = false) {
   // if `val` is undefined or null, return an empty string
   if (isNil(val)) return '';
 
+  // ensure `val` is a number
   const convertedVal = +val;
 
   // if `convertedVal` is not an integer, return `val`
@@ -70,10 +58,9 @@ export default function ordinal(val, spellOutOrdinals = false) {
     return AP_ORDINALS[convertedVal - 1];
   }
 
-  // if `convertedVal` is 11, 12 or 13, English gets weird
-  if (ENGLISH_ORDINAL_EXCEPTIONS.indexOf(convertedVal % 100) > -1) {
-    return convertedVal + SUFFIXES[0];
-  }
+  // get the suffix
+  const suffix = ordinalsuffix(convertedVal);
 
-  return convertedVal + SUFFIXES[convertedVal % 10];
+  // return the original value with the suffix
+  return convertedVal + suffix;
 }

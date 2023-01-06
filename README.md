@@ -85,15 +85,18 @@ import * as journalize from 'journalize';
 - [ordinal](#ordinal)
   - [Parameters](#parameters-9)
   - [Examples](#examples-9)
-- [pluralize](#pluralize)
+- [ordinalsuffix](#ordinalsuffix)
   - [Parameters](#parameters-10)
   - [Examples](#examples-10)
-- [widont](#widont)
+- [pluralize](#pluralize)
   - [Parameters](#parameters-11)
   - [Examples](#examples-11)
-- [yesno](#yesno)
+- [widont](#widont)
   - [Parameters](#parameters-12)
   - [Examples](#examples-12)
+- [yesno](#yesno)
+  - [Parameters](#parameters-13)
+  - [Examples](#examples-13)
 
 ### apdate
 
@@ -349,6 +352,39 @@ journalize.ordinal(103);
 
 journalize.ordinal(7, true);
 // returns 'seventh'
+```
+
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
+
+### ordinalsuffix
+
+Determines the ordinal suffix for a given integer. Handles the special
+cases of 11, 12 and 13. If a non-integer is submitted an empty string will
+be returned.
+
+#### Parameters
+
+- `val` **([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))**&#x20;
+
+#### Examples
+
+```javascript
+var journalize = require('journalize');
+
+journalize.ordinalsuffix(5);
+// returns 'th'
+
+journalize.ordinalsuffix(13);
+// returns 'th'
+
+journalize.ordinalsuffix(103);
+// returns 'rd'
+
+journalize.ordinalsuffix(7);
+// returns 'th'
+
+journalize.ordinalsuffix('foo');
+// returns ''
 ```
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**&#x20;
