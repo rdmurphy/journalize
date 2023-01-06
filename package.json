@@ -24,7 +24,6 @@
     "build": "microbundle --format cjs,es,umd",
     "docs:build": "documentation readme ./src/index.js --readme-file README.md --section 'API Docs' --sort-order alpha && prettier --write README.md",
     "docs:serve": "documentation serve --watch ./src/index.js",
-    "git-pre-commit": "precise-commits",
     "prepublishOnly": "npm run test",
     "test": "uvu -r esm",
     "test:cov": "c8 --reporter text --reporter lcovonly npm run test",
