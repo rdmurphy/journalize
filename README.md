@@ -43,9 +43,9 @@ import { intcomma } from 'journalize';
 
 ```html
 <script type="module">
-  import * as journalize from 'https://esm.sh/journalize@3';
-  // or
-  import * as journalize from 'https://cdn.skypack.dev/journalize@^3';
+	import * as journalize from 'https://esm.sh/journalize@3';
+	// or
+	import * as journalize from 'https://cdn.skypack.dev/journalize@^3';
 </script>
 ```
 
@@ -111,7 +111,7 @@ Date. If an `input` is not passed, it will use the result of `new Date();`.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 // Remember that JavaScript zero-indexes months!
 journalize.apdate(new Date(2016, 10, 8));
@@ -137,7 +137,7 @@ Date. If an `input` is not passed, it will use the result of `new Date();`.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 // Remember that JavaScript zero-indexes months!
 journalize.apdate(new Date(2016, 10, 8));
@@ -163,7 +163,7 @@ Date. If an `input` is not passed, it will use the result of `new Date();`.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 // Remember that JavaScript zero-indexes months!
 journalize.apmonth(new Date(2016, 10, 8));
@@ -189,7 +189,7 @@ Date. If an `input` is not passed, it will use the result of `new Date();`.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 // Remember that JavaScript zero-indexes months!
 journalize.apmonth(new Date(2016, 10, 8));
@@ -218,7 +218,7 @@ well.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 journalize.apnumber(8);
 // returns 'eight'
@@ -242,7 +242,7 @@ Date. If an `input` is not passed, it will use the result of `new Date();`.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 // Bright and early
 journalize.aptime(new Date(2016, 10, 8, 6, 30));
@@ -270,7 +270,7 @@ Capitalizes the first character of a value and returns it.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 journalize.capfirst('hello world');
 // returns 'Hello world'
@@ -290,7 +290,7 @@ an empty string is returned.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 journalize.intcomma(10311);
 // returns '10,311'
@@ -313,7 +313,7 @@ numbers at least 1 million or more.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 journalize.intword(1000000);
 // returns '1 million'
@@ -339,7 +339,7 @@ its original form.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 journalize.ordinal(5);
 // returns '5th'
@@ -369,7 +369,7 @@ be returned.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 journalize.ordinalsuffix(5);
 // returns 'th'
@@ -407,7 +407,7 @@ necessary, an alternative singular suffix can be provided as the third.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 // typical usage
 'vote' + journalize.pluralize(0); // votes
@@ -441,7 +441,7 @@ character.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 journalize.widont('this is a string');
 // returns 'this is a&nbsp;string'
@@ -468,7 +468,7 @@ provided, a `null` or `undefined` value will return the `no` argument.
 #### Examples
 
 ```javascript
-var journalize = require('journalize');
+import * as journalize from 'journalize';
 
 journalize.yesno(true);
 // returns 'yes'
@@ -496,20 +496,16 @@ Once you have your `nunjucks` environment, you can loop through the
 properties of `journalize` and add each function as a filter.
 
 ```js
-const journalize = require('journalize');
-const nunjucks = require('nunjucks');
+import * as journalize from 'journalize';
+import nunjucks from 'nunjucks';
 
 const env = nunjucks.configure(/* */);
 
 /*
 Set up `journalize`.
  */
-for (let key in journalize) {
-  let func = journalize[key];
-
-  if (typeof func === 'function') {
-    env.addFilter(key, func); // this would work with env.addGlobal, too
-  }
+for (const [name, method] of Object.entries(journalize)) {
+	env.addFilter(name, method); // this would work with env.addGlobal, too
 }
 ```
 

@@ -93,8 +93,8 @@ export function intword(val: number | string): string;
  * @returns The converted value
  */
 export function ordinal(
-  val: number | string,
-  spellOutOrdinals?: boolean
+	val: number | string,
+	spellOutOrdinals?: boolean,
 ): string;
 
 /**
@@ -121,9 +121,9 @@ export function ordinalsuffix(val: number | string): string;
  * @returns The converted value
  */
 export function pluralize(
-  value: number | string | any[],
-  pluralSuffix?: string,
-  singularSuffix?: string
+	value: number | string | any[],
+	pluralSuffix?: string,
+	singularSuffix?: string,
 ): string;
 
 /**
@@ -149,8 +149,8 @@ export function widont(val: string, replaceChar?: string): string;
  * @returns The converted value
  */
 export function yesno(
-  val: boolean | null | undefined,
-  yes?: string,
-  no?: string,
-  maybe?: string
+	val: boolean | null | undefined,
+	yes?: string,
+	no?: string,
+	maybe?: string,
 ): string | boolean | null | undefined;
