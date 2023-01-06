@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.6.0]
+
+### Added
+
+- Added two new date methods — `apmonthtab` and `apdatetab`. These two are identical to `apmonth` and `apdate` except months are output in AP's tabular format instead. Instead of `Sept.` you get `Sep`, etc.
+- The logic for determining the correct suffix in `ordinal` has been extracted and made into its own method called `ordinalsuffix`. This makes it possible to access the correct suffix for a number without modifying the original value. Great for if you'd like to style the number and suffix differently, or just want to output them separately. Credit to @sawyerclick for the suggestion in #283!
+
 ## [2.5.1]
 
 ### Fixed
