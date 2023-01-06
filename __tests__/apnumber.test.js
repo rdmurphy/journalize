@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
-import assert from 'uvu/assert';
+import * as assert from 'uvu/assert';
 
-import apnumber from '../src/apnumber';
+import apnumber from '../lib/apnumber.js';
 
 const it = suite('apnumber');
 

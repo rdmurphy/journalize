@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
-import assert from 'uvu/assert';
+import * as assert from 'uvu/assert';
 
-import capfirst from '../src/capfirst';
+import capfirst from '../lib/capfirst.js';
 
 const it = suite('capfirst');
 

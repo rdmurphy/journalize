@@ -1,8 +1,8 @@
 import { suite } from 'uvu';
-import assert from 'uvu/assert';
+import * as assert from 'uvu/assert';
 import { install } from '@sinonjs/fake-timers';
 
-import apmonthtab, { AP_MONTHS_TAB } from '../src/apmonthtab';
+import apmonthtab, { AP_MONTHS_TAB } from '../lib/apmonthtab.js';
 
 const it = suite('apmonth');
 

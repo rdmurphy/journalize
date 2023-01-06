@@ -1,7 +1,7 @@
 import { suite } from 'uvu';
-import assert from 'uvu/assert';
+import * as assert from 'uvu/assert';
 
-import ordinalsuffix from '../src/ordinalsuffix';
+import ordinalsuffix from '../lib/ordinalsuffix.js';
 
 const it = suite('ordinalsuffix');
 

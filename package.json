@@ -2,18 +2,9 @@
   "name": "journalize",
   "version": "2.6.0",
   "description": "A collection of functions useful for making prose more reader friendly. Inspired by Django's `django.contrib.humanize`.",
-  "source": "src/index.js",
-  "module": "dist/journalize.mjs",
-  "main": "dist/journalize.js",
-  "unpkg": "dist/journalize.umd.js",
-  "jsdelivr": "dist/journalize.umd.js",
+  "type": "module",
+  "exports": "./lib/index.js",
   "types": "types/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/journalize.mjs",
-      "require": "./dist/journalize.js"
-    }
-  },
   "files": [
     "dist",
     "README.md",
@@ -21,15 +12,13 @@
     "types"
   ],
   "scripts": {
-    "build": "microbundle --format cjs,es,umd",
-    "docs:build": "documentation readme ./src/index.js --readme-file README.md --section 'API Docs' --sort-order alpha && prettier --write README.md",
+    "docs:build": "documentation readme ./lib/index.js --readme-file README.md --section 'API Docs' --sort-order alpha && prettier --write README.md",
     "docs:serve": "documentation serve --watch ./src/index.js",
     "prepublishOnly": "npm run test",
-    "test": "uvu -r esm",
+    "test": "uvu",
     "test:cov": "c8 --reporter text --reporter lcovonly npm run test",
     "test:coveralls": "cat ./coverage/lcov.info | coveralls",
-    "test:watch": "npm run test -- --watch",
-    "watch": "microbundle watch --format cjs,es,umd"
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -54,9 +43,7 @@
     "c8": "^7.9.0",
     "coveralls": "^3.1.1",
     "documentation": "^14.0.1",
-    "esm": "^3.2.25",
     "lefthook": "^1.2.6",
-    "microbundle": "^0.13.3",
     "prettier": "^2.4.1",
     "sinon": "^11.1.2",
     "uvu": "^0.5.1"
