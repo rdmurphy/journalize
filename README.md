@@ -21,13 +21,9 @@ I've always really appreciated the built-in functionality provided by Django's `
 
 ```sh
 npm install journalize
-
 # or
-
 yarn add journalize
-
 # or
-
 pnpm add journalize
 ```
 
