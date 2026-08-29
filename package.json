@@ -10,6 +10,7 @@
   "types": "types/index.d.ts",
   "exports": {
     ".": {
+      "types": "types/index.d.ts",
       "import": "./dist/journalize.mjs",
       "require": "./dist/journalize.js"
     }
